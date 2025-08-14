@@ -1,1 +1,282 @@
-import React, { useState, useEffect } from 'react';import { Search, Filter, Download, Eye, X, Users, Database } from 'lucide-react';import { PadronVictimasService } from '../services/googleSheetsServiceMock';const BuscarVictimas = () => {  const [filtros, setFiltros] = useState({});  const [resultados, setResultados] = useState([]);  const [columnas, setColumnas] = useState([]);  const [cargando, setCargando] = useState(false);  const [error, setError] = useState(null);  const [mostrarFiltros, setMostrarFiltros] = useState(false);  const padronService = new PadronVictimasService();  useEffect(() => {    cargarEstructuraColumnas();  }, []);  const cargarEstructuraColumnas = async () => {    try {      const cols = await padronService.obtenerEstructuraColumnas();      setColumnas(cols);            const filtrosIniciales = {};      cols.forEach(col => {        filtrosIniciales[col] = '';      });      setFiltros(filtrosIniciales);    } catch (err) {      setError('Error al cargar la estructura de la base de datos');      console.error(err);    }  };  const buscarVictimas = async () => {    setCargando(true);    setError(null);        try {      const filtrosActivos = Object.entries(filtros)        .filter(([_, valor]) => valor.trim() !== '')        .reduce((acc, [campo, valor]) => {          acc[campo] = valor;          return acc;        }, {});      if (Object.keys(filtrosActivos).length === 0) {        setError('Debe especificar al menos un criterio de búsqueda');        setCargando(false);        return;      }      const datos = await padronService.buscar(filtrosActivos);      setResultados(datos);    } catch (err) {      setError('Error al realizar la búsqueda');      console.error(err);    } finally {      setCargando(false);    }  };  const limpiarFiltros = () => {    const filtrosLimpios = {};    columnas.forEach(col => {      filtrosLimpios[col] = '';    });    setFiltros(filtrosLimpios);    setResultados([]);    setError(null);  };  const exportarResultados = () => {    if (resultados.length === 0) return;        const csv = [      columnas.join(','),      ...resultados.map(fila =>         columnas.map(col => `"${fila[col] || ''}"`).join(',')      )    ].join('\n');        const blob = new Blob([csv], { type: 'text/csv' });    const url = window.URL.createObjectURL(blob);    const a = document.createElement('a');    a.href = url;    a.download = `victimas_${new Date().toISOString().split('T')[0]}.csv`;    a.click();  };  const handleInputChange = (columna, valor) => {    setFiltros(prev => ({      ...prev,      [columna]: valor    }));  };  return (    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">            {/* Header */}      <div className="bg-gradient-to-r from-primary-burgundy to-primary-gold text-white py-16">        <div className="container mx-auto px-4 text-center">          <div className="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-2xl mb-6">            <Search className="w-8 h-8" />          </div>          <h1 className="text-4xl md:text-5xl font-bold mb-4">            Búsqueda de Víctimas          </h1>          <p className="text-xl opacity-90 max-w-2xl mx-auto">            Consulta el padrón oficial de víctimas con herramientas de búsqueda avanzada          </p>        </div>      </div>      <div className="container mx-auto px-4 py-12">                {/* Search Section */}        <div className="max-w-4xl mx-auto">                    {/* Filters Toggle */}          <div className="card-modern p-6 mb-8">            <div className="flex items-center justify-between mb-6">              <h2 className="text-2xl font-semibold text-gray-900 flex items-center">                <Filter className="w-6 h-6 mr-3 text-primary-burgundy" />                Criterios de Búsqueda              </h2>              <button                onClick={() => setMostrarFiltros(!mostrarFiltros)}                className="btn btn-ghost"              >                {mostrarFiltros ? 'Ocultar' : 'Mostrar'} Filtros              </button>            </div>            {mostrarFiltros && (              <div className="space-y-4 animate-slide-in">                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">                  {columnas.map((columna) => (                    <div key={columna} className="form-group">                      <label className="form-label">{columna}</label>                      <input                        type="text"                        className="form-input"                        value={filtros[columna] || ''}                        onChange={(e) => handleInputChange(columna, e.target.value)}                        placeholder={`Buscar por ${columna.toLowerCase()}`}                      />                    </div>                  ))}                </div>                                <div className="flex flex-wrap gap-4 pt-6 border-t border-gray-200">                  <button                    onClick={buscarVictimas}                    disabled={cargando}                    className="btn btn-primary"                  >                    {cargando ? (                      <div className="loading">                        <div className="loading-spinner"></div>                        Buscando...                      </div>                    ) : (                      <>                        <Search className="w-4 h-4" />                        Buscar                      </>                    )}                  </button>                                    <button                    onClick={limpiarFiltros}                    className="btn btn-outline"                  >                    <X className="w-4 h-4" />                    Limpiar                  </button>                                    {resultados.length > 0 && (                    <button                      onClick={exportarResultados}                      className="btn btn-secondary"                    >                      <Download className="w-4 h-4" />                      Exportar CSV                    </button>                  )}                </div>              </div>            )}          </div>          {/* Error Message */}          {error && (            <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-8 animate-scale-in">              <div className="flex items-center">                <X className="w-5 h-5 text-red-500 mr-3" />                <p className="text-red-700">{error}</p>              </div>            </div>          )}          {/* Results Statistics */}          {resultados.length > 0 && (            <div className="bg-gradient-to-r from-primary-burgundy to-primary-gold text-white rounded-xl p-6 mb-8 animate-fade-in">              <div className="flex items-center justify-between">                <div className="flex items-center">                  <Database className="w-6 h-6 mr-3" />                  <div>                    <h3 className="text-lg font-semibold">Resultados de Búsqueda</h3>                    <p className="opacity-90">                      Se encontraron {resultados.length} registro{resultados.length !== 1 ? 's' : ''}                       que coinciden con los criterios especificados                    </p>                  </div>                </div>                <Users className="w-8 h-8 opacity-75" />              </div>            </div>          )}          {/* Results Table */}          {resultados.length > 0 && (            <div className="card-modern overflow-hidden animate-fade-in">              <div className="overflow-x-auto">                <table className="w-full">                  <thead className="bg-gray-50">                    <tr>                      {columnas.map((columna) => (                        <th                          key={columna}                          className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200"                        >                          {columna}                        </th>                      ))}                      <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 border-b border-gray-200">                        Acciones                      </th>                    </tr>                  </thead>                  <tbody className="divide-y divide-gray-200">                    {resultados.map((resultado, index) => (                      <tr key={index} className="hover:bg-gray-50 transition-colors duration-200">                        {columnas.map((columna) => (                          <td key={columna} className="px-6 py-4 text-sm text-gray-700">                            {resultado[columna] || '-'}                          </td>                        ))}                        <td className="px-6 py-4 text-center">                          <button className="btn btn-ghost p-2">                            <Eye className="w-4 h-4" />                          </button>                        </td>                      </tr>                    ))}                  </tbody>                </table>              </div>            </div>          )}          {/* No Results */}          {!cargando && resultados.length === 0 && Object.values(filtros).some(v => v.trim() !== '') && !error && (            <div className="text-center py-12 animate-fade-in">              <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">                <Search className="w-8 h-8 text-gray-400" />              </div>              <h3 className="text-xl font-semibold text-gray-900 mb-2">                No se encontraron resultados              </h3>              <p className="text-gray-600">                Intenta ajustar los criterios de búsqueda para obtener mejores resultados              </p>            </div>          )}        </div>      </div>    </div>  );};export default BuscarVictimas;
+import React, { useState, useEffect } from 'react';
+import { Search, Filter, Download, Eye, X, Users, Database } from 'lucide-react';
+import { PadronVictimasService } from '../services/googleSheetsServiceMock';
+
+const BuscarVictimas = () => {
+  const [filtros, setFiltros] = useState({});
+  const [resultados, setResultados] = useState([]);
+  const [columnas, setColumnas] = useState([]);
+  const [cargando, setCargando] = useState(false);
+  const [error, setError] = useState(null);
+  const [mostrarFiltros, setMostrarFiltros] = useState(false);
+
+  const padronService = new PadronVictimasService();
+
+  useEffect(() => {
+    cargarEstructuraColumnas();
+  }, []);
+
+  const cargarEstructuraColumnas = async () => {
+    try {
+      const cols = await padronService.obtenerEstructuraColumnas();
+      setColumnas(cols);
+      
+      const filtrosIniciales = {};
+      cols.forEach(col => {
+        filtrosIniciales[col] = '';
+      });
+      setFiltros(filtrosIniciales);
+    } catch (err) {
+      setError('Error al cargar la estructura de la base de datos');
+      console.error(err);
+    }
+  };
+
+  const buscarVictimas = async () => {
+    setCargando(true);
+    setError(null);
+    
+    try {
+      const filtrosActivos = Object.entries(filtros)
+        .filter(([_, valor]) => valor.trim() !== '')
+        .reduce((acc, [campo, valor]) => {
+          acc[campo] = valor;
+          return acc;
+        }, {});
+
+      if (Object.keys(filtrosActivos).length === 0) {
+        setError('Debe especificar al menos un criterio de búsqueda');
+        setCargando(false);
+        return;
+      }
+
+      const datos = await padronService.buscar(filtrosActivos);
+      setResultados(datos);
+    } catch (err) {
+      setError('Error al realizar la búsqueda');
+      console.error(err);
+    } finally {
+      setCargando(false);
+    }
+  };
+
+  const limpiarFiltros = () => {
+    const filtrosLimpios = {};
+    columnas.forEach(col => {
+      filtrosLimpios[col] = '';
+    });
+    setFiltros(filtrosLimpios);
+    setResultados([]);
+    setError(null);
+  };
+
+  const exportarResultados = () => {
+    if (resultados.length === 0) return;
+    
+    const csv = [
+      columnas.join(','),
+      ...resultados.map(fila => 
+        columnas.map(col => `"${fila[col] || ''}"`).join(',')
+      )
+    ].join('\n');
+    
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `victimas_${new Date().toISOString().split('T')[0]}.csv`;
+    a.click();
+  };
+
+  const handleInputChange = (columna, valor) => {
+    setFiltros(prev => ({
+      ...prev,
+      [columna]: valor
+    }));
+  };
+
+  return (
+    <div>
+      
+      {/* Header */}
+      <div className="bg-white bg-opacity-10 backdrop-blur-sm text-white py-16 border-b border-white border-opacity-20">
+        <div className="container mx-auto px-4 text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-2xl mb-6">
+            <Search className="w-8 h-8" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Búsqueda de Víctimas
+          </h1>
+          <p className="text-xl opacity-90 max-w-2xl mx-auto">
+            Consulta el padrón oficial de víctimas con herramientas de búsqueda avanzada
+          </p>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-12">
+        {/* Search Section */}
+        <div className="max-w-4xl mx-auto">
+          {/* Filters Toggle */}
+          <div className="card-modern p-6 mb-8">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-semibold text-gray-900 flex items-center">
+                <Filter className="w-6 h-6 mr-3 text-primary-burgundy" />
+                Criterios de Búsqueda
+              </h2>
+              <button
+                onClick={() => setMostrarFiltros(!mostrarFiltros)}
+                className="btn btn-ghost"
+              >
+                {mostrarFiltros ? 'Ocultar' : 'Mostrar'} Filtros
+              </button>
+            </div>
+
+            {mostrarFiltros && (
+              <div className="space-y-4 animate-slide-in">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {columnas.map((columna) => (
+                    <div key={columna} className="form-group">
+                      <label className="form-label">{columna}</label>
+                      <input
+                        type="text"
+                        className="form-input"
+                        value={filtros[columna] || ''}
+                        onChange={(e) => handleInputChange(columna, e.target.value)}
+                        placeholder={`Buscar por ${columna.toLowerCase()}`}
+                      />
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="flex flex-wrap gap-4 pt-6 border-t border-gray-200">
+                  <button
+                    onClick={buscarVictimas}
+                    disabled={cargando}
+                    className="btn btn-primary"
+                  >
+                    {cargando ? (
+                      <div className="loading">
+                        <div className="loading-spinner"></div>
+                        Buscando...
+                      </div>
+                    ) : (
+                      <>
+                        <Search className="w-4 h-4" />
+                        Buscar
+                      </>
+                    )}
+                  </button>
+                  
+                  <button
+                    onClick={limpiarFiltros}
+                    className="btn btn-outline"
+                  >
+                    <X className="w-4 h-4" />
+                    Limpiar
+                  </button>
+                  
+                  {resultados.length > 0 && (
+                    <button
+                      onClick={exportarResultados}
+                      className="btn btn-secondary"
+                    >
+                      <Download className="w-4 h-4" />
+                      Exportar CSV
+                    </button>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Error Message */}
+          {error && (
+            <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-8 animate-scale-in">
+              <div className="flex items-center">
+                <X className="w-5 h-5 text-red-500 mr-3" />
+                <p className="text-red-700">{error}</p>
+              </div>
+            </div>
+          )}
+
+          {/* Results Statistics */}
+          {resultados.length > 0 && (
+            <div className="bg-white bg-opacity-95 backdrop-blur-sm text-gray-900 rounded-xl p-6 mb-8 animate-fade-in border border-white border-opacity-30">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <Database className="w-6 h-6 mr-3 text-primary-burgundy" />
+                  <div>
+                    <h3 className="text-lg font-semibold">Resultados de Búsqueda</h3>
+                    <p className="text-gray-700">
+                      Se encontraron {resultados.length} registro{resultados.length !== 1 ? 's' : ''} 
+                      que coinciden con los criterios especificados
+                    </p>
+                  </div>
+                </div>
+                <Users className="w-8 h-8 text-primary-burgundy opacity-75" />
+              </div>
+            </div>
+          )}
+
+          {/* Results Table */}
+          {resultados.length > 0 && (
+            <div className="card-modern overflow-hidden animate-fade-in">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      {columnas.map((columna) => (
+                        <th
+                          key={columna}
+                          className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200"
+                        >
+                          {columna}
+                        </th>
+                      ))}
+                      <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 border-b border-gray-200">
+                        Acciones
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {resultados.map((resultado, index) => (
+                      <tr key={index} className="hover:bg-gray-50 transition-colors duration-200">
+                        {columnas.map((columna) => (
+                          <td key={columna} className="px-6 py-4 text-sm text-gray-700">
+                            {resultado[columna] || '-'}
+                          </td>
+                        ))}
+                        <td className="px-6 py-4 text-center">
+                          <button className="btn btn-ghost p-2">
+                            <Eye className="w-4 h-4" />
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* No Results */}
+          {!cargando && resultados.length === 0 && Object.values(filtros).some(v => v.trim() !== '') && !error && (
+            <div className="text-center py-12 animate-fade-in">
+              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                No se encontraron resultados
+              </h3>
+              <p className="text-white text-opacity-80">
+                Intenta ajustar los criterios de búsqueda para obtener mejores resultados
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BuscarVictimas;

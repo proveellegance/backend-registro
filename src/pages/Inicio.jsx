@@ -31,69 +31,59 @@ const Inicio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div>
       <HeaderInstitucional />
       
-      <main className="container mx-auto px-4 py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <main className="container mx-auto px-6 py-16 md:py-24 pb-24 md:pb-32">
+        <div className="space-y-16 md:space-y-20">
           
-          {/* Columna izquierda - Títulos en burbujas */}
-          <div className="space-y-8 animate-fade-in">
-            {/* Burbuja del título principal */}
-            <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-200">
+          {/* Burbuja de Acceso Rápido - Centrada */}
+          <div className="flex justify-center animate-fade-in">
+            <div className="bg-gradient-to-br from-primary-burgundy to-primary-gold rounded-3xl p-8 md:p-10 shadow-2xl text-white max-w-2xl w-full">
               <div className="text-center">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Sistema de <span className="text-gradient">Registro de Víctimas</span>
-                </h2>
-              </div>
-            </div>
-            
-            {/* Burbuja de Acceso Rápido */}
-            <div className="bg-gradient-to-br from-primary-burgundy to-primary-gold rounded-3xl p-8 shadow-2xl text-white">
-              <div className="text-center">
-                <h3 className="text-4xl font-bold mb-4">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                   Acceso Rápido
                 </h3>
-                <p className="text-white text-opacity-90 text-lg">
+                <p className="text-white text-opacity-90 text-lg md:text-xl leading-relaxed">
                   Selecciona la funcionalidad que necesitas
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Columna derecha - Botones de funcionalidades */}
-          <div className="space-y-6 animate-fade-in delay-300">
+          {/* Botones de funcionalidades - FORZAR fila horizontal CON ESPACIADO */}
+          <div className="w-full flex flex-row justify-between animate-fade-in delay-300" style={{marginBottom: '80px', gap: '32px'}}>
             {functionalities.map((func, index) => {
               const IconComponent = func.icon;
               return (
                 <button
                   key={index}
                   onClick={() => navigate(func.route)}
-                  className={`w-full p-8 rounded-2xl bg-gradient-to-r ${func.color} text-white 
-                             hover:scale-105 transform transition-all duration-300 
+                  className={`flex-1 p-6 md:p-8 bg-gradient-to-r ${func.color} text-white 
+                             hover:scale-[1.02] transform transition-all duration-300 
                              shadow-xl hover:shadow-2xl group border-0 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50`}
-                  style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+                  style={{ 
+                    borderRadius: '24px',
+                    animationDelay: `${0.4 + index * 0.1}s`,
+                    minHeight: '200px',
+                    marginLeft: index > 0 ? '16px' : '0',
+                    marginRight: index < functionalities.length - 1 ? '16px' : '0'
+                  }}
                 >
-                  <div className="flex items-center space-x-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center group-hover:bg-opacity-30 group-hover:scale-110 transition-all duration-300 shadow-lg">
-                        <IconComponent className="w-8 h-8" />
+                  <div className="text-center space-y-4 h-full flex flex-col justify-center">
+                    <div className="flex justify-center">
+                      <div className="w-16 h-16 md:w-20 md:h-20 bg-white bg-opacity-20 flex items-center justify-center group-hover:bg-opacity-30 group-hover:scale-110 transition-all duration-300 shadow-lg"
+                           style={{ borderRadius: '20px' }}>
+                        <IconComponent className="w-8 h-8 md:w-10 md:h-10" />
                       </div>
                     </div>
-                    <div className="flex-1 text-left">
-                      <h4 className="text-2xl font-bold mb-3">
+                    <div>
+                      <h4 className="text-xl md:text-2xl font-bold mb-3">
                         {func.title}
                       </h4>
-                      <p className="text-white text-opacity-90 text-base leading-relaxed">
+                      <p className="text-white text-opacity-90 text-sm md:text-base leading-relaxed">
                         {func.description}
                       </p>
-                    </div>
-                    <div className="flex-shrink-0">
-                      <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center group-hover:translate-x-2 group-hover:bg-opacity-30 transition-all duration-300">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
                     </div>
                   </div>
                 </button>

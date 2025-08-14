@@ -40,10 +40,10 @@ const OficiosEntrada = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div>
       
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary-burgundy to-primary-gold text-white py-16">
+      <div className="bg-white bg-opacity-10 backdrop-blur-sm text-white py-16 border-b border-white border-opacity-20">
         <div className="container mx-auto px-4 text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-2xl mb-6">
             <FileText className="w-8 h-8" />
@@ -62,10 +62,10 @@ const OficiosEntrada = () => {
         {/* Actions Bar */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+            <h2 className="text-2xl font-semibold text-white mb-2">
               Documentos Registrados
             </h2>
-            <p className="text-gray-600">
+            <p className="text-white text-opacity-90">
               {oficios.length} documento{oficios.length !== 1 ? 's' : ''} en el sistema
             </p>
           </div>
@@ -113,7 +113,7 @@ const OficiosEntrada = () => {
               <FileText className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">{oficios.length}</h3>
-            <p className="text-gray-600">Total de Oficios</p>
+            <p className="text-gray-700">Total de Oficios</p>
           </div>
           
           <div className="card-modern p-6 text-center">
@@ -127,7 +127,7 @@ const OficiosEntrada = () => {
                 return fecha.getMonth() === hoy.getMonth() && fecha.getFullYear() === hoy.getFullYear();
               }).length}
             </h3>
-            <p className="text-gray-600">Este Mes</p>
+            <p className="text-gray-700">Este Mes</p>
           </div>
           
           <div className="card-modern p-6 text-center">
@@ -137,7 +137,7 @@ const OficiosEntrada = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-2">
               {new Set(oficios.map(o => o.dependencia)).size}
             </h3>
-            <p className="text-gray-600">Dependencias</p>
+            <p className="text-gray-700">Dependencias</p>
           </div>
         </div>
 
@@ -197,13 +197,13 @@ const OficiosEntrada = () => {
           </div>
         ) : !cargando && (
           <div className="text-center py-16 animate-fade-in">
-            <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6">
-              <FileText className="w-8 h-8 text-gray-400" />
+            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <FileText className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+            <h3 className="text-xl font-semibold text-white mb-2">
               No hay oficios registrados
             </h3>
-            <p className="text-gray-600 mb-8">
+            <p className="text-white text-opacity-90 mb-8">
               Comienza agregando tu primer oficio de entrada al sistema
             </p>
             <button

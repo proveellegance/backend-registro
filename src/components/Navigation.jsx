@@ -30,7 +30,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="nav">
+    <nav className="nav" style={{backgroundColor: '#9d2148', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'}}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           
@@ -43,8 +43,8 @@ const Navigation = () => {
                 className="w-3 h-3 object-contain"
               />
             </div>
-            <span className="text-xl font-semibold text-gradient">
-              Registro de Víctimas
+            <span className="text-xl font-semibold" style={{color: '#ffffff'}}>
+              Sistema - Registro de Víctimas
             </span>
           </div>
 

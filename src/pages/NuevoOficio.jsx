@@ -112,10 +112,10 @@ const NuevoOficio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <div>
       
       {/* Header */}
-      <div className="bg-gradient-to-r from-primary-burgundy to-primary-gold text-white py-16">
+      <div className="bg-white bg-opacity-10 backdrop-blur-sm text-white py-16 border-b border-white border-opacity-20">
         <div className="container mx-auto px-4 text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-2xl mb-6">
             <Plus className="w-8 h-8" />
@@ -334,11 +334,11 @@ const NuevoOficio = () => {
                   id="pdf-upload"
                 />
                 <label htmlFor="pdf-upload" className="cursor-pointer">
-                  <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                  <p className="text-gray-600 mb-2">
+                  <Upload className="w-12 h-12 text-white text-opacity-75 mx-auto mb-4" />
+                  <p className="text-white text-opacity-90 mb-2">
                     Haz clic para seleccionar un archivo PDF
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-white text-opacity-75">
                     Tamaño máximo: 10MB
                   </p>
                 </label>

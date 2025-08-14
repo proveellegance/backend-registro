@@ -273,12 +273,13 @@ h6 { font-size: 1.125rem; font-weight: 600; }
 
 /* Navegación elegante */
 .nav {
-  background: rgba(255, 255, 255, 0.95);
+  background: #9d2148;
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   position: sticky;
   top: 0;
   z-index: 50;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link {
@@ -288,7 +289,7 @@ h6 { font-size: 1.125rem; font-weight: 600; }
   padding: 0.75rem 1rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--gray-600);
+  color: rgba(255, 255, 255, 0.9) !important;
   text-decoration: none;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
@@ -296,13 +297,15 @@ h6 { font-size: 1.125rem; font-weight: 600; }
 }
 
 .nav-link:hover {
-  color: var(--primary-burgundy);
-  background: var(--burgundy-50);
+  color: white !important;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
 
 .nav-link.active {
-  color: var(--primary-burgundy);
-  background: linear-gradient(135deg, var(--burgundy-50) 0%, var(--gold-50) 100%);
+  color: white !important;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link.active:after {
@@ -312,7 +315,7 @@ h6 { font-size: 1.125rem; font-weight: 600; }
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary-burgundy) 0%, var(--primary-gold) 100%);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 /* Header institucional */
