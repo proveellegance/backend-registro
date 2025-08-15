@@ -1,254 +1,330 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Filter, Download, Eye, X, Users, Database } from 'lucide-react';
-import { PadronVictimasService } from '../services/googleSheetsServiceMock';
+import { Search, Filter, Download, Eye, X, Users, Database, ChevronLeft, ChevronRight } from 'lucide-react';
+import { victimasAPI } from '../services/api';
+import HeaderInstitucional from '../components/HeaderInstitucional';
 
 const BuscarVictimas = () => {
-  const [filtros, setFiltros] = useState({});
-  const [resultados, setResultados] = useState([]);
-  const [columnas, setColumnas] = useState([]);
-  const [cargando, setCargando] = useState(false);
+  const [victimas, setVictimas] = useState([]);
+  const [filteredVictimas, setFilteredVictimas] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [mostrarFiltros, setMostrarFiltros] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filterModalVisible, setFilterModalVisible] = useState(false);
+  const [selectedVictima, setSelectedVictima] = useState(null);
+  const [detalleModalVisible, setDetalleModalVisible] = useState(false);
+  const [estadisticas, setEstadisticas] = useState({
+    totalVictimas: 0,
+    totalRegistros: 0,
+    totalHombres: 0,
+    totalMujeres: 0
+  });
 
-  const padronService = new PadronVictimasService();
+  // Estados para filtros
+  const [filtros, setFiltros] = useState({
+    sexo: '',
+    edad_minima: '',
+    edad_maxima: '',
+    municipio_hechos: '',
+    unidad_investigacion: ''
+  });
 
+  // Estados para paginación
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(10);
+
+  // Cargar datos iniciales
   useEffect(() => {
-    cargarEstructuraColumnas();
-  }, []);
+    cargarDatos();
+  }, [currentPage, filtros]);
 
-  const cargarEstructuraColumnas = async () => {
+  // Filtrar por término de búsqueda
+  useEffect(() => {
+    if (!searchTerm) {
+      setFilteredVictimas(victimas);
+    } else {
+      const filtered = victimas.filter(victima =>
+        victima.nombre_victima?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        victima.expediente?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        victima.carpeta_investigacion?.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredVictimas(filtered);
+    }
+  }, [searchTerm, victimas]);
+
+  const cargarDatos = async () => {
     try {
-      const cols = await padronService.obtenerEstructuraColumnas();
-      setColumnas(cols);
+      setLoading(true);
       
-      const filtrosIniciales = {};
-      cols.forEach(col => {
-        filtrosIniciales[col] = '';
+      // Cargar estadísticas
+      const statsResponse = await victimasAPI.getEstadisticas();
+      setEstadisticas(statsResponse);
+
+      // Cargar víctimas con filtros y paginación
+      const victimasResponse = await victimasAPI.getVictimas({
+        page: currentPage,
+        page_size: itemsPerPage,
+        ...filtros
       });
-      setFiltros(filtrosIniciales);
-    } catch (err) {
-      setError('Error al cargar la estructura de la base de datos');
-      console.error(err);
+      
+      setVictimas(victimasResponse.results || []);
+      setError(null);
+    } catch (error) {
+      console.error('Error al cargar datos:', error);
+      setError('Error al cargar los datos. Por favor, intente nuevamente.');
+    } finally {
+      setLoading(false);
     }
   };
 
-  const buscarVictimas = async () => {
-    setCargando(true);
-    setError(null);
-    
-    try {
-      const filtrosActivos = Object.entries(filtros)
-        .filter(([_, valor]) => valor.trim() !== '')
-        .reduce((acc, [campo, valor]) => {
-          acc[campo] = valor;
-          return acc;
-        }, {});
-
-      if (Object.keys(filtrosActivos).length === 0) {
-        setError('Debe especificar al menos un criterio de búsqueda');
-        setCargando(false);
-        return;
-      }
-
-      const datos = await padronService.buscar(filtrosActivos);
-      setResultados(datos);
-    } catch (err) {
-      setError('Error al realizar la búsqueda');
-      console.error(err);
-    } finally {
-      setCargando(false);
-    }
+  const aplicarFiltros = () => {
+    setCurrentPage(1);
+    cargarDatos();
+    setFilterModalVisible(false);
   };
 
   const limpiarFiltros = () => {
-    const filtrosLimpios = {};
-    columnas.forEach(col => {
-      filtrosLimpios[col] = '';
+    setFiltros({
+      sexo: '',
+      edad_minima: '',
+      edad_maxima: '',
+      municipio_hechos: '',
+      unidad_investigacion: ''
     });
-    setFiltros(filtrosLimpios);
-    setResultados([]);
-    setError(null);
+    setCurrentPage(1);
   };
 
-  const exportarResultados = () => {
-    if (resultados.length === 0) return;
+  const verDetalle = (victima) => {
+    setSelectedVictima(victima);
+    setDetalleModalVisible(true);
+  };
+
+  const exportarDatos = async () => {
+    try {
+      const allData = await victimasAPI.getVictimas({ ...filtros });
+      const csvContent = convertToCSV(allData.results || []);
+      downloadCSV(csvContent, 'victimas_export.csv');
+    } catch (error) {
+      console.error('Error al exportar:', error);
+      alert('Error al exportar los datos');
+    }
+  };
+
+  const convertToCSV = (data) => {
+    if (data.length === 0) return '';
     
-    const csv = [
-      columnas.join(','),
-      ...resultados.map(fila => 
-        columnas.map(col => `"${fila[col] || ''}"`).join(',')
-      )
-    ].join('\n');
+    const headers = Object.keys(data[0]);
+    const csvHeaders = headers.join(',');
+    const csvRows = data.map(row => 
+      headers.map(header => {
+        const value = row[header];
+        return typeof value === 'string' ? `"${value.replace(/"/g, '""')}"` : value || '';
+      }).join(',')
+    );
     
-    const blob = new Blob([csv], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `victimas_${new Date().toISOString().split('T')[0]}.csv`;
-    a.click();
+    return [csvHeaders, ...csvRows].join('\n');
   };
 
-  const handleInputChange = (columna, valor) => {
-    setFiltros(prev => ({
-      ...prev,
-      [columna]: valor
-    }));
+  const downloadCSV = (content, filename) => {
+    const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    if (link.download !== undefined) {
+      const url = URL.createObjectURL(blob);
+      link.setAttribute('href', url);
+      link.setAttribute('download', filename);
+      link.style.visibility = 'hidden';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   };
 
-  return (
-    <div>
-      
-      {/* Header */}
-      <div className="bg-white bg-opacity-10 backdrop-blur-sm text-white py-16 border-b border-white border-opacity-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-2xl mb-6">
-            <Search className="w-8 h-8" />
+  // Calcular paginación
+  const totalItems = filteredVictimas.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentItems = filteredVictimas.slice(startIndex, endIndex);
+
+  if (loading && victimas.length === 0) {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <HeaderInstitucional />
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex justify-center items-center h-64">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
+              <p className="text-gray-600">Cargando datos...</p>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Búsqueda de Víctimas
-          </h1>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">
-            Consulta el padrón oficial de víctimas con herramientas de búsqueda avanzada
-          </p>
         </div>
       </div>
+    );
+  }
 
-      <div className="container mx-auto px-4 py-12">
-        {/* Search Section */}
-        <div className="max-w-4xl mx-auto">
-          {/* Filters Toggle */}
-          <div className="card-modern p-6 mb-8">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-semibold text-gray-900 flex items-center">
-                <Filter className="w-6 h-6 mr-3 text-primary-burgundy" />
-                Criterios de Búsqueda
-              </h2>
-              <button
-                onClick={() => setMostrarFiltros(!mostrarFiltros)}
-                className="btn btn-ghost"
-              >
-                {mostrarFiltros ? 'Ocultar' : 'Mostrar'} Filtros
-              </button>
-            </div>
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <HeaderInstitucional />
+      <div className="container mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Padrón de Víctimas CDMX</h1>
+          <p className="text-gray-600">Sistema de búsqueda y consulta del registro de víctimas</p>
+        </div>
 
-            {mostrarFiltros && (
-              <div className="space-y-4 animate-slide-in">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {columnas.map((columna) => (
-                    <div key={columna} className="form-group">
-                      <label className="form-label">{columna}</label>
-                      <input
-                        type="text"
-                        className="form-input"
-                        value={filtros[columna] || ''}
-                        onChange={(e) => handleInputChange(columna, e.target.value)}
-                        placeholder={`Buscar por ${columna.toLowerCase()}`}
-                      />
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="flex flex-wrap gap-4 pt-6 border-t border-gray-200">
-                  <button
-                    onClick={buscarVictimas}
-                    disabled={cargando}
-                    className="btn btn-primary"
-                  >
-                    {cargando ? (
-                      <div className="loading">
-                        <div className="loading-spinner"></div>
-                        Buscando...
-                      </div>
-                    ) : (
-                      <>
-                        <Search className="w-4 h-4" />
-                        Buscar
-                      </>
-                    )}
-                  </button>
-                  
-                  <button
-                    onClick={limpiarFiltros}
-                    className="btn btn-outline"
-                  >
-                    <X className="w-4 h-4" />
-                    Limpiar
-                  </button>
-                  
-                  {resultados.length > 0 && (
-                    <button
-                      onClick={exportarResultados}
-                      className="btn btn-secondary"
-                    >
-                      <Download className="w-4 h-4" />
-                      Exportar CSV
-                    </button>
-                  )}
-                </div>
+        {/* Estadísticas */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-red-500">
+            <div className="flex items-center">
+              <Users className="w-8 h-8 text-red-500 mr-3" />
+              <div>
+                <p className="text-sm font-medium text-gray-600">Total Víctimas</p>
+                <p className="text-2xl font-bold text-gray-900">{estadisticas.totalVictimas?.toLocaleString() || 0}</p>
               </div>
-            )}
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-blue-500">
+            <div className="flex items-center">
+              <Database className="w-8 h-8 text-blue-500 mr-3" />
+              <div>
+                <p className="text-sm font-medium text-gray-600">Registros Totales</p>
+                <p className="text-2xl font-bold text-gray-900">{estadisticas.totalRegistros?.toLocaleString() || 0}</p>
+              </div>
+            </div>
           </div>
 
-          {/* Error Message */}
+          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-green-500">
+            <div className="flex items-center">
+              <Users className="w-8 h-8 text-green-500 mr-3" />
+              <div>
+                <p className="text-sm font-medium text-gray-600">Hombres</p>
+                <p className="text-2xl font-bold text-gray-900">{estadisticas.totalHombres?.toLocaleString() || 0}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-purple-500">
+            <div className="flex items-center">
+              <Users className="w-8 h-8 text-purple-500 mr-3" />
+              <div>
+                <p className="text-sm font-medium text-gray-600">Mujeres</p>
+                <p className="text-2xl font-bold text-gray-900">{estadisticas.totalMujeres?.toLocaleString() || 0}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Barra de búsqueda y controles */}
+        <div className="bg-white rounded-lg shadow p-6 mb-6">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Buscar por nombre, expediente o carpeta de investigación..."
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={() => setFilterModalVisible(true)}
+                className="flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <Filter className="w-4 h-4 mr-2" />
+                Filtros
+              </button>
+              <button
+                onClick={exportarDatos}
+                className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Exportar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Resultado de búsqueda */}
+        <div className="bg-white rounded-lg shadow">
+          <div className="p-6 border-b border-gray-200">
+            <h2 className="text-xl font-semibold text-gray-900">
+              Resultados de búsqueda ({filteredVictimas.length} registros)
+            </h2>
+          </div>
+
           {error && (
-            <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-8 animate-scale-in">
-              <div className="flex items-center">
-                <X className="w-5 h-5 text-red-500 mr-3" />
-                <p className="text-red-700">{error}</p>
-              </div>
+            <div className="p-6 bg-red-50 border-l-4 border-red-500">
+              <p className="text-red-700">{error}</p>
             </div>
           )}
 
-          {/* Results Statistics */}
-          {resultados.length > 0 && (
-            <div className="bg-white bg-opacity-95 backdrop-blur-sm text-gray-900 rounded-xl p-6 mb-8 animate-fade-in border border-white border-opacity-30">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <Database className="w-6 h-6 mr-3 text-primary-burgundy" />
-                  <div>
-                    <h3 className="text-lg font-semibold">Resultados de Búsqueda</h3>
-                    <p className="text-gray-700">
-                      Se encontraron {resultados.length} registro{resultados.length !== 1 ? 's' : ''} 
-                      que coinciden con los criterios especificados
-                    </p>
-                  </div>
-                </div>
-                <Users className="w-8 h-8 text-primary-burgundy opacity-75" />
-              </div>
+          {currentItems.length === 0 && !loading ? (
+            <div className="p-12 text-center">
+              <Users className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-lg font-medium text-gray-900 mb-2">No se encontraron resultados</h3>
+              <p className="text-gray-600">Intenta ajustar los filtros o términos de búsqueda</p>
             </div>
-          )}
-
-          {/* Results Table */}
-          {resultados.length > 0 && (
-            <div className="card-modern overflow-hidden animate-fade-in">
+          ) : (
+            <>
               <div className="overflow-x-auto">
-                <table className="w-full">
+                <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
                     <tr>
-                      {columnas.map((columna) => (
-                        <th
-                          key={columna}
-                          className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200"
-                        >
-                          {columna}
-                        </th>
-                      ))}
-                      <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 border-b border-gray-200">
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Nombre
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Sexo
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Edad
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Expediente
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Municipio
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Acciones
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-gray-200">
-                    {resultados.map((resultado, index) => (
-                      <tr key={index} className="hover:bg-gray-50 transition-colors duration-200">
-                        {columnas.map((columna) => (
-                          <td key={columna} className="px-6 py-4 text-sm text-gray-700">
-                            {resultado[columna] || '-'}
-                          </td>
-                        ))}
-                        <td className="px-6 py-4 text-center">
-                          <button className="btn btn-ghost p-2">
-                            <Eye className="w-4 h-4" />
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    {currentItems.map((victima, index) => (
+                      <tr key={index} className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div className="text-sm font-medium text-gray-900">
+                            {victima.nombre_victima || 'N/A'}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
+                            victima.sexo === 'MASCULINO' ? 'bg-blue-100 text-blue-800' : 
+                            victima.sexo === 'FEMENINO' ? 'bg-pink-100 text-pink-800' : 
+                            'bg-gray-100 text-gray-800'
+                          }`}>
+                            {victima.sexo || 'N/E'}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          {victima.edad || 'N/E'}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          {victima.expediente || 'N/A'}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          {victima.municipio_hechos || 'N/A'}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <button
+                            onClick={() => verDetalle(victima)}
+                            className="text-red-600 hover:text-red-900 flex items-center"
+                          >
+                            <Eye className="w-4 h-4 mr-1" />
+                            Ver detalle
                           </button>
                         </td>
                       </tr>
@@ -256,25 +332,177 @@ const BuscarVictimas = () => {
                   </tbody>
                 </table>
               </div>
-            </div>
-          )}
 
-          {/* No Results */}
-          {!cargando && resultados.length === 0 && Object.values(filtros).some(v => v.trim() !== '') && !error && (
-            <div className="text-center py-12 animate-fade-in">
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                No se encontraron resultados
-              </h3>
-              <p className="text-white text-opacity-80">
-                Intenta ajustar los criterios de búsqueda para obtener mejores resultados
-              </p>
-            </div>
+              {/* Paginación */}
+              {totalPages > 1 && (
+                <div className="px-6 py-3 bg-gray-50 border-t border-gray-200">
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-gray-700">
+                      Mostrando {startIndex + 1} a {Math.min(endIndex, totalItems)} de {totalItems} registros
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <button
+                        onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                        disabled={currentPage === 1}
+                        className="p-2 text-gray-400 hover:text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        <ChevronLeft className="w-5 h-5" />
+                      </button>
+                      <div className="flex space-x-1">
+                        {[...Array(Math.min(5, totalPages))].map((_, i) => {
+                          const pageNumber = i + 1;
+                          return (
+                            <button
+                              key={pageNumber}
+                              onClick={() => setCurrentPage(pageNumber)}
+                              className={`px-3 py-1 text-sm rounded ${
+                                currentPage === pageNumber
+                                  ? 'bg-red-600 text-white'
+                                  : 'text-gray-700 hover:bg-gray-100'
+                              }`}
+                            >
+                              {pageNumber}
+                            </button>
+                          );
+                        })}
+                      </div>
+                      <button
+                        onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                        disabled={currentPage === totalPages}
+                        className="p-2 text-gray-400 hover:text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        <ChevronRight className="w-5 h-5" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>
+
+      {/* Modal de Filtros */}
+      {filterModalVisible && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6 border-b border-gray-200">
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-semibold text-gray-900">Filtros de Búsqueda</h3>
+                <button
+                  onClick={() => setFilterModalVisible(false)}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+            </div>
+            <div className="p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Sexo</label>
+                  <select
+                    value={filtros.sexo}
+                    onChange={(e) => setFiltros({...filtros, sexo: e.target.value})}
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  >
+                    <option value="">Todos</option>
+                    <option value="MASCULINO">Masculino</option>
+                    <option value="FEMENINO">Femenino</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Municipio</label>
+                  <input
+                    type="text"
+                    value={filtros.municipio_hechos}
+                    onChange={(e) => setFiltros({...filtros, municipio_hechos: e.target.value})}
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    placeholder="Ej: ÁLVARO OBREGÓN"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Edad Mínima</label>
+                  <input
+                    type="number"
+                    value={filtros.edad_minima}
+                    onChange={(e) => setFiltros({...filtros, edad_minima: e.target.value})}
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    placeholder="0"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Edad Máxima</label>
+                  <input
+                    type="number"
+                    value={filtros.edad_maxima}
+                    onChange={(e) => setFiltros({...filtros, edad_maxima: e.target.value})}
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    placeholder="100"
+                  />
+                </div>
+                <div className="md:col-span-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Unidad de Investigación</label>
+                  <input
+                    type="text"
+                    value={filtros.unidad_investigacion}
+                    onChange={(e) => setFiltros({...filtros, unidad_investigacion: e.target.value})}
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    placeholder="Buscar por unidad de investigación"
+                  />
+                </div>
+              </div>
+              <div className="flex justify-end gap-4 mt-6">
+                <button
+                  onClick={limpiarFiltros}
+                  className="px-4 py-2 text-gray-600 border border-gray-300 rounded-lg hover:bg-gray-50"
+                >
+                  Limpiar
+                </button>
+                <button
+                  onClick={aplicarFiltros}
+                  className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
+                >
+                  Aplicar Filtros
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal de Detalle */}
+      {detalleModalVisible && selectedVictima && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6 border-b border-gray-200">
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-semibold text-gray-900">Detalle de Víctima</h3>
+                <button
+                  onClick={() => setDetalleModalVisible(false)}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+            </div>
+            <div className="p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {Object.entries(selectedVictima).map(([key, value]) => (
+                  <div key={key} className="border-b border-gray-100 pb-2">
+                    <dt className="text-sm font-medium text-gray-600 capitalize">
+                      {key.replace(/_/g, ' ')}
+                    </dt>
+                    <dd className="text-sm text-gray-900 mt-1">
+                      {value || 'N/A'}
+                    </dd>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FileText, Eye, Plus, RotateCcw, Calendar, Building } from 'lucide-react';
-import { OficiosService } from '../services/googleSheetsServiceMock';
+import { controlGestionAPI } from '../services/api';
 import { useNavigate } from 'react-router-dom';
 
 const OficiosEntrada = () => {
@@ -8,8 +8,6 @@ const OficiosEntrada = () => {
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-
-  const oficiosService = new OficiosService();
 
   useEffect(() => {
     cargarOficios();
@@ -20,8 +18,8 @@ const OficiosEntrada = () => {
     setError(null);
     
     try {
-      const datos = await oficiosService.obtenerOficiosEntrada();
-      setOficios(datos);
+      const datos = await controlGestionAPI.oficiosEntrada.getAll();
+      setOficios(datos.results || datos);
     } catch (err) {
       setError('Error al cargar los oficios de entrada');
       console.error(err);

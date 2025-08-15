@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Search, FileText, Plus, Home } from 'lucide-react';
+import { Search, FileText, Plus, Home, Settings } from 'lucide-react';
 import logoCDMX from '../assets/logos/Logo_CDMX.png';
 
 const Navigation = () => {
@@ -16,6 +16,11 @@ const Navigation = () => {
       to: '/buscar-victimas',
       icon: Search,
       label: 'Buscar Víctimas'
+    },
+    {
+      to: '/control-gestion',
+      icon: Settings,
+      label: 'Control de Gestión'
     },
     {
       to: '/oficios',

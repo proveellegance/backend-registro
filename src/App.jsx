@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Inicio from './pages/Inicio';
 import BuscarVictimas from './pages/BuscarVictimas';
+import ControlGestion from './pages/ControlGestion';
 import OficiosEntrada from './pages/OficiosEntrada';
 import NuevoOficio from './pages/NuevoOficio';
 
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/buscar-victimas" element={<BuscarVictimas />} />
+            <Route path="/control-gestion" element={<ControlGestion />} />
             <Route path="/oficios" element={<OficiosEntrada />} />
             <Route path="/nuevo-oficio" element={<NuevoOficio />} />
           </Routes>

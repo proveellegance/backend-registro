@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'oficios_salida',
     'solicitudes_registro',
     'turno_cie',
+    'control_gestion',
 ]
 
 MIDDLEWARE = [
@@ -153,7 +154,7 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny',  # Temporalmente para desarrollo
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 20,

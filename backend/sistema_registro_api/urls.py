@@ -26,6 +26,8 @@ urlpatterns = [
     path('api/auth/', include('djoser.urls')),
     path('api/auth/', include('djoser.urls.jwt')),
     path('api/', include('usuarios.urls')),
+    path('api/', include('padron_victimas.urls')),
+    path('api/control-gestion/', include('control_gestion.urls')),
 ]
 
 # Servir archivos media en desarrollo
