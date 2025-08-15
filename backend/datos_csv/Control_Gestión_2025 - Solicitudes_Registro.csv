@@ -1,0 +1,997 @@
+Número_Solicitud,Fecha_Solicitud,Fecha_Completo,Persona_Usuaria,Solicitante,Delito,Recomendación,Aceptación,FUDS,Reconocimiento_Víctima,Identificaciones,Actas,CURP,Estatus_Solicitud,Tipo_Resolución,Fecha_Resolución,Tiempo_Resolución,
+RELOVI/SOL/1/2025,02/01/2025,02/01/2025,Anabel Patricio Pastor | Olivia Pastor | Cecilia Patricio Pastor | N.N.A. M.M.T.P (Miranda Margarita Tiburcio Pastor) | N.N.A. C.R.T.P (Carlos Raul Tiburcio Pastor) | N.N.A. A.G.M.P (Axel Gadiel Martinez Patricio) | N.N.A. A.D.M.P (Adriana Dalia Martinez Patricio) | N.N.A. M.A.M.P (Mario Adriel Martinez Patricio),Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,El tiempo de resolución fue de 0 días,1
+RELOVI/SOL/2/2025,2/1/2025,2/1/2025,Maria Elena Zárate Estrada,SSC,NA,Recomendación 08/2024,Aceptada,Incompleto,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,El tiempo de resolución fue de 0 días,2
+RELOVI/SOL/3/2025,06/01/2025,06/01/2025,Angelina Mondragon Berrocal | Lucero Casas Mondragon | Fabiola Casas Mondragon | Marisol Casas Mondragon,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,14/01/2025,El tiempo de resolución fue de 0 días,3
+RELOVI/SOL/4/2025,08/01/2025,08/01/2025,María De los Ángeles Aguirre Arenas | N.N.A. M.S.A.A (Marcos Said Aguirre Arenas),Ministerio Público,Violacion,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,,El tiempo de resolución fue de 0 días,4
+RELOVI/SOL/5/2025,9/1/2025,9/1/2025,Karla Patricia Cortes Cervantes | Brisa Xochilt García Cortes | N.N.A. A.G.C.C. (Ana Gabriela Carrillo Cortes),Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,14/01/2025,El tiempo de resolución fue de 0 días,5
+RELOVI/SOL/6/2025,9/1/2025,9/1/2025,Mercedes Angeles Maderos | Jazmin Ángeles Maderos | Azucena Ángeles Maderos,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,14/01/2025,El tiempo de resolución fue de 0 días,6
+RELOVI/SOL/7/2025,10/1/2025,10/1/2025,Magali Roman Vargas | N.N.A. S.M.R (Sofia Morales Roman) | N.N.A. D.G.M.R (Danna Gabriela Martínez Roman),Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,14/01/2025,El tiempo de resolución fue de 0 días,7
+RELOVI/SOL/8/2025,10/1/2025,10/1/2025,Antonio Laure Martínez | Monica Díaz Zavala,Ministerio Público,Homicidio,NA,NA,Incompleto,Incompleto,Completo,Completo,Completo,Incompleto,,,El tiempo de resolución fue de 0 días,8
+RELOVI/SOL/9/2025,17/01/2025,17/01/2025,Victor Ismael Flores Martínez,CDHCM,NA,Recomendación 12/2022,Aceptada,Completo,Completo,Completo,Completo,Incompleto,Incompleto,,,El tiempo de resolución fue de 0 días,9
+RELOVI/SOL/10/2025,17/1/2025,17/1/2025,Alondra Valeria García Montealegre | N.N.A. M.A.B.G | Maribel Montealegre Díaz | Delfino Vigueras García,Ministerio Público,Secuestro,NA,NA,Completo,Incompleto,Incompleto,Incompleto,Incompleto,Incompleto,,,El tiempo de resolución fue de 0 días,10
+RELOVI/SOL/11/2025,21/1/2025,21/1/2025,Eduwigis Illescas Sosa | Elpidio Yllesca Dionet | Esther Eunice Sosa Álvarez,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,7/02/2025,El tiempo de resolución fue de 0 días,11
+RELOVI/SOL/12/2025,21/01/2025,21/01/2025,Ibett Monserrat Navarrete Valle,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,7/02/2025,El tiempo de resolución fue de 0 días,12
+RELOVI/SOL/13/2025,21/1/2025,21/1/2025,Cristobal Rene Carrillo Álvarez | Mónica Álvarez Huerta | Axel Rodrigo Carrillo Reyes | Monica Naomi Carrillo Reyes | Elsa Fernanda Sotomayor Álvarez,Petición Constitucional,Homicidio-tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,7/02/2025,El tiempo de resolución fue de 0 días,13
+RELOVI/SOL/14/2025,23/1/2025,23/1/2025,Margarita Cerezo Guadarrama | Margarita Hernández Cerezo,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,7/02/2025,El tiempo de resolución fue de 0 días,14
+RELOVI/SOL/15/2025,23/01/2025,23/01/2025,Aaron Ricardo Castillo Gallegos,Ministerio Público,Tortura,NA,NA,Incompleto,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,15
+RELOVI/SOL/16/2025,29/01/2025,29/01/2025,Esteban Ulises Aviña Contreras | María Soledad Suarez García | Jesus Esteban Aviña Suarez | N.N.A. A.E.A.S,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,7/02/2025,El tiempo de resolución fue de 9 días,16
+RELOVI/SOL/17/2025,29/01/2025,29/01/2025,Silvia Elodia Tinajero Valdés | Jesús Legorreta Medina | Nancy Elizabeth Lagorreta Tinajero | Jesús Guadalupe Lagorreta Tinajero | Diana Aurelia Lagorreta Tinajero | Ivonne Deyanira Tinajero Valdés | Leslie Sánchez Tinajero | M.S.T. | D.S.T,Asesoria CEAVI,,NA,NA,Incompleto,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,17
+RELOVI/SOL/18/2025,29/01/2025,29/01/2025, Luz Areli Huicochea Rubio | Luis Antonio Huicochea Cordóva | Olga Dolores Rubio Hernández | Josefina Córdova Ortíz | Paola Belén Huicochea Rubio | N.N.A. C.A.H.R (Cesar Antonio Hucochea Rubio),Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,7/02/2025,El tiempo de resolución fue de 9 días,18
+RELOVI/SOL/19/2025,29/01/2025,29/01/2025, Roberto Mendoza Gómez | Luz Maria Echeverria Mendoza | Andrea Mendoza Echeverria | Roberto Mendoza Echeverria | Karla Mendoza Echeverria | N.N.A. K.A.S.M (Karla Sarahi Salazar Mendoza),Petición Constitucional,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,7/02/2025,El tiempo de resolución fue de 9 días,19
+RELOVI/SOL/20/2025,05/02/2025,05/02/2025,Cassandra Abigail Sanguero Menchaca | Blanca Rosa Menchaa Ruiz | Ramsés Salguero Menchaca | Adriana Zarahi Salguero Menchaca,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,14/04/2025,El tiempo de resolución fue de 68 días,20
+RELOVI/SOL/21/2025,07/02/2025,07/02/2025,Carlos Alberto Alfaro Pérez | Erik Iván Alfaro Pérez,CDHCM,NA,Recomendación 13/2023,Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,Registro,27/02/2025,El tiempo de resolución fue de 20 días,21
+RELOVI/SOL/22/2025,07/02/2025,07/02/2025,Alejandro Fragoso González | Lucia Fragoso González | Ivonne Zepeda Álvarez,CDHCM,NA,Recomendación 03/2024,Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,Registro,27/02/2025,El tiempo de resolución fue de 20 días,22
+RELOVI/SOL/23/2025,07/02/2025,07/02/2025,N.N.A. P.A.A.M (Paz Alejandra Aguilar Morales) | Martín Morales Paulido,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,27/02/2025,El tiempo de resolución fue de 20 días,23
+RELOVI/SOL/24/2025,30/01/2025,30/01/2025,Ximena Abigail Ramos Ortíz,Ministerio Público,Obligaciones Alimentarias,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Acuerdo Incompetencia,22/05/2025,El tiempo de resolución fue de 112 días,24
+RELOVI/SOL/25/2025,12/02/2025,12/02/2025,Isarac Ayari Perez Solorzano | Harlen Moises Villarroel Huice | Dereck Jeremias Villarroel Perez | Deiverlin Anais Suarez Perez,Ministerio Público,Trata de personas,NA,NA,Completo,Completo,Completo,Incompleto,Incompleto,Incompleto,,,#NUM!,25
+RELOVI/SOL/26/2025,14/02/2025,14/02/2025,N.N.A. X.M.S (Ximena Márquez Sánchez) | Silvia Márquez Sánchez | N.N.A. D.M.S ( Dilan Márquez Sánchez) | N.N.A. E.J.M.S (Eduardo Jesus Márquez Sánchez),Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,27/02/2025,El tiempo de resolución fue de 13 días,26
+RELOVI/SOL/27/2025,18/02/2025,18/02/2025,Diego Orlando Anguiano García | Refugio Anguiano Ramírez,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,17/02/2025,#NUM!,27
+RELOVI/SOL/28/2025,19/02/2025,19/02/2025,Mayra Itzel Arteaga Ceron | Diego Araya Arteaga | Jose Arteaga Aguilar | Myrna Ivette Arteaga Ceron,Ministerio Público,Desaparición,NA,NA,Incompleto,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,28
+RELOVI/SOL/29/2025,21/02/2025,21/02/2025,Luis Daniel Nicolas Ramírez | Brandon Guillermo Nicolas Ramírez | N.N.A. A.Y.N.R (Axel Yulem Nicolas Ramírez) | N.N.A. O.A.N.R (Omar Aldahir Nicolas Ramírez) | N.N.A. E.R.R. (Elizabeth Romero Ramírez) | Irma Arreola Paredes,Asesoria CEAVI,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,7/02/2025,#NUM!,29
+RELOVI/SOL/30/2025,24/02/2025,24/02/2025,Victoria Lizbeth Posadas Silva | Paola Noemi Vázquez Posadas,UPC,Desaparición,NA,NA,Completo,Incompleto,Completo,Completo,Completo,Incompleto,,,#NUM!,30
+RELOVI/SOL/31/2025,25/02/2025,25/02/2025,Mayra Elizabeth González Clemente | María Rosa Clemente López | N.N.A. A.I.S.G (Angel Israel Salazar González) | N.N.A. F.G.S.G (Fernanda Guadalupe Salazar González),Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,27/02/2025,El tiempo de resolución fue de 2 días,31
+RELOVI/SOL/32/2025,25/02/2025,25/02/2025,Sarahi Belem Hernández Baeza | María de los Ángeles Hernández Baeza | N.N.A. L.Z.G.H (Laura Zuri Gómez Hernández),Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,27/02/2025,El tiempo de resolución fue de 2 días,32
+RELOVI/SOL/33/2025,26/02/2025,26/02/2025,Teresa Estrada Grande | Maria Teresa de Jesus Uribe Estrada,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,27/02/2025,El tiempo de resolución fue de 1 días,33
+RELOVI/SOL/34/2025,27/02/2025,27/02/2025,Cecilia Guadalupe Torres Medina | Guillermina Medina Andrade,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Acuerdo Incompetencia,28/02/2025,El tiempo de resolución fue de 1 días,34
+RELOVI/SOL/35/2025,27/02/2025,27/02/2025,Benjamín Echeverria Olmedo | Araceli Olmedo Cruz,Ministerio Público,Desaparición,NA,NA,Completo,Incompleto,Completo,Completo,Completo,Incompleto,,,#NUM!,35
+RELOVI/SOL/36/2025,28/02/2025,28/02/2025,Yesenia Marisol Hernández Briseño | N.N.A. G.J.H (Gael Jiménez Hernández) | N.N.A. N.J.H (Nicole Jimenez Hernández),Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,18/03/2025,El tiempo de resolución fue de 18 días,36
+RELOVI/SOL/37/2025,05/02/2025,05/02/2025,Stephanie Alejandra Crespo Maldonado | Karol Nathaly Maldonado Paredes,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,7/02/2025,El tiempo de resolución fue de 2 días,37
+RELOVI/SOL/38/2025,05/02/2025,05/02/2025,Keyderlin Rosyeibis Carallo Moreno | Glendy Milagros Urbano Moreno,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,7/02/2025,El tiempo de resolución fue de 2 días,38
+RELOVI/SOL/39/2025,13/03/2025,13/03/2025,N.N.A. D.M.A.V. | Isela Arellano Velázquez,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,26/03/2025,El tiempo de resolución fue de 13 días,39
+RELOVI/SOL/40/2025,10/03/2025,10/03/2025,Karla Lizeth Mondragón Baltierra | Lizbeth Baltierra Barrera | Juan Carlos Mondragón Chirino | N.N.A. J.J.M.B. | N.N.A. L.L.A.M.,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,26/03/2025,El tiempo de resolución fue de 16 días,40
+RELOVI/SOL/41/2025,11/03/2025,11/03/2025,Juana Gabriela Nieto Velazquez | Georgina Velázquez García | N.N.A. C.Z.Z.N. | N.N.A. J.M.Z.N,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,26/03/2025,El tiempo de resolución fue de 15 días,41
+RELOVI/SOL/42/2025,11/03/2025,11/03/2025,Diana Marcela Tabares Jaramillo | N.N.A. S.T.J.,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,26/03/2025,El tiempo de resolución fue de 15 días,42
+RELOVI/SOL/43/2025,07/03/2025,07/03/2025,Ivana Enid Flores Guadarrama | Arturo Flores Mejia | Leticia Guadarrama Jiménez | N.N.A. R.G.F.G.,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,26/03/2025,El tiempo de resolución fue de 19 días,43
+RELOVI/SOL/44/2025,20/03/2025,20/03/2025,N.N.A. D.L.C.S.,Petición Constitucional,NA,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,26/03/2025,El tiempo de resolución fue de 6 días,44
+RELOVI/SOL/45/2025,07/03/2025,,L.A.O.J. | Gerardo Ortiz García | Maria Antonieta Jimenez Melo | Mariela Ortíz Jimenez,Poder Judicial,Secuestro,NA,NA,Incompleto,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,45
+RELOVI/SOL/46/2025,11/03/2025,11/03/2025,N.N.A. T.R.L. | Marien Luquez Fernandez del Pino | N.N.A. S.J.C.L.,UPC,Violacion,NA,NA,Completo,Incompleto,Completo,Completo,Completo,Incompleto,,,#NUM!,46
+RELOVI/SOL/47/2025,18/03/2025,18/03/2025,Gloria Petra Xolalpa Mancera | Alma Delia Martinez Xolalpa | Marisela Martinez Xolalpa | Hector Martinez Xolalpa,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,26/03/2025,El tiempo de resolución fue de 8 días,47
+RELOVI/SOL/48/2025,24/03/2025,28/05/2025,Miguel Angel Esparza Valencia | Margarrita Valencia Robles,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,48
+RELOVI/SOL/49/2025,06/03/2025,,Jose Juan Bravo Gonzalez | Rubi Guadalupe Bravo Pimentel | Alfredo Bravo Pimental | Juan Antonio Bravo Pimental,Ministerio Público,Secuestro,NA,NA,Incompleto,Completo,Incompleto,Incompleto,Completo,Incompleto,,,#NUM!,49
+RELOVI/SOL/50/2025,06/03/2025,06/03/2025,Lucero Yañez Trejo | Leonor Trejo Martinez | Yolanda Yañez Trejo | Marcelino Yañez Villafuerte,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,5/05/2025,El tiempo de resolución fue de 60 días,50
+RELOVI/SOL/51/2025,25/03/2025,25/03/2025,Jaqueline Andrea Garcia Cruz | N.N.A N.W.G.,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,27/03/2025,El tiempo de resolución fue de 2 días,51
+RELOVI/SOL/52/2025,25/03/2025,25/03/2025,Florencia Segura Torres | Eusebio Lucas Segura | Eulogia Lucas Segura,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,14/04/2025,El tiempo de resolución fue de 20 días,52
+RELOVI/SOL/53/2025,25/03/2025,25/03/2025,N.N.A. A.J.M.R. | N.N.A. Q.A.M.V. | Ana Luisa Vergara Pineda | Maria Alejandra Reyes del Valle | Jovita Vianilli Vergara Pineda | Lito Javier Reyes Campos,Ministerio Público,Secuestro,NA,NA,Completo,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,53
+RELOVI/SOL/54/2025,02/04/2025,02/04/2025,Olin Hernando Vargas Ojeda | Sandra Deli Ojeda Rivera | Fernando Vargas Manríquez,Ministerio Público,Secuestro,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,14/04/2025,El tiempo de resolución fue de 12 días,54
+RELOVI/SOL/55/2025,27/03/2025,15/04/2025,Gilda Guadalupe Perez Rivera | Maria de Lourdes Perez Rivera | Lurdes Jacel Perez Rivera | L.A.L.P.,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,5/05/2025,El tiempo de resolución fue de 39 días,55
+RELOVI/SOL/56/2025,27/03/2025,15/04/2025,Minerva Jimenez Guzman | N.N.A. D.P.J. | Jose Fernando Pedro Guzman | Greogorio Pablo Jimenez Guzman | Graciela Andrea Guzman Ruiz,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,5/05/2025,El tiempo de resolución fue de 39 días,56
+RELOVI/SOL/57/2025,27/03/2025,15/04/2025,Ines Guadalupe Bernal l Rodriguez | Maria del Carmen Bernal Rodriguez | N.N.A. M.A.M.B. | N.N.A. S.M.M.B. | N.N.A. M.M.B.,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,57
+RELOVI/SOL/58/2025,13/03/2025,15/04/2025,Raymundo Vargas Muñoz,CIE,Lesiones,NA,NA,Incompleto,Completo,Incompleto,Incompleto,Incompleto,Incompleto,Opinión Técnica CIE,,#NUM!,58
+RELOVI/SOL/59/2025,07/03/2025,15/04/2025,Maria Elena Zárate Estrada,CDHCM,NA,Recomendación 08/2024,Aceptada,Incompleto,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,59
+RELOVI/SOL/60/2025,07/04/0205,15/04/2025,Mauro Santiago Santos ,Poder Judicial,Tortura,NA,Aceptada,Incompleto,Completo,Completo,Completo,Completo,Incompleto,,,El tiempo de resolución fue de 618988 días,60
+RELOVI/SOL/61/2025,07/04/2025,15/04/2025,Maria Victoria Martinez Soriano | Maria del Carmen Martinez Soriano | Joe Alejadro Malvarez Martinez | Josue Wendolyne  Malvarez Martinez | N.N.A. C.A.M.M.,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,5/05/2024,#NUM!,61
+RELOVI/SOL/62/2025,07/04/2025,15/04/2025,Jose Monroy Rebollo | Elvira Tonatzin Rebollo Melgarejo ,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,22/05/2025,El tiempo de resolución fue de 45 días,62
+RELOVI/SOL/63/2025,08/04/2025,15/04/2025,Carlota Villagran Backman | N.N.A. L.A.C.V.,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,22/05/2025,El tiempo de resolución fue de 44 días,63
+RELOVI/SOL/64/2025,09/04/2025,15/04/2025,Melisa Quezada Rodriguez | Adriana Quezada Rodriguez | .R.G.O.Q. | Z.M.A.Q.,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,5/05/2025,El tiempo de resolución fue de 26 días,64
+RELOVI/SOL/65/2025,10/04/2025,15/04/2025,Juan Martín Fabián Llaguno | Itzel Tonanxin Santillan Elizarraras,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,5/05/2025,El tiempo de resolución fue de 25 días,65
+RELOVI/SOL/66/2025,11/04/2025,15/04/0205,J.N.S.V. (Juline Nicole Salvatierra Villavicentino),Ministerio Público,Extorsión,NA,NA,Completo,Completo,Completo,Incompleto,Incompleto,Incompleto,Opinión Técnica CIE,24/04/2025,El tiempo de resolución fue de 13 días,66
+RELOVI/SOL/67/2025,27/03/2025,15/04/2025,Carlos Hernandez Flores | Elizabeth Maria del Carmen Ortiz Santamaria ,Poder Judicial,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,16/05/2025,El tiempo de resolución fue de 50 días,67
+RELOVI/SOL/68/2025,15/04/2025,15/04/2025,Darinka Abigail Mendez Hernandez,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,22/05/2025,El tiempo de resolución fue de 37 días,68
+RELOVI/SOL/69/2025,02/04/2025,,27 Migrantes,Ministerio Público,Secuestro,NA,NA,Completo,Completo,Completo,Incompleto,Completo,Incompleto,,,#NUM!,69
+RELOVI/SOL/70/2025,11/04/2025,29/04/2025,Dulce Ivonee Escobar Cruz | N.N.A. A.M.G.E. | N.N.A. R.E.C. | Sandra  Cruz Gonzalez,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,22/05/2025,El tiempo de resolución fue de 41 días,70
+RELOVI/SOL/71/2025,15/04/2025,29/04/2025,Maria Jose Montes Mendoza,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,22/05/2025,El tiempo de resolución fue de 37 días,71
+RELOVI/SOL/72/2025,29/04/2025,29/04/20025,Silvia Ruiz Luna | Hotniel Ruiz Luna,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,22/05/2025,El tiempo de resolución fue de 23 días,72
+RELOVI/SOL/73/2025,21/04/2025,29/04/2025,Ingrid Iran Zuñiga|  Maria Guadalupe Perez Gonzalez | N.N.A. L.J.A.G. | N.N.A. M.R.A.G.| N.N.A. G.V.Z.P.,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,22/05/2025,El tiempo de resolución fue de 31 días,73
+RELOVI/SOL/74/2025,21/04/2025,29/04/2025,Hector Javier Acevedo | Silvia Javier Acevedo | Manuel Javier Acevedo | Gilberto Javier Acevedo | Maribel Javier Acevedo | Ana Lilia Javier Acevedo,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,22/05/2025,El tiempo de resolución fue de 31 días,74
+RELOVI/SOL/75/2025,22/04/2025,29/04/2025,Fabiola Jacinto Rubí | Edgar David Guadarrama Guzman | Y.G.J. | M.G.J.,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,22/05/2025,El tiempo de resolución fue de 30 días,75
+RELOVI/SOL/76/2025,24/04/2025,29/04/2025,Alma Rocio Galvan Rodriguez | Sebastian Galvan Rodriguez | Maria del Refugio  Rodriguez  Gonzalez| N.N.A. J.A.G.R. | N.N.A. N.K.M.G.,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Registro,22/05/2025,El tiempo de resolución fue de 28 días,76
+RELOVI/SOL/77/2025,25/04/2025,29/04/2025,Erick Lopez Albiter | Veronica Gutierrez Albiter | Alison Esthefania Lopez Albiter | Yuliana Macedo Garcia | Danahe Aitana Lopez Macedo | Eduardo Martin Lopez Macedo ,CDHCM,Tortura,Recomendación 07/2024,No Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,Acuerdo Incompetencia,,#NUM!,77
+RELOVI/SOL/78/2025,02/05/2025,02/05/2025,Perla Nuñez García | N.N.A. N.Y.F.N. | N.N.A. C.L.F.N. | Macedonio Nuñez Morales ,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,78
+RELOVI/SOL/79/2025,05/05/2025,05/05/2025,Osiris José Luis Moreno Castillo,Poder Judicial,Violencia familiar,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Opinión Técnica CIE,,#NUM!,79
+RELOVI/SOL/80/2025,08/05/2025,08/05/2025,"Rubi Izbeth Espinosa López | N.N.A. L.V.M.E. | N.N,A. L.A.A.E. | N.N.A. D.S.A.E.",Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,80
+RELOVI/SOL/81/2025,08/05/2025,,Carlos Daniel Peña Suárez |  Diego Alberto Peña Suárez |  Silvia Janine Suárez Labarrios | René Peña Gutiérrez | Mitzi Janine Suárez Labarrios | N.N.A. E.F.P.G. | N.N.A. E.D.P.G.| N.N.A. D.T.V.P.| N.N.A. | N.N.A. L.D.P.R.,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Incompleto,Incompleto,Completo,Incompleto,,,#NUM!,81
+RELOVI/SOL/82/2025,08/05/2025,,Laura Estefanía Pineda Aguilar | Josué Pineda Contreras | Silvia Aguilar Fragoso | Zelzin Itzel Monroy Pineda | N.N.A. I.R.P. | N.N.A. R.A.M.P.,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Incompleto,Incompleto,Completo,Incompleto,,,#NUM!,82
+RELOVI/SOL/83/2025,08/05/2025,08/05/2025,Diego Enrique Portela Rosales | Esther Rosales Tovar | Huitzinahuatl Tonatiuh Yoatzin Portela Rosales | Esther Fernanda Portela Rosales,Ministerio Público,Secuestro,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,83
+RELOVI/SOL/84/2025,08/05/2025,08/05/2025,Jessica Zepeda Ramírez | Silvia Ramírez Ramírez,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,84
+RELOVI/SOL/85/2025,08/05/2025,08/05/2025,Brian Jared Cala Noria | Marisol Noria Hernández ,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,85
+RELOVI/SOL/86/2025,08/05/2025,08/05/2025,Kevin Ramírez Peña | Ivet Ramírez Peña  | Kristian Daniel Ramírez Peña,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,86
+RELOVI/SOL/87/2025,05/05/2025,05/05/2025,Carolina Pérez Ordóñez | Valtivio Pérez Ordóñez | Eligio Pérez Ordoñez,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,87
+RELOVI/SOL/88/2025,02/05/2025,,B.A.S.V.P.,Poder Judicial,Feminicidio - Tentativa,NA,NA,Incompleto,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,88
+RELOVI/SOL/89/2025,02/05/2025,,Irma Galindo Barrios,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,89
+RELOVI/SOL/90/2025,22/04/2025,22/04/2025,Edna Martha Maderos,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,90
+RELOVI/SOL/91/2025,27/05/2025,27/05/2025,Jonathan Daniel Lopez Mendoza | Pedor Israel  Lopez  Mendoza ,UPC,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,91
+RELOVI/SOL/92/2025,14/05/2025,14/05/2025,Rosa Maria Granados | N.N.A M.Z.R.G.,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,92
+RELOVI/SOL/93/2025,16/05/2025,16/05/2025,Juan Carlos Oyarvide Perez|Saul Alexander Oyarvide Sanchez|Dylan Amaury Oyarvide Sanchez| Andrik Luciano Oyarvide Sanchez ,CDHCM,Tortura,Recomendación 21/2023,Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,93
+RELOVI/SOL/94/2025,16/05/2025,16/05/2025,Alitze Herandez Aceves|Yessica Stepanny Hernandez Aceves|Marcelino Hernandez Angeles |Rocio Aceves Gonzalez ,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,94
+RELOVI/SOL/95/2025,16/05/2025,16/05/2025,Gregorio Perez Cano | Raquel Perez Perez|Adelina Perez Gonzalez ,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,95
+RELOVI/SOL/96/2025,16/05/2025,16/05/2025,Rodrigo Ricardo Rico Fernandez | Brigida Ricardo Matilde ,Ministerio Público,Desaparición,NA,NA,Incompleto,Completo,Completo,Incompleto,Incompleto,Incompleto,,,#NUM!,96
+RELOVI/SOL/97/2025,16/05/2025,16/05/2025,Martha Cristina Juarez Ortega ,CDHCM,Tortura,Recomendación 11/2024,No Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,Acuerdo Incompetencia,,#NUM!,97
+RELOVI/SOL/98/2025,16/05/2025,16/05/2025,Fernado Bravo Villanueva | Rocio Villanueva | Salvador Bravo Villanueva ,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,98
+RELOVI/SOL/99/2025,16/05/2025,16/05/2025,Alonso Santos Ortiz ,CDHCM,Tortura,Recomendación 11/2024,No Aceptada,Completo,Incompleto,Completo,Completo,Completo,Incompleto,,,#NUM!,99
+RELOVI/SOL/100/2025,21/05/2025,21/05/2025,Paola Vannessa Barrios Hernandez | Jose Luis Barrios Esquivel | Antonia Hernandez ,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,100
+RELOVI/SOL/101/2025,16/05/2025,16/05/2025,Rodrigo Olvidares Hernandez | Alejandra Eloisa Hernandez Rosales,Ministerio Público,Lesiones por Riña,NA,NA,Incompleto,Incompleto,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,101
+RELOVI/SOL/102/2025,19/05/2025,19/05/2025,Fabiola Jacinto Rubi | Ignacio Jacinto Castillo| Guadalupe Rubi Juarez |Alejandra Jacinto Rubi ,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,102
+RELOVI/SOL/103/2025,22/05/2025,22/05/2025,Edith Andrade Jardon ,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,103
+RELOVI/SOL/104/2025,22/05/2025,22/05/2025,Mia Oviedo Medina | Dominga Martha Patricia Acevedo Medina | Maria del Rocio Gerardina Medina ,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,104
+RELOVI/SOL/105/2025,22/05/2025,22/05/2025,Juana Guadalupe Padilla Orozco ,Poder Judicial,Obligaciones Alimentarias,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Opinión Técnica CIE,,#NUM!,105
+RELOVI/SOL/106/2025,29/04/2025,22/05/2025,Aarón Ricardo  Castillo Gallegos | Blanca Gallegos Sanchez ,Ministerio Público,Tortura,NA,NA,Incompleto,Completo,Completo,Completo,Completo,Incompleto,,,#NUM!,106
+RELOVI/SOL/107/2025,27/05/2025,27/05/2025,Venus Mireya Aventaño Gonzalez | Alejandro Gonzalez Osornio | Rosa Aguilar Medina ,UPC,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,107
+RELOVI/SOL/108/2025,27/05/2025,28/05/2025,Yadira Lizet Paredes Sanchez | Armando Paredes Hidalgo | Maria Victoria Sanchez Brito  | N.N.A. M.N.P. | N.N.A. A.K.N.P.,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,108
+RELOVI/SOL/109/2025,28/05/2025,28/05/2025,Elizabeth Ortega  Soto | Erika Miriam Ortega | Salvador Rodrigo Guzman Monrroy | N.N.A. A.M.G.O,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,109
+RELOVI/SOL/110/2025,30/05/2025,30/05/2025,Amairany Robledo Gonzalez,UPC,Feminicidio,NA,NA,Completo,Incompleto,Completo,Completo,Completo,Incompleto,,,#NUM!,110
+RELOVI/SOL/111/2025,04/06/2025,04/06/2025,Juana Gabriela Martinez Castillo | N.N.A. I.M.C.,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,111
+RELOVI/SOL/112/2025,04/06/2025,04/06/2025,Elisa Ester Morales Vazquez | Elisabeta Vazquez Morales.,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,112
+RELOVI/SOL/113/2025,05/06/2025,,Santiago Lopez Sanchez | Zenaida Lopez Sanchez | Alfonsina Sanchez Dionet.,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,113
+RELOVI/SOL/114/2025,03/06/2025,10/06/2025,Andres Giovanny Garcia Tenesaca,Ministerio Público,Lesiones,NA,NA,Incompleto,Incompleto,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,114
+RELOVI/SOL/115/2025,04/06/2025,,Adriana Rodriguez Medina,CDHCM,Tortura,Recomendación 04/2023,NA,Incompleto,Incompleto,Completo,Incompleto,Completo,Incompleto,,,#NUM!,115
+RELOVI/SOL/116/2025,06/06/2025,08/08/2025,Esperanza Guadalupe Hernandez Facuindes,CDHCM,Tortura,Recomendación 04/2023,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,116
+RELOVI/SOL/117/2025,04/06/2025,10/06/2025,Ana Maria Lara Pedrero | Vannesa Gonzales Lara | Elizabeth Gonzalez Lara | D.A.C.G.,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,117
+RELOVI/SOL/118/2025,29/05/2025,29/05/2025,Alfonso Fonseca García,CDHCM,NA,Recomendación 12/2023,Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,118
+RELOVI/SOL/119/2025,29/05/2025,29/05/2025,Magda Rosa Campos Olalde | Jennifer Emiliano Campos | Nancy Emiliano Campos | Miguel Ángel Emiliano Campos | Adriana Olalde Correa,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,119
+RELOVI/SOL/120/2025,30/05/2025,13/06/2025,Orlando Manuel Gutierrez | ,Petición Constitucional,Homicidio culposo,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,Opinión Técnica CIE,16/03/2025,#NUM!,120
+RELOVI/SOL/121/2025,19/06/2025,19/06/2025,Juana Elizarras Juárez | Yurid Ameyaly Martínez Camacho | Judith Amayrany Martínez Camacho,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,121
+RELOVI/SOL/122/2025,10/06/2025,10/06/2025,N.N.A. J.A.M.B. | Yasmin B.D.,Poder Judicial,Abuso Sexual,NA,NA,Completo,Completo,Completo,Completo,Incompleto,Incompleto,,,#NUM!,122
+RELOVI/SOL/123/2025,10/06/2025,10/06/2025,Benjamín Echeverria Olmedo | Araceli Olmedo Cruz,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,123
+RELOVI/SOL/124/2025,11/06/2025,11/06/2025,Clauidia Bethzabet Vega Palacios| Alan Santiago Gomez Salgado | Gabriela Monica Cruz Rojas| Z.G.R.,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,124
+RELOVI/SOL/125/2025,12/06/2025,12/06/2022,Ana Valeria Hurtado Tagle | O.V.H. | A.V.H. ,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,125
+RELOVI/SOL/126/2025,16/06/2025,16/06/2025,Brittany JoselinGarduño Paredes|Daniel Alejandro Garduño Alvarez| Fabiola Paredes Jurado | J.S.G.P.,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,126
+RELOVI/SOL/127/2025,19/06/2025,19/06/2025,Juana Elizarras Juárez | Yurid Ameyaly Martínez Camacho | Judith Amayrany Martínez Camacho,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,127
+RELOVI/SOL/128/2025,19/06/2025,19/06/2025,Natividad de la Luz Alonso | Alonso Zarate Silva | Y.Z.,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,128
+RELOVI/SOL/129/2025,20/06/2025,20/06/2025,J. Dolores Alanis Valencia | Eulalia Alanis Valencia ,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,129
+RELOVI/SOL/130/2025,19/06/2025,19/06/2025,Aniceto Escamilla Pascual | Victor Escamilla Pascual ,CDHCM,Tortura,Recomendacion 02/2022,Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,130
+RELOVI/SOL/131/2025,23/06/2025,23/06/2025,Jose Muñoz Vega| Ximen Josefin Guzman  Cuevas| A.E.P.M.|J.G.C.| A.M.R.,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,131
+RELOVI/SOL/132/2025,25/06/2025,25/06/2025,Sergio Ruben Alonso Anaya,CDHCM,Tortura,Recomendación 22/2019,Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,132
+RELOVI/SOL/133/2025,25/06/2025,25/06/2025,Yesenia Elideth Zamudio Solórzano|Jessica Fernanda  Lopez Zamudio ,CDHCM,Tortura,Recomendación 02/2023,No Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,133
+RELOVI/SOL/134/2025,27/06/2025,27/06/2025,Agustin Emilio Ayala ,UPC,Lesiones,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,134
+RELOVI/SOL/135/2025,26/06/2025,26/06/2025,Nayeli Yared Molina Loyola ,CDHCM,Tortura,Recomendación 01/2025,Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,135
+RELOVI/SOL/136/2025,17/06/2025,17/06/2025,Manuel Alejandro Perez Rosas | Cristina Trinidad Esteban | Ricardo Perez Trinidad | Jimena Perez Trinidad,Ministerio Público,Desaparición,NA,NA,Incompleto,Completo,Completo,Incompleto,Incompleto,Incompleto,,,#NUM!,136
+RELOVI/SOL/137/2025,01/07/2025,01/07/2025,Luis Enrique Morales Corona | Enriqueta Corona  Morales ,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,137
+RELOVI/SOL/138/2025,01/07/2025,01/07/2025,Johan Esneirder Gongora Huerta | Karen Liseth Huerta Londozuri ,UPC,Desaparición,NA,NA,Completo,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,138
+RELOVI/SOL/139/2025,02/07/2025,02/07/2025,F.S.L. | K.Y.G.R. | X.Q.S.G.,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,139
+RELOVI/SOL/140/2025,03/07/2025,03/07/2025,Maria Teresa Hernandez Garcia ,Ministerio Público,Violencia familiar,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,140
+RELOVI/SOL/141/2025,04/07/2025,04/07/2025,Diego Jonathan Rodriguez Miranda| Ana Benita Miranda Reyes ,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,141
+RELOVI/SOL/142/2025,04/07/2025,04/07/2025,Alessana Mendez Flores | Jessica Manjanes Duran Franco ,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,142
+RELOVI/SOL/143/2025,07/07/2025,07/07/2025,A.R.V.U. (Alejandro Ruben Vázquez Uribe) | Angeles Sarahi Vazquez Uribe,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,143
+RELOVI/SOL/144/2025,08/07/2025,08/07/2025,Zuleyma|Mujer2,CDHCM,Tortura,Recomendación 05/2025,No Aceptada,Incompleto,Incompleto,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,144
+RELOVI/SOL/145/2025,08/07/2025,08/07/2025,Jorge Flores Pedroza | Mariel Strop Cruz | J.A.F.S. | A.G.S,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,145
+RELOVI/SOL/146/2025,23/06/2025,23/06/2025,Daniel Canela Jimenez | Elvia Susana Jiménez Hernández,Petición Constitucional,Secuestro,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,146
+RELOVI/SOL/147/2025,14/07/2025,14/07/2025,Francia Nelly Henao Agudelo ,UPC,NA,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,147
+RELOVI/SOL/148/2025,15/07/2025,15/07/2025,G.E.M.|M.C.D.E.F. ,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,148
+RELOVI/SOL/149/2025,14/07/2025,15/07/2025,Damaris Reyes,Ministerio Público,Violacion,NA,NA,Incompleto,Incompleto,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,149
+RELOVI/SOL/150/2025,09/07/2025,17/07/2025,AlejandroRuben Vazquez Uribe| Angeles Sarai Vazquez Uribe ,Ministerio Público,Desaparición,NA,NA,Incompleto,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,150
+RELOVI/SOL/151/2025,17/07/2025,17/07/2025,Irene Arias Lopez| Remedios Arias Lopez|Flor Arias Lopez|Guillermo Arias Dominguez|Juliana Lopez Martinez |D.A.L,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,151
+RELOVI/SOL/152/2025,17/07/2025,17/07/2025,Jonathan Eduardo Hernandez Gomez|Dayana Michelle Cabrera Sandoval|E.H.C.|A.H.C.,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,152
+RELOVI/SOL/153/2025,17/07/2025,17/07/2025,Emma Gonzalez Aragon | Socorro Vazquez Gonzalez | Elizabeth Vazquez Gonzalez | Fernando Miguel Vazquez Gonzalez,Ministerio Público,Feminicidio - Tentativa,NA,NA,Completo,Completo,Completo,Incompleto,Incompleto,Incompleto,,,#NUM!,153
+RELOVI/SOL/154/2025,12/06/2025,NA,Armando Parra Reyes,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Incompleto,Incompleto,Completo,Incompleto,,,#NUM!,154
+RELOVI/SOL/155/2025,14/02/2025,14/02/2025,R.V.D. (Gabriela Hernandez Arreola),CNDH,NA,Recomendación 287/2024,No Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,155
+RELOVI/SOL/156/2025,22/07/2025,08/08/2025,Heydi Juliet Mondragón Flores | Oliver Crisostomo Zaragoza | Laura Flores Jimenez | Raul Malagón Nolasco | D.L.M.F |. D.M.M.F | S.M.F | Patricia Crisostomo Zaragoza | Dolores Crisostomo Zaragoza | N.C.C,Ministerio Público,Homicidio,NA,Aceptada,Completo,Completo,Incompleto,Incompleto,Incompleto,Incompleto,,,#NUM!,156
+RELOVI/SOL/157/2025,30/01/2025,08/08/2025,Guillermo Prieto Hernández,CDHCM,Tortura,NA,Aceptada,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,157
+RELOVI/SOL/158/2025,30/08/2025,08/08/2025,Johan Andrik Salazar Almaraz | Adriana Almaraz Montoya | Gabriel Salazar Colin | Yomalli Gabriela Salazar Almaraz ,Ministerio Público,Homicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,158
+RELOVI/SOL/159/2025,01/08/2025,08/08/2025,Karen Monserrat Alvarez Vigueras | Elvia Adriana Vigueras Martinez | Fatima Liliana Martinez Vogueras. ,Ministerio Público,Feminicidio,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,159
+RELOVI/SOL/160/2025,25/07/2025,08/08/2025,José de Jesus Rodriguez Martinez,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,160
+RELOVI/SOL/161/2025,11/08/2025,14/08/2025,F.S.L.R | Minerva Ramirez Martinez | Felipe Francisco Lima Gomez,Ministerio Público,Desaparición,NA,NA,Completo,Completo,Completo,Completo,Completo,Completa,,,#NUM!,161
+RELOVI/SOL/162/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,162
+RELOVI/SOL/163/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,163
+RELOVI/SOL/164/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,164
+RELOVI/SOL/165/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,165
+RELOVI/SOL/166/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,166
+RELOVI/SOL/167/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,167
+RELOVI/SOL/168/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,168
+RELOVI/SOL/169/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,169
+RELOVI/SOL/170/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,170
+RELOVI/SOL/171/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,171
+RELOVI/SOL/172/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,172
+RELOVI/SOL/173/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,173
+RELOVI/SOL/174/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,174
+RELOVI/SOL/175/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,175
+RELOVI/SOL/176/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,176
+RELOVI/SOL/177/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,177
+RELOVI/SOL/178/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,178
+RELOVI/SOL/179/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,179
+RELOVI/SOL/180/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,180
+RELOVI/SOL/181/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,181
+RELOVI/SOL/182/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,182
+RELOVI/SOL/183/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,183
+RELOVI/SOL/184/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,184
+RELOVI/SOL/185/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,185
+RELOVI/SOL/186/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,186
+RELOVI/SOL/187/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,187
+RELOVI/SOL/188/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,188
+RELOVI/SOL/189/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,189
+RELOVI/SOL/190/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,190
+RELOVI/SOL/191/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,191
+RELOVI/SOL/192/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,192
+RELOVI/SOL/193/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,193
+RELOVI/SOL/194/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,194
+RELOVI/SOL/195/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,195
+RELOVI/SOL/196/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,196
+RELOVI/SOL/197/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,197
+RELOVI/SOL/198/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,198
+RELOVI/SOL/199/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,199
+RELOVI/SOL/200/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,200
+RELOVI/SOL/201/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,201
+RELOVI/SOL/202/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,202
+RELOVI/SOL/203/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,203
+RELOVI/SOL/204/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,204
+RELOVI/SOL/205/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,205
+RELOVI/SOL/206/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,206
+RELOVI/SOL/207/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,207
+RELOVI/SOL/208/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,208
+RELOVI/SOL/209/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,209
+RELOVI/SOL/210/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,210
+RELOVI/SOL/211/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,211
+RELOVI/SOL/212/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,212
+RELOVI/SOL/213/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,213
+RELOVI/SOL/214/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,214
+RELOVI/SOL/215/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,215
+RELOVI/SOL/216/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,216
+RELOVI/SOL/217/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,217
+RELOVI/SOL/218/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,218
+RELOVI/SOL/219/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,219
+RELOVI/SOL/220/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,220
+RELOVI/SOL/221/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,221
+RELOVI/SOL/222/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,222
+RELOVI/SOL/223/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,223
+RELOVI/SOL/224/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,224
+RELOVI/SOL/225/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,225
+RELOVI/SOL/226/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,226
+RELOVI/SOL/227/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,227
+RELOVI/SOL/228/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,228
+RELOVI/SOL/229/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,229
+RELOVI/SOL/230/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,230
+RELOVI/SOL/231/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,231
+RELOVI/SOL/232/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,232
+RELOVI/SOL/233/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,233
+RELOVI/SOL/234/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,234
+RELOVI/SOL/235/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,235
+RELOVI/SOL/236/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,236
+RELOVI/SOL/237/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,237
+RELOVI/SOL/238/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,238
+RELOVI/SOL/239/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,239
+RELOVI/SOL/240/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,240
+RELOVI/SOL/241/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,241
+RELOVI/SOL/242/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,242
+RELOVI/SOL/243/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,243
+RELOVI/SOL/244/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,244
+RELOVI/SOL/245/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,245
+RELOVI/SOL/246/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,246
+RELOVI/SOL/247/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,247
+RELOVI/SOL/248/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,248
+RELOVI/SOL/249/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,249
+RELOVI/SOL/250/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,250
+RELOVI/SOL/251/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,251
+RELOVI/SOL/252/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,252
+RELOVI/SOL/253/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,253
+RELOVI/SOL/254/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,254
+RELOVI/SOL/255/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,255
+RELOVI/SOL/256/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,256
+RELOVI/SOL/257/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,257
+RELOVI/SOL/258/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,258
+RELOVI/SOL/259/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,259
+RELOVI/SOL/260/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,260
+RELOVI/SOL/261/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,261
+RELOVI/SOL/262/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,262
+RELOVI/SOL/263/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,263
+RELOVI/SOL/264/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,264
+RELOVI/SOL/265/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,265
+RELOVI/SOL/266/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,266
+RELOVI/SOL/267/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,267
+RELOVI/SOL/268/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,268
+RELOVI/SOL/269/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,269
+RELOVI/SOL/270/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,270
+RELOVI/SOL/271/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,271
+RELOVI/SOL/272/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,272
+RELOVI/SOL/273/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,273
+RELOVI/SOL/274/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,274
+RELOVI/SOL/275/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,275
+RELOVI/SOL/276/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,276
+RELOVI/SOL/277/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,277
+RELOVI/SOL/278/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,278
+RELOVI/SOL/279/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,279
+RELOVI/SOL/280/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,280
+RELOVI/SOL/281/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,281
+RELOVI/SOL/282/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,282
+RELOVI/SOL/283/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,283
+RELOVI/SOL/284/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,284
+RELOVI/SOL/285/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,285
+RELOVI/SOL/286/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,286
+RELOVI/SOL/287/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,287
+RELOVI/SOL/288/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,288
+RELOVI/SOL/289/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,289
+RELOVI/SOL/290/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,290
+RELOVI/SOL/291/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,291
+RELOVI/SOL/292/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,292
+RELOVI/SOL/293/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,293
+RELOVI/SOL/294/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,294
+RELOVI/SOL/295/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,295
+RELOVI/SOL/296/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,296
+RELOVI/SOL/297/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,297
+RELOVI/SOL/298/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,298
+RELOVI/SOL/299/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,299
+RELOVI/SOL/300/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,300
+RELOVI/SOL/301/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,301
+RELOVI/SOL/302/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,302
+RELOVI/SOL/303/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,303
+RELOVI/SOL/304/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,304
+RELOVI/SOL/305/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,305
+RELOVI/SOL/306/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,306
+RELOVI/SOL/307/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,307
+RELOVI/SOL/308/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,308
+RELOVI/SOL/309/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,309
+RELOVI/SOL/310/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,310
+RELOVI/SOL/311/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,311
+RELOVI/SOL/312/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,312
+RELOVI/SOL/313/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,313
+RELOVI/SOL/314/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,314
+RELOVI/SOL/315/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,315
+RELOVI/SOL/316/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,316
+RELOVI/SOL/317/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,317
+RELOVI/SOL/318/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,318
+RELOVI/SOL/319/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,319
+RELOVI/SOL/320/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,320
+RELOVI/SOL/321/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,321
+RELOVI/SOL/322/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,322
+RELOVI/SOL/323/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,323
+RELOVI/SOL/324/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,324
+RELOVI/SOL/325/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,325
+RELOVI/SOL/326/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,326
+RELOVI/SOL/327/2025,,,,,,,,,,,,,Incompleto,Acuerdo Incompetencia,6/11/2024,El tiempo de resolución fue de 45602 días,327
+RELOVI/SOL/328/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,328
+RELOVI/SOL/329/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,329
+RELOVI/SOL/330/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,330
+RELOVI/SOL/331/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,331
+RELOVI/SOL/332/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,332
+RELOVI/SOL/333/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,333
+RELOVI/SOL/334/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,334
+RELOVI/SOL/335/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,335
+RELOVI/SOL/336/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,336
+RELOVI/SOL/337/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,337
+RELOVI/SOL/338/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,338
+RELOVI/SOL/339/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,339
+RELOVI/SOL/340/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,340
+RELOVI/SOL/341/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,341
+RELOVI/SOL/342/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,342
+RELOVI/SOL/343/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,343
+RELOVI/SOL/344/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,344
+RELOVI/SOL/345/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,345
+RELOVI/SOL/346/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,346
+RELOVI/SOL/347/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,347
+RELOVI/SOL/348/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,348
+RELOVI/SOL/349/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,349
+RELOVI/SOL/350/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,350
+RELOVI/SOL/351/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,351
+RELOVI/SOL/352/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,352
+RELOVI/SOL/353/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,353
+RELOVI/SOL/354/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,354
+RELOVI/SOL/355/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,355
+RELOVI/SOL/356/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,356
+RELOVI/SOL/357/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,357
+RELOVI/SOL/358/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,358
+RELOVI/SOL/359/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,359
+RELOVI/SOL/360/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,360
+RELOVI/SOL/361/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,361
+RELOVI/SOL/362/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,362
+RELOVI/SOL/363/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,363
+RELOVI/SOL/364/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,364
+RELOVI/SOL/365/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,365
+RELOVI/SOL/366/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,366
+RELOVI/SOL/367/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,367
+RELOVI/SOL/368/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,368
+RELOVI/SOL/369/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,369
+RELOVI/SOL/370/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,370
+RELOVI/SOL/371/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,371
+RELOVI/SOL/372/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,372
+RELOVI/SOL/373/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,373
+RELOVI/SOL/374/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,374
+RELOVI/SOL/375/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,375
+RELOVI/SOL/376/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,376
+RELOVI/SOL/377/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,377
+RELOVI/SOL/378/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,378
+RELOVI/SOL/379/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,379
+RELOVI/SOL/380/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,380
+RELOVI/SOL/381/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,381
+RELOVI/SOL/382/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,382
+RELOVI/SOL/383/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,383
+RELOVI/SOL/384/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,384
+RELOVI/SOL/385/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,385
+RELOVI/SOL/386/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,386
+RELOVI/SOL/387/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,387
+RELOVI/SOL/388/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,388
+RELOVI/SOL/389/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,389
+RELOVI/SOL/390/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,390
+RELOVI/SOL/391/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,391
+RELOVI/SOL/392/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,392
+RELOVI/SOL/393/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,393
+RELOVI/SOL/394/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,394
+RELOVI/SOL/395/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,395
+RELOVI/SOL/396/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,396
+RELOVI/SOL/397/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,397
+RELOVI/SOL/398/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,398
+RELOVI/SOL/399/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,399
+RELOVI/SOL/400/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,400
+RELOVI/SOL/401/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,401
+RELOVI/SOL/402/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,402
+RELOVI/SOL/403/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,403
+RELOVI/SOL/404/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,404
+RELOVI/SOL/405/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,405
+RELOVI/SOL/406/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,406
+RELOVI/SOL/407/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,407
+RELOVI/SOL/408/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,408
+RELOVI/SOL/409/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,409
+RELOVI/SOL/410/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,410
+RELOVI/SOL/411/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,411
+RELOVI/SOL/412/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,412
+RELOVI/SOL/413/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,413
+RELOVI/SOL/414/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,414
+RELOVI/SOL/415/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,415
+RELOVI/SOL/416/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,416
+RELOVI/SOL/417/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,417
+RELOVI/SOL/418/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,418
+RELOVI/SOL/419/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,419
+RELOVI/SOL/420/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,420
+RELOVI/SOL/421/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,421
+RELOVI/SOL/422/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,422
+RELOVI/SOL/423/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,423
+RELOVI/SOL/424/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,424
+RELOVI/SOL/425/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,425
+RELOVI/SOL/426/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,426
+RELOVI/SOL/427/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,427
+RELOVI/SOL/428/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,428
+RELOVI/SOL/429/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,429
+RELOVI/SOL/430/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,430
+RELOVI/SOL/431/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,431
+RELOVI/SOL/432/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,432
+RELOVI/SOL/433/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,433
+RELOVI/SOL/434/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,434
+RELOVI/SOL/435/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,435
+RELOVI/SOL/436/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,436
+RELOVI/SOL/437/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,437
+RELOVI/SOL/438/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,438
+RELOVI/SOL/439/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,439
+RELOVI/SOL/440/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,440
+RELOVI/SOL/441/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,441
+RELOVI/SOL/442/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,442
+RELOVI/SOL/443/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,443
+RELOVI/SOL/444/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,444
+RELOVI/SOL/445/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,445
+RELOVI/SOL/446/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,446
+RELOVI/SOL/447/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,447
+RELOVI/SOL/448/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,448
+RELOVI/SOL/449/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,449
+RELOVI/SOL/450/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,450
+RELOVI/SOL/451/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,451
+RELOVI/SOL/452/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,452
+RELOVI/SOL/453/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,453
+RELOVI/SOL/454/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,454
+RELOVI/SOL/455/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,455
+RELOVI/SOL/456/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,456
+RELOVI/SOL/457/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,457
+RELOVI/SOL/458/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,458
+RELOVI/SOL/459/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,459
+RELOVI/SOL/460/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,460
+RELOVI/SOL/461/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,461
+RELOVI/SOL/462/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,462
+RELOVI/SOL/463/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,463
+RELOVI/SOL/464/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,464
+RELOVI/SOL/465/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,465
+RELOVI/SOL/466/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,466
+RELOVI/SOL/467/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,467
+RELOVI/SOL/468/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,468
+RELOVI/SOL/469/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,469
+RELOVI/SOL/470/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,470
+RELOVI/SOL/471/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,471
+RELOVI/SOL/472/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,472
+RELOVI/SOL/473/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,473
+RELOVI/SOL/474/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,474
+RELOVI/SOL/475/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,475
+RELOVI/SOL/476/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,476
+RELOVI/SOL/477/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,477
+RELOVI/SOL/478/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,478
+RELOVI/SOL/479/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,479
+RELOVI/SOL/480/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,480
+RELOVI/SOL/481/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,481
+RELOVI/SOL/482/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,482
+RELOVI/SOL/483/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,483
+RELOVI/SOL/484/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,484
+RELOVI/SOL/485/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,485
+RELOVI/SOL/486/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,486
+RELOVI/SOL/487/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,487
+RELOVI/SOL/488/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,488
+RELOVI/SOL/489/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,489
+RELOVI/SOL/490/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,490
+RELOVI/SOL/491/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,491
+RELOVI/SOL/492/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,492
+RELOVI/SOL/493/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,493
+RELOVI/SOL/494/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,494
+RELOVI/SOL/495/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,495
+RELOVI/SOL/496/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,496
+RELOVI/SOL/497/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,497
+RELOVI/SOL/498/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,498
+RELOVI/SOL/499/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,499
+RELOVI/SOL/500/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,500
+RELOVI/SOL/501/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,501
+RELOVI/SOL/502/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,502
+RELOVI/SOL/503/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,503
+RELOVI/SOL/504/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,504
+RELOVI/SOL/505/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,505
+RELOVI/SOL/506/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,506
+RELOVI/SOL/507/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,507
+RELOVI/SOL/508/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,508
+RELOVI/SOL/509/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,509
+RELOVI/SOL/510/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,510
+RELOVI/SOL/511/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,511
+RELOVI/SOL/512/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,512
+RELOVI/SOL/513/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,513
+RELOVI/SOL/514/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,514
+RELOVI/SOL/515/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,515
+RELOVI/SOL/516/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,516
+RELOVI/SOL/517/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,517
+RELOVI/SOL/518/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,518
+RELOVI/SOL/519/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,519
+RELOVI/SOL/520/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,520
+RELOVI/SOL/521/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,521
+RELOVI/SOL/522/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,522
+RELOVI/SOL/523/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,523
+RELOVI/SOL/524/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,524
+RELOVI/SOL/525/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,525
+RELOVI/SOL/526/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,526
+RELOVI/SOL/527/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,527
+RELOVI/SOL/528/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,528
+RELOVI/SOL/529/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,529
+RELOVI/SOL/530/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,530
+RELOVI/SOL/531/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,531
+RELOVI/SOL/532/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,532
+RELOVI/SOL/533/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,533
+RELOVI/SOL/534/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,534
+RELOVI/SOL/535/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,535
+RELOVI/SOL/536/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,536
+RELOVI/SOL/537/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,537
+RELOVI/SOL/538/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,538
+RELOVI/SOL/539/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,539
+RELOVI/SOL/540/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,540
+RELOVI/SOL/541/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,541
+RELOVI/SOL/542/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,542
+RELOVI/SOL/543/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,543
+RELOVI/SOL/544/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,544
+RELOVI/SOL/545/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,545
+RELOVI/SOL/546/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,546
+RELOVI/SOL/547/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,547
+RELOVI/SOL/548/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,548
+RELOVI/SOL/549/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,549
+RELOVI/SOL/550/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,550
+RELOVI/SOL/551/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,551
+RELOVI/SOL/552/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,552
+RELOVI/SOL/553/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,553
+RELOVI/SOL/554/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,554
+RELOVI/SOL/555/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,555
+RELOVI/SOL/556/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,556
+RELOVI/SOL/557/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,557
+RELOVI/SOL/558/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,558
+RELOVI/SOL/559/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,559
+RELOVI/SOL/560/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,560
+RELOVI/SOL/561/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,561
+RELOVI/SOL/562/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,562
+RELOVI/SOL/563/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,563
+RELOVI/SOL/564/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,564
+RELOVI/SOL/565/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,565
+RELOVI/SOL/566/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,566
+RELOVI/SOL/567/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,567
+RELOVI/SOL/568/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,568
+RELOVI/SOL/569/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,569
+RELOVI/SOL/570/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,570
+RELOVI/SOL/571/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,571
+RELOVI/SOL/572/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,572
+RELOVI/SOL/573/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,573
+RELOVI/SOL/574/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,574
+RELOVI/SOL/575/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,575
+RELOVI/SOL/576/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,576
+RELOVI/SOL/577/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,577
+RELOVI/SOL/578/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,578
+RELOVI/SOL/579/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,579
+RELOVI/SOL/580/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,580
+RELOVI/SOL/581/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,581
+RELOVI/SOL/582/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,582
+RELOVI/SOL/583/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,583
+RELOVI/SOL/584/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,584
+RELOVI/SOL/585/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,585
+RELOVI/SOL/586/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,586
+RELOVI/SOL/587/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,587
+RELOVI/SOL/588/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,588
+RELOVI/SOL/589/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,589
+RELOVI/SOL/590/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,590
+RELOVI/SOL/591/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,591
+RELOVI/SOL/592/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,592
+RELOVI/SOL/593/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,593
+RELOVI/SOL/594/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,594
+RELOVI/SOL/595/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,595
+RELOVI/SOL/596/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,596
+RELOVI/SOL/597/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,597
+RELOVI/SOL/598/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,598
+RELOVI/SOL/599/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,599
+RELOVI/SOL/600/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,600
+RELOVI/SOL/601/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,601
+RELOVI/SOL/602/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,602
+RELOVI/SOL/603/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,603
+RELOVI/SOL/604/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,604
+RELOVI/SOL/605/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,605
+RELOVI/SOL/606/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,606
+RELOVI/SOL/607/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,607
+RELOVI/SOL/608/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,608
+RELOVI/SOL/609/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,609
+RELOVI/SOL/610/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,610
+RELOVI/SOL/611/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,611
+RELOVI/SOL/612/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,612
+RELOVI/SOL/613/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,613
+RELOVI/SOL/614/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,614
+RELOVI/SOL/615/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,615
+RELOVI/SOL/616/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,616
+RELOVI/SOL/617/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,617
+RELOVI/SOL/618/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,618
+RELOVI/SOL/619/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,619
+RELOVI/SOL/620/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,620
+RELOVI/SOL/621/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,621
+RELOVI/SOL/622/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,622
+RELOVI/SOL/623/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,623
+RELOVI/SOL/624/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,624
+RELOVI/SOL/625/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,625
+RELOVI/SOL/626/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,626
+RELOVI/SOL/627/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,627
+RELOVI/SOL/628/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,628
+RELOVI/SOL/629/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,629
+RELOVI/SOL/630/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,630
+RELOVI/SOL/631/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,631
+RELOVI/SOL/632/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,632
+RELOVI/SOL/633/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,633
+RELOVI/SOL/634/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,634
+RELOVI/SOL/635/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,635
+RELOVI/SOL/636/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,636
+RELOVI/SOL/637/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,637
+RELOVI/SOL/638/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,638
+RELOVI/SOL/639/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,639
+RELOVI/SOL/640/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,640
+RELOVI/SOL/641/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,641
+RELOVI/SOL/642/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,642
+RELOVI/SOL/643/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,643
+RELOVI/SOL/644/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,644
+RELOVI/SOL/645/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,645
+RELOVI/SOL/646/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,646
+RELOVI/SOL/647/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,647
+RELOVI/SOL/648/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,648
+RELOVI/SOL/649/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,649
+RELOVI/SOL/650/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,650
+RELOVI/SOL/651/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,651
+RELOVI/SOL/652/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,652
+RELOVI/SOL/653/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,653
+RELOVI/SOL/654/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,654
+RELOVI/SOL/655/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,655
+RELOVI/SOL/656/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,656
+RELOVI/SOL/657/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,657
+RELOVI/SOL/658/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,658
+RELOVI/SOL/659/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,659
+RELOVI/SOL/660/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,660
+RELOVI/SOL/661/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,661
+RELOVI/SOL/662/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,662
+RELOVI/SOL/663/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,663
+RELOVI/SOL/664/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,664
+RELOVI/SOL/665/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,665
+RELOVI/SOL/666/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,666
+RELOVI/SOL/667/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,667
+RELOVI/SOL/668/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,668
+RELOVI/SOL/669/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,669
+RELOVI/SOL/670/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,670
+RELOVI/SOL/671/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,671
+RELOVI/SOL/672/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,672
+RELOVI/SOL/673/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,673
+RELOVI/SOL/674/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,674
+RELOVI/SOL/675/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,675
+RELOVI/SOL/676/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,676
+RELOVI/SOL/677/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,677
+RELOVI/SOL/678/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,678
+RELOVI/SOL/679/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,679
+RELOVI/SOL/680/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,680
+RELOVI/SOL/681/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,681
+RELOVI/SOL/682/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,682
+RELOVI/SOL/683/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,683
+RELOVI/SOL/684/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,684
+RELOVI/SOL/685/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,685
+RELOVI/SOL/686/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,686
+RELOVI/SOL/687/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,687
+RELOVI/SOL/688/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,688
+RELOVI/SOL/689/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,689
+RELOVI/SOL/690/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,690
+RELOVI/SOL/691/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,691
+RELOVI/SOL/692/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,692
+RELOVI/SOL/693/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,693
+RELOVI/SOL/694/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,694
+RELOVI/SOL/695/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,695
+RELOVI/SOL/696/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,696
+RELOVI/SOL/697/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,697
+RELOVI/SOL/698/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,698
+RELOVI/SOL/699/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,699
+RELOVI/SOL/700/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,700
+RELOVI/SOL/701/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,701
+RELOVI/SOL/702/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,702
+RELOVI/SOL/703/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,703
+RELOVI/SOL/704/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,704
+RELOVI/SOL/705/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,705
+RELOVI/SOL/706/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,706
+RELOVI/SOL/707/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,707
+RELOVI/SOL/708/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,708
+RELOVI/SOL/709/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,709
+RELOVI/SOL/710/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,710
+RELOVI/SOL/711/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,711
+RELOVI/SOL/712/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,712
+RELOVI/SOL/713/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,713
+RELOVI/SOL/714/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,714
+RELOVI/SOL/715/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,715
+RELOVI/SOL/716/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,716
+RELOVI/SOL/717/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,717
+RELOVI/SOL/718/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,718
+RELOVI/SOL/719/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,719
+RELOVI/SOL/720/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,720
+RELOVI/SOL/721/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,721
+RELOVI/SOL/722/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,722
+RELOVI/SOL/723/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,723
+RELOVI/SOL/724/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,724
+RELOVI/SOL/725/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,725
+RELOVI/SOL/726/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,726
+RELOVI/SOL/727/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,727
+RELOVI/SOL/728/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,728
+RELOVI/SOL/729/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,729
+RELOVI/SOL/730/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,730
+RELOVI/SOL/731/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,731
+RELOVI/SOL/732/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,732
+RELOVI/SOL/733/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,733
+RELOVI/SOL/734/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,734
+RELOVI/SOL/735/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,735
+RELOVI/SOL/736/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,736
+RELOVI/SOL/737/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,737
+RELOVI/SOL/738/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,738
+RELOVI/SOL/739/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,739
+RELOVI/SOL/740/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,740
+RELOVI/SOL/741/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,741
+RELOVI/SOL/742/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,742
+RELOVI/SOL/743/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,743
+RELOVI/SOL/744/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,744
+RELOVI/SOL/745/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,745
+RELOVI/SOL/746/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,746
+RELOVI/SOL/747/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,747
+RELOVI/SOL/748/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,748
+RELOVI/SOL/749/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,749
+RELOVI/SOL/750/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,750
+RELOVI/SOL/751/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,751
+RELOVI/SOL/752/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,752
+RELOVI/SOL/753/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,753
+RELOVI/SOL/754/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,754
+RELOVI/SOL/755/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,755
+RELOVI/SOL/756/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,756
+RELOVI/SOL/757/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,757
+RELOVI/SOL/758/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,758
+RELOVI/SOL/759/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,759
+RELOVI/SOL/760/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,760
+RELOVI/SOL/761/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,761
+RELOVI/SOL/762/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,762
+RELOVI/SOL/763/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,763
+RELOVI/SOL/764/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,764
+RELOVI/SOL/765/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,765
+RELOVI/SOL/766/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,766
+RELOVI/SOL/767/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,767
+RELOVI/SOL/768/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,768
+RELOVI/SOL/769/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,769
+RELOVI/SOL/770/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,770
+RELOVI/SOL/771/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,771
+RELOVI/SOL/772/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,772
+RELOVI/SOL/773/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,773
+RELOVI/SOL/774/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,774
+RELOVI/SOL/775/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,775
+RELOVI/SOL/776/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,776
+RELOVI/SOL/777/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,777
+RELOVI/SOL/778/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,778
+RELOVI/SOL/779/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,779
+RELOVI/SOL/780/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,780
+RELOVI/SOL/781/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,781
+RELOVI/SOL/782/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,782
+RELOVI/SOL/783/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,783
+RELOVI/SOL/784/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,784
+RELOVI/SOL/785/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,785
+RELOVI/SOL/786/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,786
+RELOVI/SOL/787/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,787
+RELOVI/SOL/788/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,788
+RELOVI/SOL/789/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,789
+RELOVI/SOL/790/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,790
+RELOVI/SOL/791/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,791
+RELOVI/SOL/792/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,792
+RELOVI/SOL/793/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,793
+RELOVI/SOL/794/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,794
+RELOVI/SOL/795/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,795
+RELOVI/SOL/796/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,796
+RELOVI/SOL/797/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,797
+RELOVI/SOL/798/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,798
+RELOVI/SOL/799/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,799
+RELOVI/SOL/800/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,800
+RELOVI/SOL/801/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,801
+RELOVI/SOL/802/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,802
+RELOVI/SOL/803/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,803
+RELOVI/SOL/804/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,804
+RELOVI/SOL/805/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,805
+RELOVI/SOL/806/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,806
+RELOVI/SOL/807/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,807
+RELOVI/SOL/808/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,808
+RELOVI/SOL/809/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,809
+RELOVI/SOL/810/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,810
+RELOVI/SOL/811/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,811
+RELOVI/SOL/812/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,812
+RELOVI/SOL/813/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,813
+RELOVI/SOL/814/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,814
+RELOVI/SOL/815/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,815
+RELOVI/SOL/816/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,816
+RELOVI/SOL/817/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,817
+RELOVI/SOL/818/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,818
+RELOVI/SOL/819/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,819
+RELOVI/SOL/820/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,820
+RELOVI/SOL/821/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,821
+RELOVI/SOL/822/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,822
+RELOVI/SOL/823/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,823
+RELOVI/SOL/824/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,824
+RELOVI/SOL/825/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,825
+RELOVI/SOL/826/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,826
+RELOVI/SOL/827/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,827
+RELOVI/SOL/828/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,828
+RELOVI/SOL/829/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,829
+RELOVI/SOL/830/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,830
+RELOVI/SOL/831/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,831
+RELOVI/SOL/832/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,832
+RELOVI/SOL/833/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,833
+RELOVI/SOL/834/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,834
+RELOVI/SOL/835/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,835
+RELOVI/SOL/836/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,836
+RELOVI/SOL/837/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,837
+RELOVI/SOL/838/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,838
+RELOVI/SOL/839/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,839
+RELOVI/SOL/840/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,840
+RELOVI/SOL/841/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,841
+RELOVI/SOL/842/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,842
+RELOVI/SOL/843/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,843
+RELOVI/SOL/844/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,844
+RELOVI/SOL/845/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,845
+RELOVI/SOL/846/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,846
+RELOVI/SOL/847/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,847
+RELOVI/SOL/848/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,848
+RELOVI/SOL/849/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,849
+RELOVI/SOL/850/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,850
+RELOVI/SOL/851/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,851
+RELOVI/SOL/852/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,852
+RELOVI/SOL/853/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,853
+RELOVI/SOL/854/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,854
+RELOVI/SOL/855/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,855
+RELOVI/SOL/856/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,856
+RELOVI/SOL/857/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,857
+RELOVI/SOL/858/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,858
+RELOVI/SOL/859/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,859
+RELOVI/SOL/860/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,860
+RELOVI/SOL/861/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,861
+RELOVI/SOL/862/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,862
+RELOVI/SOL/863/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,863
+RELOVI/SOL/864/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,864
+RELOVI/SOL/865/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,865
+RELOVI/SOL/866/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,866
+RELOVI/SOL/867/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,867
+RELOVI/SOL/868/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,868
+RELOVI/SOL/869/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,869
+RELOVI/SOL/870/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,870
+RELOVI/SOL/871/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,871
+RELOVI/SOL/872/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,872
+RELOVI/SOL/873/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,873
+RELOVI/SOL/874/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,874
+RELOVI/SOL/875/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,875
+RELOVI/SOL/876/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,876
+RELOVI/SOL/877/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,877
+RELOVI/SOL/878/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,878
+RELOVI/SOL/879/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,879
+RELOVI/SOL/880/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,880
+RELOVI/SOL/881/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,881
+RELOVI/SOL/882/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,882
+RELOVI/SOL/883/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,883
+RELOVI/SOL/884/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,884
+RELOVI/SOL/885/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,885
+RELOVI/SOL/886/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,886
+RELOVI/SOL/887/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,887
+RELOVI/SOL/888/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,888
+RELOVI/SOL/889/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,889
+RELOVI/SOL/890/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,890
+RELOVI/SOL/891/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,891
+RELOVI/SOL/892/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,892
+RELOVI/SOL/893/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,893
+RELOVI/SOL/894/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,894
+RELOVI/SOL/895/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,895
+RELOVI/SOL/896/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,896
+RELOVI/SOL/897/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,897
+RELOVI/SOL/898/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,898
+RELOVI/SOL/899/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,899
+RELOVI/SOL/900/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,900
+RELOVI/SOL/901/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,901
+RELOVI/SOL/902/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,902
+RELOVI/SOL/903/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,903
+RELOVI/SOL/904/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,904
+RELOVI/SOL/905/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,905
+RELOVI/SOL/906/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,906
+RELOVI/SOL/907/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,907
+RELOVI/SOL/908/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,908
+RELOVI/SOL/909/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,909
+RELOVI/SOL/910/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,910
+RELOVI/SOL/911/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,911
+RELOVI/SOL/912/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,912
+RELOVI/SOL/913/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,913
+RELOVI/SOL/914/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,914
+RELOVI/SOL/915/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,915
+RELOVI/SOL/916/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,916
+RELOVI/SOL/917/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,917
+RELOVI/SOL/918/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,918
+RELOVI/SOL/919/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,919
+RELOVI/SOL/920/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,920
+RELOVI/SOL/921/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,921
+RELOVI/SOL/922/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,922
+RELOVI/SOL/923/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,923
+RELOVI/SOL/924/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,924
+RELOVI/SOL/925/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,925
+RELOVI/SOL/926/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,926
+RELOVI/SOL/927/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,927
+RELOVI/SOL/928/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,928
+RELOVI/SOL/929/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,929
+RELOVI/SOL/930/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,930
+RELOVI/SOL/931/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,931
+RELOVI/SOL/932/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,932
+RELOVI/SOL/933/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,933
+RELOVI/SOL/934/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,934
+RELOVI/SOL/935/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,935
+RELOVI/SOL/936/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,936
+RELOVI/SOL/937/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,937
+RELOVI/SOL/938/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,938
+RELOVI/SOL/939/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,939
+RELOVI/SOL/940/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,940
+RELOVI/SOL/941/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,941
+RELOVI/SOL/942/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,942
+RELOVI/SOL/943/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,943
+RELOVI/SOL/944/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,944
+RELOVI/SOL/945/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,945
+RELOVI/SOL/946/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,946
+RELOVI/SOL/947/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,947
+RELOVI/SOL/948/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,948
+RELOVI/SOL/949/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,949
+RELOVI/SOL/950/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,950
+RELOVI/SOL/951/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,951
+RELOVI/SOL/952/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,952
+RELOVI/SOL/953/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,953
+RELOVI/SOL/954/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,954
+RELOVI/SOL/955/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,955
+RELOVI/SOL/956/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,956
+RELOVI/SOL/957/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,957
+RELOVI/SOL/958/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,958
+RELOVI/SOL/959/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,959
+RELOVI/SOL/960/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,960
+RELOVI/SOL/961/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,961
+RELOVI/SOL/962/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,962
+RELOVI/SOL/963/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,963
+RELOVI/SOL/964/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,964
+RELOVI/SOL/965/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,965
+RELOVI/SOL/966/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,966
+RELOVI/SOL/967/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,967
+RELOVI/SOL/968/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,968
+RELOVI/SOL/969/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,969
+RELOVI/SOL/970/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,970
+RELOVI/SOL/971/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,971
+RELOVI/SOL/972/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,972
+RELOVI/SOL/973/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,973
+RELOVI/SOL/974/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,974
+RELOVI/SOL/975/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,975
+RELOVI/SOL/976/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,976
+RELOVI/SOL/977/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,977
+RELOVI/SOL/978/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,978
+RELOVI/SOL/979/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,979
+RELOVI/SOL/980/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,980
+RELOVI/SOL/981/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,981
+RELOVI/SOL/982/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,982
+RELOVI/SOL/983/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,983
+RELOVI/SOL/984/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,984
+RELOVI/SOL/985/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,985
+RELOVI/SOL/986/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,986
+RELOVI/SOL/987/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,987
+RELOVI/SOL/988/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,988
+RELOVI/SOL/989/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,989
+RELOVI/SOL/990/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,990
+RELOVI/SOL/991/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,991
+RELOVI/SOL/992/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,992
+RELOVI/SOL/993/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,993
+RELOVI/SOL/994/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,994
+RELOVI/SOL/995/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,995
+RELOVI/SOL/996/2025,,,,,,,,,,,,,Incompleto,,,El tiempo de resolución fue de 0 días,996
