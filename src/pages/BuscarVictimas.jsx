@@ -37,19 +37,38 @@ const BuscarVictimas = () => {
     cargarDatos();
   }, [currentPage, filtros]);
 
-  // Filtrar por término de búsqueda
+  // Función para buscar con debounce
+  const [searchTimeout, setSearchTimeout] = useState(null);
+
+  // Efecto para manejar la búsqueda con delay
+  useEffect(() => {
+    if (searchTimeout) {
+      clearTimeout(searchTimeout);
+    }
+
+    const timeout = setTimeout(() => {
+      setCurrentPage(1); // Resetear a la primera página cuando se busca
+      cargarDatos();
+    }, 500); // Delay de 500ms para evitar demasiadas consultas
+
+    setSearchTimeout(timeout);
+
+    return () => {
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+    };
+  }, [searchTerm]);
+
+  // Filtrar por término de búsqueda - ahora solo para mostrar resultados locales si no hay búsqueda
   useEffect(() => {
     if (!searchTerm) {
       setFilteredVictimas(victimas);
     } else {
-      const filtered = victimas.filter(victima =>
-        victima.NombreVíctima?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        victima.AlfanúmericaRegistro?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        victima.FechaRegistro?.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredVictimas(filtered);
+      // Si hay término de búsqueda, mostramos todos los resultados que vienen del servidor
+      setFilteredVictimas(victimas);
     }
-  }, [searchTerm, victimas]);
+  }, [victimas]);
 
   const cargarDatos = async () => {
     try {
@@ -61,12 +80,19 @@ const BuscarVictimas = () => {
       console.log('Estadísticas recibidas:', statsResponse);
       setEstadisticas(statsResponse);
 
-      // Cargar víctimas con filtros y paginación
-      const victimasResponse = await victimasAPI.getVictimas({
+      // Cargar víctimas con filtros, paginación y búsqueda
+      const params = {
         page: currentPage,
         page_size: itemsPerPage,
         ...filtros
-      });
+      };
+
+      // Si hay término de búsqueda, agregarlo a los parámetros
+      if (searchTerm.trim()) {
+        params.search = searchTerm.trim();
+      }
+
+      const victimasResponse = await victimasAPI.getVictimas(params);
       
       console.log('Víctimas recibidas:', victimasResponse);
       setVictimas(victimasResponse.results || []);
