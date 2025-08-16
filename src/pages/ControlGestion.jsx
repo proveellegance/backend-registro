@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { controlGestionAPI } from '../services/api';
 import HeaderInstitucional from '../components/HeaderInstitucional';
+import './ControlGestion.css';
 
 const ControlGestion = () => {
   const [activeModule, setActiveModule] = useState('expedientes');
@@ -174,7 +175,7 @@ const ControlGestion = () => {
           </div>
         </div>
         
-        <div className="bg-white rounded-lg shadow p-6 border-l-4 border-gray-400">
+        <div className="tarjeta-estadistica bg-white rounded-lg shadow p-6 border-l-4 border-gray-400">
           <div className="flex items-center">
             <BarChart3 className="w-8 h-8 text-gray-600 mr-3" />
             <div>
@@ -186,7 +187,7 @@ const ControlGestion = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6 border-l-4 border-green-400">
+        <div className="tarjeta-estadistica bg-white rounded-lg shadow p-6 border-l-4 border-green-400">
           <div className="flex items-center">
             <Calendar className="w-8 h-8 text-green-600 mr-3" />
             <div>
@@ -304,7 +305,7 @@ const ControlGestion = () => {
               <button
                 key={module.id}
                 onClick={() => handleModuleChange(module.id)}
-                className={`p-4 rounded-lg text-left transition-all duration-200 ${
+                className={`modulo-tarjeta p-4 rounded-lg text-left transition-all duration-200 ${
                   isActive 
                     ? `${module.color} text-white shadow-lg transform scale-105` 
                     : 'bg-white text-gray-700 hover:bg-gray-50 shadow'
@@ -324,7 +325,7 @@ const ControlGestion = () => {
         {renderModuleStats()}
 
         {/* Controles de búsqueda y exportación */}
-        <div className="bg-white rounded-lg shadow p-6 mb-6">
+        <div className="contenedor-blanco bg-white rounded-lg shadow p-6 mb-6">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -353,7 +354,7 @@ const ControlGestion = () => {
         </div>
 
         {/* Tabla de datos */}
-        <div className="bg-white rounded-lg shadow">
+        <div className="tabla-contenedor bg-white rounded-lg shadow">
           <div className="p-6 border-b border-gray-200">
             <h2 className="text-xl font-semibold text-gray-900 flex items-center">
               {React.createElement(modules.find(m => m.id === activeModule)?.icon, { 
