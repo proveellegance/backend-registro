@@ -213,14 +213,14 @@ const BuscarVictimas = () => {
         <div className="mb-12">
           <div className="bg-gradient-to-r from-primary-burgundy via-primary-burgundy to-primary-gold rounded-3xl p-8 md:p-12 text-white shadow-2xl">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between">
-              <div className="mb-6 lg:mb-0">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Padrón de Víctimas</h1>
-                <p className="text-white/90 text-lg md:text-xl">Sistema de búsqueda y consulta del registro oficial de víctimas de la Ciudad de México</p>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="bg-white/20 p-4 rounded-2xl backdrop-blur-sm">
-                  <Database className="w-12 h-12 text-white" />
+              <div className="mb-6 lg:mb-0 flex-1">
+                <div className="flex items-center justify-between">
+                  <h1 className="text-4xl md:text-5xl font-bold mb-4">Padrón de Víctimas</h1>
+                  <div className="bg-white/20 p-4 rounded-2xl backdrop-blur-sm">
+                    <Database className="w-12 h-12 text-white" />
+                  </div>
                 </div>
+                <p className="text-white/90 text-lg md:text-xl">Sistema de búsqueda y consulta del registro oficial de víctimas de la Ciudad de México</p>
               </div>
             </div>
           </div>
@@ -235,8 +235,8 @@ const BuscarVictimas = () => {
                     <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Total Víctimas</h3>
                     <p className="text-3xl font-bold text-primary-burgundy">{estadisticas.total_victimas?.toLocaleString() || '0'}</p>
                   </div>
-                  <div className="bg-gradient-to-br from-primary-burgundy to-burgundy-dark p-3 rounded-xl">
-                    <Users className="w-8 h-8 text-white" />
+                  <div className="bg-white p-3 rounded-xl border-2 border-primary-burgundy">
+                    <Users className="w-8 h-8 text-primary-burgundy" />
                   </div>
                 </div>
               </div>
@@ -248,8 +248,8 @@ const BuscarVictimas = () => {
                     <p className="text-3xl font-bold text-blue-600">{estadisticas.nna_count?.toLocaleString() || '0'}</p>
                     <p className="text-sm text-gray-500 mt-1">{estadisticas.porcentaje_nna || '0'}% del total</p>
                   </div>
-                  <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-3 rounded-xl">
-                    <Users className="w-8 h-8 text-white" />
+                  <div className="bg-white p-3 rounded-xl border-2 border-blue-500">
+                    <Users className="w-8 h-8 text-blue-500" />
                   </div>
                 </div>
               </div>
@@ -260,8 +260,8 @@ const BuscarVictimas = () => {
                     <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Víctimas Directas</h3>
                     <p className="text-3xl font-bold text-green-600">{estadisticas.victimas_directas?.toLocaleString() || '0'}</p>
                   </div>
-                  <div className="bg-gradient-to-br from-green-500 to-green-700 p-3 rounded-xl">
-                    <BarChart3 className="w-8 h-8 text-white" />
+                  <div className="bg-white p-3 rounded-xl border-2 border-green-500">
+                    <BarChart3 className="w-8 h-8 text-green-500" />
                   </div>
                 </div>
               </div>
@@ -272,8 +272,8 @@ const BuscarVictimas = () => {
                     <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Víctimas Indirectas</h3>
                     <p className="text-3xl font-bold text-orange-600">{estadisticas.victimas_indirectas?.toLocaleString() || '0'}</p>
                   </div>
-                  <div className="bg-gradient-to-br from-orange-500 to-orange-700 p-3 rounded-xl">
-                    <BarChart3 className="w-8 h-8 text-white" />
+                  <div className="bg-white p-3 rounded-xl border-2 border-orange-500">
+                    <BarChart3 className="w-8 h-8 text-orange-500" />
                   </div>
                 </div>
               </div>
@@ -351,7 +351,7 @@ const BuscarVictimas = () => {
         {/* Resultados */}
         <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
           {/* Header de la tabla */}
-          <div className="bg-gradient-to-r from-gray-50 to-white p-6 border-b border-gray-200">
+          <div className="bg-white p-6 border-b border-gray-200">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between">
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">Resultados de la Búsqueda</h3>
@@ -409,7 +409,7 @@ const BuscarVictimas = () => {
               <div className="overflow-x-auto">
                 <table className="min-w-full">
                   <thead>
-                    <tr className="border-b border-gray-200 bg-gradient-to-r from-gray-50 to-gray-100">
+                    <tr className="border-b border-gray-200 bg-white">
                       <th className="px-8 py-5 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
                         <div className="flex items-center space-x-2">
                           <Users className="w-4 h-4" />
@@ -499,7 +499,7 @@ const BuscarVictimas = () => {
 
               {/* Paginación mejorada */}
               {totalPages > 1 && (
-                <div className="px-8 py-6 bg-gradient-to-r from-gray-50 to-white border-t border-gray-200">
+                <div className="px-8 py-6 bg-white border-t border-gray-200">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between space-y-4 sm:space-y-0">
                     <div className="text-sm text-gray-600">
                       Mostrando <span className="font-semibold text-gray-900">{startIndex + 1}</span> a{' '}
@@ -666,7 +666,7 @@ const BuscarVictimas = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Información principal */}
                 <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl border border-gray-200">
+                  <div className="bg-white p-6 rounded-2xl border border-gray-200">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                       <Users className="w-5 h-5 mr-2 text-primary-burgundy" />
                       Información Personal
@@ -711,7 +711,7 @@ const BuscarVictimas = () => {
 
                 {/* Información del registro */}
                 <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl border border-blue-200">
+                  <div className="bg-white p-6 rounded-2xl border border-blue-200">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                       <Database className="w-5 h-5 mr-2 text-blue-600" />
                       Información del Registro
@@ -737,7 +737,7 @@ const BuscarVictimas = () => {
               </div>
 
               {/* Información adicional */}
-              <div className="mt-8 bg-gradient-to-r from-gray-50 to-white p-6 rounded-2xl border border-gray-200">
+              <div className="mt-8 bg-white p-6 rounded-2xl border border-gray-200">
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">Todos los Campos</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {Object.entries(selectedVictima).map(([key, value]) => (
