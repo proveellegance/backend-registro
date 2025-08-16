@@ -206,7 +206,7 @@ const BuscarVictimas = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <div className="min-h-screen bg-white">
       <HeaderInstitucional />
       <div className="container mx-auto px-6 py-12">
         {/* Header con degradado */}
@@ -226,132 +226,141 @@ const BuscarVictimas = () => {
           </div>
         </div>
 
-        {/* Estadísticas mejoradas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">{estadisticas && (
-            <>
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Total Víctimas</h3>
-                    <p className="text-3xl font-bold text-primary-burgundy">{estadisticas.total_victimas?.toLocaleString() || '0'}</p>
+        {/* Sección de Estadísticas - Tarjetas en botones con fondo blanco */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Estadísticas del Padrón</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {estadisticas && (
+              <>
+                <button className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Total Víctimas</h3>
+                      <p className="text-3xl font-bold text-primary-burgundy">{estadisticas.total_victimas?.toLocaleString() || '0'}</p>
+                    </div>
+                    <div className="bg-white p-3 rounded-xl border-2 border-primary-burgundy">
+                      <Users className="w-8 h-8 text-primary-burgundy" />
+                    </div>
                   </div>
-                  <div className="bg-white p-3 rounded-xl border-2 border-primary-burgundy">
-                    <Users className="w-8 h-8 text-primary-burgundy" />
+                </button>
+                
+                <button className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">NNA Registrados</h3>
+                      <p className="text-3xl font-bold text-blue-600">{estadisticas.nna_count?.toLocaleString() || '0'}</p>
+                      <p className="text-sm text-gray-500 mt-1">{estadisticas.porcentaje_nna || '0'}% del total</p>
+                    </div>
+                    <div className="bg-white p-3 rounded-xl border-2 border-blue-500">
+                      <Users className="w-8 h-8 text-blue-500" />
+                    </div>
                   </div>
-                </div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">NNA Registrados</h3>
-                    <p className="text-3xl font-bold text-blue-600">{estadisticas.nna_count?.toLocaleString() || '0'}</p>
-                    <p className="text-sm text-gray-500 mt-1">{estadisticas.porcentaje_nna || '0'}% del total</p>
+                </button>
+                
+                <button className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Víctimas Directas</h3>
+                      <p className="text-3xl font-bold text-green-600">{estadisticas.victimas_directas?.toLocaleString() || '0'}</p>
+                    </div>
+                    <div className="bg-white p-3 rounded-xl border-2 border-green-500">
+                      <BarChart3 className="w-8 h-8 text-green-500" />
+                    </div>
                   </div>
-                  <div className="bg-white p-3 rounded-xl border-2 border-blue-500">
-                    <Users className="w-8 h-8 text-blue-500" />
+                </button>
+                
+                <button className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Víctimas Indirectas</h3>
+                      <p className="text-3xl font-bold text-orange-600">{estadisticas.victimas_indirectas?.toLocaleString() || '0'}</p>
+                    </div>
+                    <div className="bg-white p-3 rounded-xl border-2 border-orange-500">
+                      <BarChart3 className="w-8 h-8 text-orange-500" />
+                    </div>
                   </div>
-                </div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Víctimas Directas</h3>
-                    <p className="text-3xl font-bold text-green-600">{estadisticas.victimas_directas?.toLocaleString() || '0'}</p>
-                  </div>
-                  <div className="bg-white p-3 rounded-xl border-2 border-green-500">
-                    <BarChart3 className="w-8 h-8 text-green-500" />
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Víctimas Indirectas</h3>
-                    <p className="text-3xl font-bold text-orange-600">{estadisticas.victimas_indirectas?.toLocaleString() || '0'}</p>
-                  </div>
-                  <div className="bg-white p-3 rounded-xl border-2 border-orange-500">
-                    <BarChart3 className="w-8 h-8 text-orange-500" />
-                  </div>
-                </div>
-              </div>
-            </>
-          )}
+                </button>
+              </>
+            )}
+          </div>
         </div>
 
-        {/* Sección de búsqueda mejorada */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 mb-10 border border-gray-100">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
-            <div className="mb-6 lg:mb-0">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Búsqueda Avanzada</h2>
-              <p className="text-gray-600">Encuentra víctimas por nombre, registro o cualquier criterio</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => setFilterModalVisible(true)}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-burgundy to-burgundy-dark text-white rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
-              >
-                <Filter className="w-5 h-5 mr-2" />
-                Filtros Avanzados
-              </button>
-              <button
-                onClick={exportarDatos}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-gold to-gold-dark text-white rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Exportar Datos
-              </button>
-            </div>
-          </div>
-
-          {/* Barra de búsqueda principal */}
-          <div className="relative mb-6">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <Search className="w-6 h-6 text-gray-400" />
-            </div>
-            <input
-              type="text"
-              placeholder="Buscar por nombre, registro alfanumérico, fecha..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-2xl text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-primary-burgundy/20 focus:border-primary-burgundy transition-all duration-300 bg-gray-50 hover:bg-white"
-            />
-            {searchTerm && (
-              <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
+        {/* Sección de Búsqueda - Búsqueda en botón redondeado con fondo blanco */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Búsqueda de Víctimas</h2>
+          
+          {/* Contenedor de búsqueda con fondo blanco y bordes redondeados */}
+          <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100" style={{backgroundColor: '#ffffff', background: '#ffffff'}}>
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
+              <div className="mb-6 lg:mb-0">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Búsqueda Avanzada</h3>
+                <p className="text-gray-600">Encuentra víctimas por nombre, registro o cualquier criterio</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={() => setSearchTerm('')}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  onClick={() => setFilterModalVisible(true)}
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-burgundy to-burgundy-dark text-white rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
                 >
-                  <X className="w-5 h-5" />
+                  <Filter className="w-5 h-5 mr-2" />
+                  Filtros Avanzados
                 </button>
+                <button
+                  onClick={exportarDatos}
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-gold to-gold-dark text-white rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Exportar Datos
+                </button>
+              </div>
+            </div>
+
+            {/* Barra de búsqueda principal */}
+            <div className="relative mb-6">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <Search className="w-6 h-6 text-gray-400" />
+              </div>
+              <input
+                type="text"
+                placeholder="Buscar por nombre, registro alfanumérico, fecha..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-2xl text-lg placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-primary-burgundy/20 focus:border-primary-burgundy transition-all duration-300 bg-gray-50 hover:bg-white"
+              />
+              {searchTerm && (
+                <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
+                  <button
+                    onClick={() => setSearchTerm('')}
+                    className="text-gray-400 hover:text-gray-600 transition-colors"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Indicador de búsqueda activa */}
+            {searchTerm && (
+              <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <Search className="w-5 h-5 text-blue-600 mr-2" />
+                    <span className="text-blue-800 font-medium">
+                      Buscando: "<span className="font-bold">{searchTerm}</span>"
+                    </span>
+                  </div>
+                  <span className="text-blue-600 text-sm">
+                    {loading ? 'Buscando...' : `${filteredVictimas.length} resultado(s) encontrado(s)`}
+                  </span>
+                </div>
               </div>
             )}
           </div>
-
-          {/* Indicador de búsqueda activa */}
-          {searchTerm && (
-            <div className="mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <Search className="w-5 h-5 text-blue-600 mr-2" />
-                  <span className="text-blue-800 font-medium">
-                    Buscando: "<span className="font-bold">{searchTerm}</span>"
-                  </span>
-                </div>
-                <span className="text-blue-600 text-sm">
-                  {loading ? 'Buscando...' : `${filteredVictimas.length} resultado(s) encontrado(s)`}
-                </span>
-              </div>
-            </div>
-          )}
         </div>
 
-        {/* Resultados */}
-        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+        {/* Sección de Resultados - Tabla con fondo blanco */}
+        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden" style={{backgroundColor: '#ffffff', background: '#ffffff'}}>
           {/* Header de la tabla */}
-          <div className="bg-white p-6 border-b border-gray-200">
+          <div className="bg-white p-6 border-b border-gray-200" style={{backgroundColor: '#ffffff', background: '#ffffff'}}>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between">
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">Resultados de la Búsqueda</h3>
@@ -366,6 +375,7 @@ const BuscarVictimas = () => {
                   </span>
                 </div>
               )}
+            </div>
           </div>
 
           {/* Contenido de la tabla */}
@@ -407,89 +417,59 @@ const BuscarVictimas = () => {
           ) : currentItems.length > 0 ? (
             <>
               <div className="overflow-x-auto">
-                <table className="min-w-full">
-                  <thead>
-                    <tr className="border-b border-gray-200 bg-white">
-                      <th className="px-8 py-5 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
-                        <div className="flex items-center space-x-2">
-                          <Users className="w-4 h-4" />
-                          <span>Víctima</span>
-                        </div>
+                <table className="w-full">
+                  <thead className="bg-white">
+                    <tr>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
+                        Víctima
                       </th>
-                      <th className="px-6 py-5 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
                         Sexo
                       </th>
-                      <th className="px-6 py-5 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
                         Tipo
                       </th>
-                      <th className="px-6 py-5 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
                         Registro
                       </th>
-                      <th className="px-6 py-5 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
                         Alcaldía
                       </th>
-                      <th className="px-6 py-5 text-center text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 border-b border-gray-200">
                         Acciones
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-gray-100">
+                  <tbody className="divide-y divide-gray-200 bg-white">
                     {currentItems.map((victima, index) => (
-                      <tr key={index} className="hover:bg-gradient-to-r hover:from-gray-50 hover:to-white transition-all duration-200 group">
-                        <td className="px-8 py-6">
-                          <div className="flex items-center space-x-4">
-                            <div className="flex-shrink-0">
-                              <div className="w-10 h-10 bg-gradient-to-br from-primary-burgundy to-burgundy-dark rounded-xl flex items-center justify-center">
-                                <Users className="w-5 h-5 text-white" />
-                              </div>
-                            </div>
-                            <div>
-                              <div className="text-sm font-semibold text-gray-900 group-hover:text-primary-burgundy transition-colors">
-                                {victima.NombreVíctima || 'N/A'}
-                              </div>
-                              <div className="text-sm text-gray-500">
-                                Fecha: {victima.FechaRegistro || 'N/A'}
-                              </div>
-                            </div>
+                      <tr key={index} className="hover:bg-white transition-colors duration-200 bg-white">
+                        <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                          {victima.NombreVíctima || '-'}
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          {victima.Sexo === '1.0' ? 'Masculino' : 
+                           victima.Sexo === '2.0' ? 'Femenino' : '-'}
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          {victima.NNA === '1.0' ? 'NNA' : 'Adulto'}
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700 max-w-xs">
+                          <div className="truncate">
+                            {victima.AlfanúmericaRegistro || '-'}
                           </div>
                         </td>
-                        <td className="px-6 py-6">
-                          <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-                            victima.Sexo === '1.0' ? 'bg-blue-100 text-blue-800 border border-blue-200' : 
-                            victima.Sexo === '2.0' ? 'bg-pink-100 text-pink-800 border border-pink-200' : 
-                            'bg-gray-100 text-gray-800 border border-gray-200'
-                          }`}>
-                            {victima.Sexo === '1.0' ? 'Masculino' : 
-                             victima.Sexo === '2.0' ? 'Femenino' : 'N/E'}
-                          </span>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          {victima.AlcaldíaHechoVictimizante || '-'}
                         </td>
-                        <td className="px-6 py-6">
-                          <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-                            victima.NNA === '1.0' 
-                              ? 'bg-purple-100 text-purple-800 border border-purple-200' 
-                              : 'bg-green-100 text-green-800 border border-green-200'
-                          }`}>
-                            {victima.NNA === '1.0' ? 'NNA' : 'Adulto'}
-                          </span>
-                        </td>
-                        <td className="px-6 py-6">
-                          <div className="text-sm font-mono text-gray-900 bg-gray-50 px-3 py-1 rounded-lg border">
-                            {victima.AlfanúmericaRegistro || 'N/A'}
+                        <td className="px-6 py-4 text-center">
+                          <div className="flex items-center justify-center space-x-2">
+                            <button 
+                              onClick={() => verDetalle(victima)}
+                              className="btn btn-ghost p-2"
+                            >
+                              <Eye className="w-4 h-4" />
+                            </button>
                           </div>
-                        </td>
-                        <td className="px-6 py-6 text-sm text-gray-900">
-                          <div className="max-w-xs truncate">
-                            {victima.AlcaldíaHechoVictimizante || 'No especificada'}
-                          </div>
-                        </td>
-                        <td className="px-6 py-6 text-center">
-                          <button
-                            onClick={() => verDetalle(victima)}
-                            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary-burgundy to-burgundy-dark text-white text-sm font-medium rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 group"
-                          >
-                            <Eye className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                            Ver Detalle
-                          </button>
                         </td>
                       </tr>
                     ))}
@@ -768,7 +748,6 @@ const BuscarVictimas = () => {
           </div>
         </div>
       )}
-    </div>
     </div>
   );
 };

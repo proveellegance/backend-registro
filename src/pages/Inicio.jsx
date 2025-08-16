@@ -35,7 +35,7 @@ const Inicio = () => {
   const functionalities = [
     {
       title: 'Padrón de Víctimas',
-      description: 'Consulta el padrón oficial de víctimas con herramientas de búsqueda avanzada',
+      description: 'Consulta el Padrón de Víctimas de la Ciudad de México con herramientas de búsqueda avanzada',
       icon: Search,
       route: '/buscar-victimas',
       color: 'from-primary-burgundy to-burgundy-dark',
