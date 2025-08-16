@@ -232,7 +232,9 @@ const BuscarVictimas = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {estadisticas && (
               <>
-                <button className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full">
+                <button 
+                  className="estadistica-button bg-white p-6 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full"
+                >
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Total Víctimas</h3>
@@ -244,7 +246,9 @@ const BuscarVictimas = () => {
                   </div>
                 </button>
                 
-                <button className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full">
+                <button 
+                  className="estadistica-button bg-white p-6 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full"
+                >
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">NNA Registrados</h3>
@@ -257,7 +261,9 @@ const BuscarVictimas = () => {
                   </div>
                 </button>
                 
-                <button className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full">
+                <button 
+                  className="estadistica-button bg-white p-6 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full"
+                >
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Víctimas Directas</h3>
@@ -269,7 +275,9 @@ const BuscarVictimas = () => {
                   </div>
                 </button>
                 
-                <button className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full">
+                <button 
+                  className="estadistica-button bg-white p-6 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full"
+                >
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">Víctimas Indirectas</h3>
@@ -290,7 +298,7 @@ const BuscarVictimas = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Búsqueda de Víctimas</h2>
           
           {/* Contenedor de búsqueda con fondo blanco y bordes redondeados */}
-          <div className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100" style={{backgroundColor: '#ffffff', background: '#ffffff'}}>
+          <div className="contenedor-blanco bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
               <div className="mb-6 lg:mb-0">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Búsqueda Avanzada</h3>
@@ -358,9 +366,9 @@ const BuscarVictimas = () => {
         </div>
 
         {/* Sección de Resultados - Tabla con fondo blanco */}
-        <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden" style={{backgroundColor: '#ffffff', background: '#ffffff'}}>
+        <div className="contenedor-blanco bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
           {/* Header de la tabla */}
-          <div className="bg-white p-6 border-b border-gray-200" style={{backgroundColor: '#ffffff', background: '#ffffff'}}>
+          <div className="contenedor-blanco bg-white p-6 border-b border-gray-200">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between">
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">Resultados de la Búsqueda</h3>

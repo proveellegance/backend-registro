@@ -36,3 +36,33 @@
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Estilos forzados para botones estadísticos */
+.estadistica-button {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  border-radius: 24px !important;
+  border: 1px solid #f3f4f6 !important;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+}
+
+.estadistica-button:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* Forzar fondo blanco en contenedores */
+.contenedor-blanco {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  border-radius: 24px !important;
+}
+
+/* Forzar bordes redondeados en cualquier elemento */
+.rounded-force {
+  border-radius: 24px !important;
+}
+
+.rounded-xl-force {
+  border-radius: 12px !important;
+}
