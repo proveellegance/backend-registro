@@ -141,71 +141,32 @@ const Inicio = () => {
                       style={{ 
                         borderRadius: '24px',
                         animationDelay: `${0.4 + index * 0.1}s`,
-                        minHeight: '280px',
+                        minHeight: '200px',
                         marginLeft: index > 0 ? '16px' : '0',
                         marginRight: index < functionalities.length - 1 ? '16px' : '0'
                       }}
                     >
-                      <div className="text-center space-y-6 h-full flex flex-col justify-between">
-                        {/* Estadísticas prominentes en la parte superior */}
-                        {func.stats && (
-                          <div className="bg-white bg-opacity-15 rounded-2xl p-4 backdrop-blur-sm">
-                            <div className="text-center space-y-2">
-                              <p className="text-sm font-medium opacity-90 uppercase tracking-wider">
-                                {func.stats.label}
-                              </p>
-                              <p className="text-4xl md:text-5xl font-bold">
-                                {func.stats.value?.toLocaleString() || '0'}
-                              </p>
-                              {func.stats.subtitle && (
-                                <p className="text-sm opacity-80 font-medium">
-                                  {func.stats.subtitle}
-                                </p>
-                              )}
-                            </div>
-                          </div>
-                        )}
-                        
+                      <div className="text-center space-y-6 h-full flex flex-col justify-center">
                         {/* Icono y contenido principal */}
-                        <div className="flex-1 flex flex-col justify-center space-y-4">
-                          <div className="flex justify-center">
-                            <div className="w-16 h-16 md:w-20 md:h-20 bg-white bg-opacity-20 flex items-center justify-center group-hover:bg-opacity-30 group-hover:scale-110 transition-all duration-300 shadow-lg"
-                                 style={{ borderRadius: '20px' }}>
-                              <IconComponent className="w-8 h-8 md:w-10 md:h-10" />
-                            </div>
+                        <div className="flex justify-center">
+                          <div className="w-16 h-16 md:w-20 md:h-20 bg-white bg-opacity-20 flex items-center justify-center group-hover:bg-opacity-30 group-hover:scale-110 transition-all duration-300 shadow-lg"
+                               style={{ borderRadius: '20px' }}>
+                            <IconComponent className="w-8 h-8 md:w-10 md:h-10" />
                           </div>
-                          <div>
-                            <h4 className="text-xl md:text-2xl font-bold mb-3">
-                              {func.title}
-                            </h4>
-                            <p className="text-white text-opacity-90 text-sm md:text-base leading-relaxed">
-                              {func.description}
-                            </p>
-                          </div>
+                        </div>
+                        <div>
+                          <h4 className="text-xl md:text-2xl font-bold mb-3">
+                            {func.title}
+                          </h4>
+                          <p className="text-white text-opacity-90 text-sm md:text-base leading-relaxed">
+                            {func.description}
+                          </p>
                         </div>
                       </div>
                     </button>
                   );
                 })}
               </div>
-              
-              {/* Información de actualización */}
-              {(estadisticas || controlGestionStats) && (
-                <div className="flex justify-center" style={{ marginTop: '100px', marginBottom: '150px' }}>
-                  <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-white border-opacity-20">
-                    <div className="flex items-center justify-center space-x-4 text-sm text-white">
-                      <span className="opacity-80">Datos actualizados:</span>
-                      <span className="font-semibold">
-                        {new Date().toLocaleDateString('es-ES', { 
-                          day: 'numeric', 
-                          month: 'long', 
-                          year: 'numeric' 
-                        })}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
           )}
         </div>

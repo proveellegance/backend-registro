@@ -49,7 +49,7 @@ const Navigation = () => {
               />
             </div>
             <span className="text-xl font-semibold" style={{color: '#ffffff'}}>
-              Sistema - Registro de Víctimas
+              Plataforma Informática del Registro de Víctimas
             </span>
           </div>
 

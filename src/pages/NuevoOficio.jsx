@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Save, Upload, FileText, AlertCircle, CheckCircle, Plus, ArrowLeft } from 'lucide-react';
-import { OficiosService, DriveService } from '../services/googleSheetsServiceBrowser';
+import { controlGestionAPI } from '../services/api';
 import { useNavigate } from 'react-router-dom';
 
 const schema = yup.object({
@@ -41,9 +41,6 @@ const NuevoOficio = () => {
   const [mensaje, setMensaje] = useState(null);
   const navigate = useNavigate();
 
-  const oficiosService = new OficiosService();
-  const driveService = new DriveService();
-
   const {
     register,
     handleSubmit,
@@ -67,18 +64,21 @@ const NuevoOficio = () => {
     try {
       let urlArchivo = null;
       
+      // TODO: Implementar subida de archivos cuando esté disponible
       if (archivoPDF) {
-        urlArchivo = await driveService.subirArchivo(archivoPDF);
+        console.log('Archivo seleccionado:', archivoPDF.name);
+        // urlArchivo = await subirArchivo(archivoPDF);
       }
 
       const oficio = {
         ...data,
         urlArchivo,
-        fechaCreacion: new Date(),
+        fechaCreacion: new Date().toISOString(),
         estado: 'pendiente'
       };
 
-      const resultado = await oficiosService.crearOficio(oficio);
+      // Usar el API de oficios de entrada
+      const resultado = await controlGestionAPI.oficiosEntrada.create(oficio);
       
       setMensaje({
         tipo: 'exito',

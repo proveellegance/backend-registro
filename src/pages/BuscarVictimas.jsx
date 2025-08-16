@@ -43,9 +43,9 @@ const BuscarVictimas = () => {
       setFilteredVictimas(victimas);
     } else {
       const filtered = victimas.filter(victima =>
-        victima.nombre_victima?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        victima.expediente?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        victima.carpeta_investigacion?.toLowerCase().includes(searchTerm.toLowerCase())
+        victima.NombreVíctima?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        victima.AlfanúmericaRegistro?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        victima.FechaRegistro?.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredVictimas(filtered);
     }
@@ -54,9 +54,11 @@ const BuscarVictimas = () => {
   const cargarDatos = async () => {
     try {
       setLoading(true);
+      console.log('Cargando datos...');
       
       // Cargar estadísticas
       const statsResponse = await victimasAPI.getEstadisticas();
+      console.log('Estadísticas recibidas:', statsResponse);
       setEstadisticas(statsResponse);
 
       // Cargar víctimas con filtros y paginación
@@ -66,6 +68,7 @@ const BuscarVictimas = () => {
         ...filtros
       });
       
+      console.log('Víctimas recibidas:', victimasResponse);
       setVictimas(victimasResponse.results || []);
       setError(null);
     } catch (error) {
@@ -279,13 +282,13 @@ const BuscarVictimas = () => {
                         Sexo
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Edad
+                        Tipo
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Expediente
+                        Registro
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Municipio
+                        Alcaldía
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Acciones
@@ -297,26 +300,26 @@ const BuscarVictimas = () => {
                       <tr key={index} className="hover:bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm font-medium text-gray-900">
-                            {victima.nombre_victima || 'N/A'}
+                            {victima.NombreVíctima || 'N/A'}
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                            victima.sexo === 'MASCULINO' ? 'bg-blue-100 text-blue-800' : 
-                            victima.sexo === 'FEMENINO' ? 'bg-pink-100 text-pink-800' : 
+                            victima.Sexo === 'MASCULINO' ? 'bg-blue-100 text-blue-800' : 
+                            victima.Sexo === 'FEMENINO' ? 'bg-pink-100 text-pink-800' : 
                             'bg-gray-100 text-gray-800'
                           }`}>
-                            {victima.sexo || 'N/E'}
+                            {victima.Sexo || 'N/E'}
                           </span>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {victima.edad || 'N/E'}
+                          {victima.NNA === '1.0' ? 'NNA' : 'Adulto'}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {victima.expediente || 'N/A'}
+                          {victima.AlfanúmericaRegistro || 'N/A'}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {victima.municipio_hechos || 'N/A'}
+                          {victima.AlcaldíaHechoVictimizante || 'N/A'}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                           <button
