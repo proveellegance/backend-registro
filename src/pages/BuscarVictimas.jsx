@@ -208,7 +208,7 @@ const BuscarVictimas = () => {
   return (
     <div className="min-h-screen bg-white">
       <HeaderInstitucional />
-      <div className="container mx-auto px-6 py-12">
+      <div className="contenedor-principal container mx-auto px-6 py-12 mb-16">
         {/* Header con degradado */}
         <div className="mb-12">
           <div className="bg-gradient-to-r from-primary-burgundy via-primary-burgundy to-primary-gold rounded-3xl p-8 md:p-12 text-white shadow-2xl">

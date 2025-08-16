@@ -49,3 +49,9 @@
   background: #ffffff !important;
   border-radius: 16px !important;
 }
+
+/* Espaciado forzado antes del footer */
+.contenedor-principal {
+  margin-bottom: 40px !important;
+  padding-bottom: 20px !important;
+}

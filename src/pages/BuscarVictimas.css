@@ -66,3 +66,9 @@
 .rounded-xl-force {
   border-radius: 12px !important;
 }
+
+/* Espaciado forzado antes del footer */
+.contenedor-principal {
+  margin-bottom: 40px !important;
+  padding-bottom: 20px !important;
+}
