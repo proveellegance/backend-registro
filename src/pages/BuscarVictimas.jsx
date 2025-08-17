@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Filter, Download, Eye, X, Users, Database, ChevronLeft, ChevronRight, BarChart3 } from 'lucide-react';
+import { Search, Filter, Download, Eye, X, Users, Database, ChevronLeft, ChevronRight, BarChart3, Building, ClipboardList } from 'lucide-react';
 import { victimasAPI } from '../services/api';
 import HeaderInstitucional from '../components/HeaderInstitucional';
 import './BuscarVictimas.css';
@@ -429,53 +429,55 @@ const BuscarVictimas = () => {
                   <thead className="bg-white">
                     <tr>
                       <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
-                        Víctima
+                        Registro Alfanumérico
                       </th>
                       <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
-                        Sexo
+                        Nombre Víctima
                       </th>
                       <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
-                        Tipo
+                        Fecha Registro
                       </th>
                       <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
-                        Registro
+                        Tipo Delito/Violación DH
                       </th>
                       <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
-                        Alcaldía
+                        Tipo Víctima
                       </th>
                       <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900 border-b border-gray-200">
-                        Acciones
+                        Ver Más
                       </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 bg-white">
                     {currentItems.map((victima, index) => (
                       <tr key={index} className="hover:bg-white transition-colors duration-200 bg-white">
-                        <td className="px-6 py-4 text-sm font-medium text-gray-900">
-                          {victima.NombreVíctima || '-'}
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-700">
-                          {victima.Sexo === '1.0' ? 'Masculino' : 
-                           victima.Sexo === '2.0' ? 'Femenino' : '-'}
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-700">
-                          {victima.NNA === '1.0' ? 'NNA' : 'Adulto'}
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-700 max-w-xs">
+                        <td className="px-6 py-4 text-sm font-medium text-gray-900 max-w-xs">
                           <div className="truncate">
                             {victima.AlfanúmericaRegistro || '-'}
                           </div>
                         </td>
                         <td className="px-6 py-4 text-sm text-gray-700">
-                          {victima.AlcaldíaHechoVictimizante || '-'}
+                          {victima.NombreVíctima || '-'}
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          {victima.FechaRegistro ? new Date(victima.FechaRegistro).toLocaleDateString('es-MX') : '-'}
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700 max-w-xs">
+                          <div className="truncate">
+                            {victima.TipoDelitoViolaciónDH || '-'}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-700">
+                          {victima.TipoVíctima || '-'}
                         </td>
                         <td className="px-6 py-4 text-center">
                           <div className="flex items-center justify-center space-x-2">
                             <button 
                               onClick={() => verDetalle(victima)}
-                              className="btn btn-ghost p-2"
+                              className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-primary-burgundy to-burgundy-dark text-white text-xs font-medium rounded-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
                             >
-                              <Eye className="w-4 h-4" />
+                              <Eye className="w-3 h-3 mr-1" />
+                              Ver Más
                             </button>
                           </div>
                         </td>
@@ -629,16 +631,17 @@ const BuscarVictimas = () => {
         </div>
       )}
 
-      {/* Modal de Detalle Mejorado */}
+      {/* Modal de Detalle Completo */}
       {detalleModalVisible && selectedVictima && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-hidden shadow-2xl animate-scale-in">
+          <div className="bg-white rounded-3xl max-w-7xl w-full max-h-[95vh] overflow-hidden shadow-2xl animate-scale-in">
             {/* Header del modal */}
-            <div className="bg-gradient-to-r from-primary-burgundy to-burgundy-dark p-8 text-white">
+            <div className="bg-gradient-to-r from-primary-burgundy to-burgundy-dark p-6 text-white">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">Detalle de Víctima</h3>
-                  <p className="text-white/90 text-lg">{selectedVictima.NombreVíctima}</p>
+                  <h3 className="text-2xl font-bold mb-2">Información Completa de la Víctima</h3>
+                  <p className="text-white/90 text-lg">{selectedVictima.NombreVíctima || 'Nombre no disponible'}</p>
+                  <p className="text-white/70 text-sm">{selectedVictima.AlfanúmericaRegistro || 'Registro no disponible'}</p>
                 </div>
                 <button
                   onClick={() => setDetalleModalVisible(false)}
@@ -649,93 +652,128 @@ const BuscarVictimas = () => {
               </div>
             </div>
 
-            {/* Contenido del modal */}
-            <div className="p-8 overflow-y-auto max-h-[70vh]">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Información principal */}
-                <div className="space-y-6">
-                  <div className="bg-white p-6 rounded-2xl border border-gray-200">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                      <Users className="w-5 h-5 mr-2 text-primary-burgundy" />
-                      Información Personal
-                    </h4>
-                    <div className="space-y-4">
-                      <div>
-                        <label className="text-sm font-medium text-gray-500 uppercase tracking-wider">Nombre Completo</label>
-                        <p className="text-lg font-semibold text-gray-900 mt-1">{selectedVictima.NombreVíctima || 'N/A'}</p>
+            {/* Contenido del modal - Grid completo */}
+            <div className="p-6 overflow-y-auto max-h-[80vh]">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                {/* Sección 1: Información Personal */}
+                <div className="bg-white p-6 rounded-2xl border border-gray-200">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center border-b pb-3">
+                    <Users className="w-5 h-5 mr-2 text-primary-burgundy" />
+                    Datos Personales
+                  </h4>
+                  <div className="space-y-3 text-sm">
+                    {Object.entries({
+                      'Nombre Completo': selectedVictima.NombreVíctima,
+                      'Primer Apellido': selectedVictima.PrimerApellido,
+                      'Segundo Apellido': selectedVictima.SegundoApellido,
+                      'CURP': selectedVictima.CURP,
+                      'Sexo': selectedVictima.Sexo === '1.0' ? 'Masculino' : selectedVictima.Sexo === '2.0' ? 'Femenino' : selectedVictima.Sexo,
+                      'Fecha Nacimiento': selectedVictima.FechaNacimiento,
+                      'Edad': selectedVictima.Edad,
+                      'NNA': selectedVictima.NNA === '1.0' ? 'Sí' : 'No',
+                      'Estado Civil': selectedVictima.EstadoCivil,
+                      'Ocupación': selectedVictima.Ocupación,
+                      'Escolaridad': selectedVictima.Escolaridad,
+                      'Nacionalidad': selectedVictima.Nacionalidad,
+                      'Lugar Nacimiento': selectedVictima.LugarNacimiento,
+                    }).map(([key, value]) => (
+                      <div key={key} className="border-b border-gray-100 pb-2 last:border-b-0">
+                        <label className="font-medium text-gray-600">{key}:</label>
+                        <p className="text-gray-900 mt-1">{value || 'N/A'}</p>
                       </div>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 uppercase tracking-wider">Sexo</label>
-                          <div className="mt-1">
-                            <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-                              selectedVictima.Sexo === '1.0' ? 'bg-blue-100 text-blue-800' : 
-                              selectedVictima.Sexo === '2.0' ? 'bg-pink-100 text-pink-800' : 
-                              'bg-gray-100 text-gray-800'
-                            }`}>
-                              {selectedVictima.Sexo === '1.0' ? 'Masculino' : 
-                               selectedVictima.Sexo === '2.0' ? 'Femenino' : 'No especificado'}
-                            </span>
-                          </div>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500 uppercase tracking-wider">Tipo</label>
-                          <div className="mt-1">
-                            <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-                              selectedVictima.NNA === '1.0' ? 'bg-purple-100 text-purple-800' : 'bg-green-100 text-green-800'
-                            }`}>
-                              {selectedVictima.NNA === '1.0' ? 'NNA' : 'Adulto'}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium text-gray-500 uppercase tracking-wider">Tipo de Víctima</label>
-                        <p className="text-gray-900 mt-1 font-medium">{selectedVictima.TipoVíctima || 'N/A'}</p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
 
-                {/* Información del registro */}
-                <div className="space-y-6">
-                  <div className="bg-white p-6 rounded-2xl border border-blue-200">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                      <Database className="w-5 h-5 mr-2 text-blue-600" />
-                      Información del Registro
-                    </h4>
-                    <div className="space-y-4">
-                      <div>
-                        <label className="text-sm font-medium text-gray-500 uppercase tracking-wider">Registro Alfanumérico</label>
-                        <div className="mt-1 p-3 bg-white rounded-lg border font-mono text-sm">
-                          {selectedVictima.AlfanúmericaRegistro || 'N/A'}
-                        </div>
+                {/* Sección 2: Información de Registro y Hechos */}
+                <div className="bg-white p-6 rounded-2xl border border-blue-200">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center border-b pb-3">
+                    <Database className="w-5 h-5 mr-2 text-blue-600" />
+                    Registro y Hechos
+                  </h4>
+                  <div className="space-y-3 text-sm">
+                    {Object.entries({
+                      'Registro Alfanumérico': selectedVictima.AlfanúmericaRegistro,
+                      'Fecha Registro': selectedVictima.FechaRegistro,
+                      'Tipo Víctima': selectedVictima.TipoVíctima,
+                      'Tipo Delito/Violación DH': selectedVictima.TipoDelitoViolaciónDH,
+                      'Fecha Hecho Victimizante': selectedVictima.FechaHechoVictimizante,
+                      'Lugar Hecho Victimizante': selectedVictima.LugarHechoVictimizante,
+                      'Alcaldía Hecho Victimizante': selectedVictima.AlcaldíaHechoVictimizante,
+                      'Estado Hecho Victimizante': selectedVictima.EstadoHechoVictimizante,
+                      'País Hecho Victimizante': selectedVictima.PaísHechoVictimizante,
+                      'Perpetrador': selectedVictima.Perpetrador,
+                      'Relación con Perpetrador': selectedVictima.RelaciónConPerpetrador,
+                      'Autoridad que Canaliza': selectedVictima.AutoridadQueCanaliza,
+                      'Medio por el que se Enteró': selectedVictima.MedioPorElQueSeEnteró,
+                    }).map(([key, value]) => (
+                      <div key={key} className="border-b border-gray-100 pb-2 last:border-b-0">
+                        <label className="font-medium text-gray-600">{key}:</label>
+                        <p className="text-gray-900 mt-1">{value || 'N/A'}</p>
                       </div>
-                      <div>
-                        <label className="text-sm font-medium text-gray-500 uppercase tracking-wider">Fecha de Registro</label>
-                        <p className="text-gray-900 mt-1 font-medium">{selectedVictima.FechaRegistro || 'N/A'}</p>
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium text-gray-500 uppercase tracking-wider">Alcaldía del Hecho Victimizante</label>
-                        <p className="text-gray-900 mt-1">{selectedVictima.AlcaldíaHechoVictimizante || 'No especificada'}</p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
+
+                {/* Sección 3: Domicilio y Contacto */}
+                <div className="bg-white p-6 rounded-2xl border border-green-200">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center border-b pb-3">
+                    <Building className="w-5 h-5 mr-2 text-green-600" />
+                    Domicilio y Contacto
+                  </h4>
+                  <div className="space-y-3 text-sm">
+                    {Object.entries({
+                      'Calle y Número': selectedVictima.CalleYNúmero,
+                      'Colonia': selectedVictima.Colonia,
+                      'Alcaldía': selectedVictima.Alcaldía,
+                      'Código Postal': selectedVictima.CódigoPostal,
+                      'Estado': selectedVictima.Estado,
+                      'País Domicilio': selectedVictima.PaísDomicilio,
+                      'Teléfono': selectedVictima.Teléfono,
+                      'Correo Electrónico': selectedVictima.CorreoElectrónico,
+                      'Persona de Contacto': selectedVictima.PersonaDeContacto,
+                      'Teléfono Contacto': selectedVictima.TeléfonoContacto,
+                      'Parentesco Contacto': selectedVictima.ParentescoContacto,
+                    }).map(([key, value]) => (
+                      <div key={key} className="border-b border-gray-100 pb-2 last:border-b-0">
+                        <label className="font-medium text-gray-600">{key}:</label>
+                        <p className="text-gray-900 mt-1">{value || 'N/A'}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
               </div>
 
-              {/* Información adicional */}
-              <div className="mt-8 bg-white p-6 rounded-2xl border border-gray-200">
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">Todos los Campos</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {Object.entries(selectedVictima).map(([key, value]) => (
-                    <div key={key} className="bg-white p-4 rounded-xl border border-gray-100">
-                      <dt className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-1">
-                        {key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
-                      </dt>
-                      <dd className="text-sm text-gray-900 break-words">
-                        {value || 'N/A'}
-                      </dd>
+              {/* Sección adicional: Información complementaria en fila completa */}
+              <div className="mt-6 bg-white p-6 rounded-2xl border border-purple-200">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center border-b pb-3">
+                  <ClipboardList className="w-5 h-5 mr-2 text-purple-600" />
+                  Información Complementaria
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+                  {Object.entries({
+                    'Pertenencia Étnica': selectedVictima.PertenenciaÉtnica,
+                    'Lengua Indígena': selectedVictima.LenguaIndígena,
+                    'Discapacidad': selectedVictima.Discapacidad,
+                    'Tipo Discapacidad': selectedVictima.TipoDiscapacidad,
+                    'Condición Migratoria': selectedVictima.CondiciónMigratoria,
+                    'LGBTI': selectedVictima.LGBTI,
+                    'Situación Calle': selectedVictima.SituaciónCalle,
+                    'Trabajo Infantil': selectedVictima.TrabajoInfantil,
+                    'Situación Pobreza': selectedVictima.SituaciónPobreza,
+                    'Embarazo': selectedVictima.Embarazo,
+                    'Trata de Personas': selectedVictima.TrataDePersonas,
+                    'Desplazamiento Forzado': selectedVictima.DesplazamientoForzado,
+                    'Adopción Irregular': selectedVictima.AdopciónIrregular,
+                    'Localización': selectedVictima.Localización,
+                    'Situación Jurídica': selectedVictima.SituaciónJurídica,
+                    'Observaciones': selectedVictima.Observaciones,
+                  }).map(([key, value]) => (
+                    <div key={key} className="border border-gray-200 rounded-lg p-3">
+                      <label className="font-medium text-gray-600 text-xs uppercase tracking-wide">{key}:</label>
+                      <p className="text-gray-900 mt-1">{value || 'N/A'}</p>
                     </div>
                   ))}
                 </div>
@@ -743,7 +781,7 @@ const BuscarVictimas = () => {
             </div>
 
             {/* Footer del modal */}
-            <div className="bg-gray-50 px-8 py-4 border-t border-gray-200">
+            <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
               <div className="flex justify-end">
                 <button
                   onClick={() => setDetalleModalVisible(false)}
