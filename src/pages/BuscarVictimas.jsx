@@ -79,7 +79,22 @@ const BuscarVictimas = () => {
       // Cargar estadísticas
       const statsResponse = await victimasAPI.getEstadisticas();
       console.log('Estadísticas recibidas:', statsResponse);
-      setEstadisticas(statsResponse);
+      
+      // Procesar estadísticas para extraer víctimas directas e indirectas
+      const victimasDirectas = statsResponse.por_tipo?.find(tipo => tipo.TipoVíctima === 'Directa')?.count || 0;
+      const victimasIndirectas = statsResponse.por_tipo?.find(tipo => tipo.TipoVíctima === 'Indirecta')?.count || 0;
+      
+      // Mapear estadísticas al formato esperado por la interfaz
+      const estadisticasMapeadas = {
+        total_victimas: statsResponse.total_victimas || 0,
+        victimas_directas: victimasDirectas,
+        victimas_indirectas: victimasIndirectas,
+        totalRegistros: statsResponse.total_victimas || 0,
+        totalHombres: statsResponse.por_sexo?.find(sexo => sexo.Sexo === '1.0')?.count || 0,
+        totalMujeres: statsResponse.por_sexo?.find(sexo => sexo.Sexo === '2.0')?.count || 0
+      };
+      
+      setEstadisticas(estadisticasMapeadas);
 
       // Cargar víctimas con filtros, paginación y búsqueda
       const params = {
@@ -124,8 +139,10 @@ const BuscarVictimas = () => {
   };
 
   const verDetalle = (victima) => {
+    console.log('verDetalle llamado con:', victima);
     setSelectedVictima(victima);
     setDetalleModalVisible(true);
+    console.log('Modal debería abrirse ahora');
   };
 
   const exportarDatos = async () => {
@@ -207,6 +224,7 @@ const BuscarVictimas = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {console.log('🔄 Estado actual del modal:', { detalleModalVisible, selectedVictima: !!selectedVictima })}
       <HeaderInstitucional />
       <div className="contenedor-principal container mx-auto px-6 py-12 mb-16">
         {/* Header con degradado */}
@@ -242,21 +260,6 @@ const BuscarVictimas = () => {
                     </div>
                     <div className="bg-white p-3 rounded-xl border-2 border-primary-burgundy">
                       <Users className="w-8 h-8 text-primary-burgundy" />
-                    </div>
-                  </div>
-                </button>
-                
-                <button 
-                  className="estadistica-button bg-white p-6 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-left w-full"
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2">NNA Registrados</h3>
-                      <p className="text-3xl font-bold text-blue-600">{estadisticas.nna_count?.toLocaleString() || '0'}</p>
-                      <p className="text-sm text-gray-500 mt-1">{estadisticas.porcentaje_nna || '0'}% del total</p>
-                    </div>
-                    <div className="bg-white p-3 rounded-xl border-2 border-blue-500">
-                      <Users className="w-8 h-8 text-blue-500" />
                     </div>
                   </div>
                 </button>
@@ -473,8 +476,11 @@ const BuscarVictimas = () => {
                         <td className="px-6 py-4 text-center">
                           <div className="flex items-center justify-center space-x-2">
                             <button 
-                              onClick={() => verDetalle(victima)}
-                              className="inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-primary-burgundy to-burgundy-dark text-white text-xs font-medium rounded-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                              onClick={() => {
+                                console.log('🔴 CLICK EN BOTÓN - Víctima:', victima);
+                                verDetalle(victima);
+                              }}
+                              className="btn-ver-mas inline-flex items-center px-3 py-1.5 bg-gradient-to-r from-primary-burgundy to-burgundy-dark text-white text-xs font-medium rounded-lg hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
                             >
                               <Eye className="w-3 h-3 mr-1" />
                               Ver Más
@@ -633,8 +639,9 @@ const BuscarVictimas = () => {
 
       {/* Modal de Detalle Completo */}
       {detalleModalVisible && selectedVictima && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-7xl w-full max-h-[95vh] overflow-hidden shadow-2xl animate-scale-in">
+        <div className="modal-overlay">
+          {console.log('Modal renderizándose con víctima:', selectedVictima)}
+          <div className="modal-content">
             {/* Header del modal */}
             <div className="bg-gradient-to-r from-primary-burgundy to-burgundy-dark p-6 text-white">
               <div className="flex justify-between items-start">
