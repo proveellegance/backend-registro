@@ -1,175 +1,89 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, FileText, Plus, Users, BarChart3, AlertCircle } from 'lucide-react';
-import HeaderInstitucional from '../components/HeaderInstitucional';
-import { victimasAPI, controlGestionAPI } from '../services/api';
+import { Search, FileText, Plus, AlertCircle } from 'lucide-react';
+import LogoCEAVI from '../components/LogoCEAVI';
+
+
 
 const Inicio = () => {
   const navigate = useNavigate();
-  const [estadisticas, setEstadisticas] = useState(null);
-  const [controlGestionStats, setControlGestionStats] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchEstadisticas = async () => {
-      try {
-        setLoading(true);
-        const [victimasStats, gestionStats] = await Promise.all([
-          victimasAPI.getEstadisticas(),
-          controlGestionAPI.turnoCIE.getEstadisticasGenerales()
-        ]);
-        setEstadisticas(victimasStats);
-        setControlGestionStats(gestionStats);
-      } catch (err) {
-        console.error('Error fetching statistics:', err);
-        setError('Error al cargar las estadísticas');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchEstadisticas();
-  }, []);
-
-  const functionalities = [
+  // Botones principales estáticos
+  const mainFunctionalities = [
     {
       title: 'Padrón de Víctimas',
-      description: 'Consulta el Padrón de Víctimas de la Ciudad de México con herramientas de búsqueda avanzada',
+      description: 'Consulta el Padrón de Víctimas de la Ciudad de México',
       icon: Search,
       route: '/buscar-victimas',
-      color: 'from-primary-burgundy to-burgundy-dark',
-      stats: {
-        value: estadisticas?.total_victimas,
-        label: 'Total Víctimas',
-        subtitle: estadisticas?.nna_count ? `${estadisticas.nna_count} NNA (${estadisticas.porcentaje_nna}%)` : null
-      }
+      color: 'from-primary-600 to-primary-700'
     },
     {
       title: 'Control de Gestión',
-      description: 'Gestiona expedientes, oficios y solicitudes del registro',
+      description: 'Gestiona expedientes, oficios y solicitudes',
       icon: FileText,
       route: '/control-gestion',
-      color: 'from-primary-gold to-gold-dark',
-      stats: {
-        value: controlGestionStats?.totales?.expedientes,
-        label: 'Expedientes',
-        subtitle: controlGestionStats?.totales?.solicitudes_registro ? `${controlGestionStats.totales.solicitudes_registro} Solicitudes` : null
-      }
+      color: 'from-dorado-600 to-dorado-700'
     },
     {
       title: 'Nuevo Registro',
-      description: 'Registra nuevas víctimas y documentos en el sistema',
+      description: 'Registra nuevas víctimas y documentos',
       icon: Plus,
       route: '/nuevo-registro',
-      color: 'from-primary-burgundy to-primary-gold',
-      stats: null
+      color: 'from-primary-600 to-dorado-600'
     }
   ];
 
   return (
-    <div>
-      <HeaderInstitucional />
-      
-      <main className="container mx-auto px-6 py-16 md:py-24 pb-64 md:pb-80">
-        <div className="space-y-16 md:space-y-20">
-          
-          {/* Error State */}
-          {error && (
-            <div className="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-200 rounded-3xl p-8 shadow-lg">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto">
-                  <AlertCircle className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-red-800 mb-2">Error al cargar estadísticas</h3>
-                  <p className="text-red-700">{error}</p>
-                  <button 
-                    onClick={() => window.location.reload()}
-                    className="mt-4 px-6 py-2 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-colors duration-200 font-medium"
-                  >
-                    Intentar nuevamente
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-          
-          {/* Loading State */}
-          {loading && (
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl shadow-2xl p-12 border border-gray-100 animate-fade-in-up">
-              <div className="text-center space-y-6">
-                <div className="relative">
-                  <div className="animate-spin rounded-full h-16 w-16 border-4 border-primary-burgundy border-t-transparent mx-auto"></div>
-                  <div className="absolute inset-0 rounded-full h-16 w-16 border-4 border-primary-gold border-t-transparent mx-auto animate-spin" style={{ animationDirection: 'reverse', animationDuration: '3s' }}></div>
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-semibold text-primary-burgundy">Cargando estadísticas...</h3>
-                  <p className="text-gray-600">Obteniendo los datos más recientes del sistema</p>
-                </div>
-              </div>
-            </div>
-          )}
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100">
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b border-primary-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            {/* Logo eliminado por solicitud */}
+            <h1 className="text-2xl font-bold text-primary-800">
+              Sistema de Registro de Víctimas
+            </h1>
+          </div>
 
-          {/* Burbuja de Acceso Rápido - Centrada */}
-          {!loading && !error && (
-            <div className="flex justify-center animate-fade-in">
-              <div className="bg-gradient-to-br from-primary-burgundy to-primary-gold rounded-3xl p-8 md:p-10 shadow-2xl text-white max-w-2xl w-full">
-                <div className="text-center">
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                    Sistema de Registro de Víctimas
-                  </h3>
-                  <p className="text-white text-opacity-90 text-lg md:text-xl leading-relaxed">
-                    Selecciona la funcionalidad que necesitas
-                  </p>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Welcome Section */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-primary-800 mb-4">
+            Bienvenido al Sistema
+          </h2>
+          <p className="text-lg text-primary-600 mb-8">
+            Selecciona una opción para comenzar
+          </p>
+        </div>
+
+        {/* Botones principales en fila horizontal con espacio y bordes redondeados */}
+        <div className="flex flex-row flex-wrap justify-center gap-12 mb-16">
+          {mainFunctionalities.map((func, index) => (
+            <button
+              key={index}
+              onClick={() => navigate(func.route)}
+              className="bg-white rounded-2xl shadow-lg border border-primary-200 p-8 hover:shadow-xl transition-shadow duration-200 text-left min-w-[280px] max-w-xs w-full flex-shrink-0 mx-2 my-4"
+              style={{ minHeight: '200px' }}
+            >
+              <div className="flex items-center mb-6">
+                <div className={`w-14 h-14 rounded-lg bg-gradient-to-r ${func.color} flex items-center justify-center shadow-md`}>
+                  <func.icon className="w-7 h-7 text-white" />
                 </div>
               </div>
-            </div>
-          )}          {/* Botones de funcionalidades con estadísticas integradas */}
-          {!loading && !error && (
-            <div style={{ marginBottom: '120px' }}>
-              <div className="w-full flex flex-row justify-between animate-fade-in delay-300" style={{gap: '32px', marginBottom: '80px'}}>
-                {functionalities.map((func, index) => {
-                  const IconComponent = func.icon;
-                  return (
-                    <button
-                      key={index}
-                      onClick={() => navigate(func.route)}
-                      className={`flex-1 p-6 md:p-8 bg-gradient-to-r ${func.color} text-white 
-                                 hover:scale-[1.02] transform transition-all duration-300 
-                                 shadow-xl hover:shadow-2xl group border-0 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50`}
-                      style={{ 
-                        borderRadius: '24px',
-                        animationDelay: `${0.4 + index * 0.1}s`,
-                        minHeight: '200px',
-                        marginLeft: index > 0 ? '16px' : '0',
-                        marginRight: index < functionalities.length - 1 ? '16px' : '0'
-                      }}
-                    >
-                      <div className="text-center space-y-6 h-full flex flex-col justify-center">
-                        {/* Icono y contenido principal */}
-                        <div className="flex justify-center">
-                          <div className="w-16 h-16 md:w-20 md:h-20 bg-white bg-opacity-20 flex items-center justify-center group-hover:bg-opacity-30 group-hover:scale-110 transition-all duration-300 shadow-lg"
-                               style={{ borderRadius: '20px' }}>
-                            <IconComponent className="w-8 h-8 md:w-10 md:h-10" />
-                          </div>
-                        </div>
-                        <div>
-                          <h4 className="text-xl md:text-2xl font-bold mb-3">
-                            {func.title}
-                          </h4>
-                          <p className="text-white text-opacity-90 text-sm md:text-base leading-relaxed">
-                            {func.description}
-                          </p>
-                        </div>
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
+              <h3 className="text-2xl font-semibold text-primary-800 mb-3">
+                {func.title}
+              </h3>
+              <p className="text-primary-600 text-base">
+                {func.description}
+              </p>
+            </button>
+          ))}
         </div>
+
+        {/* ...sin estadísticas ni estados... */}
       </main>
     </div>
   );

@@ -53,12 +53,12 @@ const Login = () => {
             <div className="flex items-center space-x-4">
               <div className="bg-primary-burgundy rounded-xl p-3">
                 <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                  <span className="text-primary-burgundy font-bold text-lg">CDMX</span>
+
                 </div>
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">Sistema de Registro de Víctimas</h1>
-                <p className="text-sm text-gray-600">Gobierno de la Ciudad de México</p>
+
               </div>
             </div>
 
@@ -194,7 +194,7 @@ const Login = () => {
               ¿Problemas para acceder? Contacta al administrador del sistema
             </p>
             <p className="text-white text-opacity-60 text-sm">
-              Versión 2.0 • CDMX 2025 • Seguro
+
             </p>
           </div>
         </div>
