@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Filter, Download, Eye, X, Users, Database, ChevronLeft, ChevronRight, BarChart3, Building, ClipboardList } from 'lucide-react';
-import { victimasAPI } from '../services/api';
+import { useAuth } from '../contexts/AuthContext';
+import { useApi } from '../hooks/useApi';
 import HeaderInstitucional from '../components/HeaderInstitucional';
 import './BuscarVictimas.css';
 
 const BuscarVictimas = () => {
+  const { authenticatedFetch } = useAuth();
+  const api = useApi();
   const [victimas, setVictimas] = useState([]);
   const [filteredVictimas, setFilteredVictimas] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -77,24 +80,9 @@ const BuscarVictimas = () => {
       console.log('Cargando datos...');
       
       // Cargar estadísticas
-      const statsResponse = await victimasAPI.getEstadisticas();
+      const statsResponse = await api.victimas.getEstadisticas();
       console.log('Estadísticas recibidas:', statsResponse);
-      
-      // Procesar estadísticas para extraer víctimas directas e indirectas
-      const victimasDirectas = statsResponse.por_tipo?.find(tipo => tipo.TipoVíctima === 'Directa')?.count || 0;
-      const victimasIndirectas = statsResponse.por_tipo?.find(tipo => tipo.TipoVíctima === 'Indirecta')?.count || 0;
-      
-      // Mapear estadísticas al formato esperado por la interfaz
-      const estadisticasMapeadas = {
-        total_victimas: statsResponse.total_victimas || 0,
-        victimas_directas: victimasDirectas,
-        victimas_indirectas: victimasIndirectas,
-        totalRegistros: statsResponse.total_victimas || 0,
-        totalHombres: statsResponse.por_sexo?.find(sexo => sexo.Sexo === '1.0')?.count || 0,
-        totalMujeres: statsResponse.por_sexo?.find(sexo => sexo.Sexo === '2.0')?.count || 0
-      };
-      
-      setEstadisticas(estadisticasMapeadas);
+      setEstadisticas(statsResponse);
 
       // Cargar víctimas con filtros, paginación y búsqueda
       const params = {
@@ -108,7 +96,7 @@ const BuscarVictimas = () => {
         params.search = searchTerm.trim();
       }
 
-      const victimasResponse = await victimasAPI.getVictimas(params);
+      const victimasResponse = await api.victimas.getVictimas(params);
       
       console.log('Víctimas recibidas:', victimasResponse);
       setVictimas(victimasResponse.results || []);

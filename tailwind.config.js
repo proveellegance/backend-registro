@@ -59,6 +59,17 @@ export default {
       fontFamily: {
         'sans': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+        'gradient-shift': 'gradient-shift 15s ease infinite',
+      },
+      backdropBlur: {
+        'xs': '2px',
+      },
+      borderWidth: {
+        '3': '3px',
+      },
     },
   },
   plugins: [],
