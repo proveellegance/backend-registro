@@ -1,4 +1,5 @@
 import React from 'react';
+import FirebaseLogin from './components/FirebaseLogin';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/control-gestion" element={<ControlGestion />} />
                 <Route path="/oficios" element={<OficiosEntrada />} />
                 <Route path="/nuevo-oficio" element={<NuevoOficio />} />
+                <Route path="/firebase-login" element={<FirebaseLogin />} />
               </Routes>
             </main>
             

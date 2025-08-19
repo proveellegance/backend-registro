@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/auth/users/me/', {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}api/auth/users/me/`, {
         headers: {
           'Authorization': `Bearer ${accessToken}`,
           'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/auth/jwt/create/', {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}api/auth/jwt/create/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem('refresh_token', data.refresh);
         
         // Obtener información del usuario
-        const userResponse = await fetch('http://127.0.0.1:8000/api/auth/users/me/', {
+  const userResponse = await fetch(`${import.meta.env.VITE_API_URL}api/auth/users/me/`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${data.access}`,
@@ -104,7 +104,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const accessToken = localStorage.getItem('access_token');
       if (accessToken) {
-        await fetch('http://127.0.0.1:8000/api/auth/token/logout/', {
+  await fetch(`${import.meta.env.VITE_API_URL}api/auth/token/logout/`, {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${accessToken}`,
@@ -132,7 +132,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/auth/jwt/refresh/', {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}api/auth/jwt/refresh/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

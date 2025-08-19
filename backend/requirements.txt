@@ -1,0 +1,9 @@
+django>=4.2
+psycopg2-binary
+python-decouple
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+django-filter
+djoser
+gunicorn
