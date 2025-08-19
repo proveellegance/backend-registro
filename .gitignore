@@ -1,18 +1,40 @@
-# Logs
-logs
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
 
-node_modules
-dist
-dist-ssr
-*.local
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Editor directories and files
+# IDE
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -23,19 +45,26 @@ dist-ssr
 *.sln
 *.sw?
 
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Google API Credentials
-credentials/*.json
-credentials/service-account-key.json
-
-# Mac
+# OS
 .DS_Store
-
-# Windows
 Thumbs.db
+
+# Node.js (if needed later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend build (if needed later)
+dist/
+dist-ssr/
+*.local
+
+# Credentials
+credentials/
+*.json
+service-account-key.json
+
+# Documentation temp files
+*.tmp
+*.bak

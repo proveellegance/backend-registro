@@ -26,14 +26,6 @@ urlpatterns = [
     # API endpoints
     path('api/', include('usuarios.urls')),
     path('api/padron-victimas/', include('padron_victimas.urls')),
-    
-    # Additional apps URLs will be added here
-    # path('api/oficios-entrada/', include('oficios_entrada.urls')),
-    # path('api/oficios-salida/', include('oficios_salida.urls')),
-    # path('api/solicitudes-registro/', include('solicitudes_registro.urls')),
-    # path('api/expedientes/', include('expedientes.urls')),
-    # path('api/turno-cie/', include('turno_cie.urls')),
-    # path('api/control-gestion/', include('control_gestion.urls')),
 ]
 
 # Serve static files in development

@@ -49,12 +49,6 @@ INSTALLED_APPS = [
     # Local apps
     "usuarios",
     "padron_victimas",
-    "oficios_entrada",
-    "oficios_salida",
-    "solicitudes_registro",
-    "expedientes",
-    "turno_cie",
-    "control_gestion",
 ]
 
 MIDDLEWARE = [
