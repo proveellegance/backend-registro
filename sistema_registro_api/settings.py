@@ -86,10 +86,9 @@ WSGI_APPLICATION = "sistema_registro_api.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# PostgreSQL Configuration for Production (Render)
 import dj_database_url
 
-# Use DATABASE_URL if available (Render provides this)
+# Use DATABASE_URL if available (Render), otherwise use SQLite for development
 DATABASE_URL = config('DATABASE_URL', default=None)
 
 if DATABASE_URL:
