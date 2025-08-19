@@ -2,7 +2,7 @@
 
 # Build script for Render.com
 echo "Installing dependencies..."
-pip install -r backend/requirements.txt
+pip install -r requirements.txt
 
 echo "Collecting static files..."
 python manage.py collectstatic --noinput

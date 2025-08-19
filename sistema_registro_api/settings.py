@@ -89,15 +89,15 @@ WSGI_APPLICATION = "sistema_registro_api.wsgi.application"
 # PostgreSQL Configuration for Production (Render)
 import dj_database_url
 
-DATABASES = {
-    "default": dj_database_url.parse(
-        config('DATABASE_URL', 
-               default=f"postgresql://{config('DATABASE_USER', default='postgres')}:{config('DATABASE_PASSWORD', default='')}@{config('DATABASE_HOST', default='localhost')}:{config('DATABASE_PORT', default='5432')}/{config('DATABASE_NAME', default='sistema_registro_db')}")
-    )
-}
+# Use DATABASE_URL if available (Render provides this)
+DATABASE_URL = config('DATABASE_URL', default=None)
 
-# Fallback to SQLite for local development if PostgreSQL is not available
-if config('USE_SQLITE', default=False, cast=bool):
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.parse(DATABASE_URL)
+    }
+else:
+    # Fallback to SQLite for local development
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
