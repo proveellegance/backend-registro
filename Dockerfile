@@ -1,27 +1,39 @@
 
-# Imagen base oficial de Node
-FROM node:20-alpine AS build
+# Imagen base oficial de Python
+FROM python:3.12-slim
+
+# Establecer variables de entorno
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PORT=8000
 
 # Directorio de trabajo
 WORKDIR /app
 
-# Copiar dependencias y código
-COPY package.json package-lock.json ./
-RUN npm install
+# Instalar dependencias del sistema
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
 
+# Copiar archivo de requirements
+COPY requirements.txt .
+
+# Instalar dependencias de Python
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+# Copiar código del proyecto
 COPY . .
 
-# Construir el frontend
-RUN npm run build
+# Ejecutar migraciones y recopilar archivos estáticos
+RUN python manage.py collectstatic --noinput
 
-# Imagen final para servir archivos estáticos
-FROM node:20-alpine AS production
-WORKDIR /app
-RUN npm install -g http-server
-COPY --from=build /app/dist ./dist
+# Exponer el puerto
+EXPOSE $PORT
 
-# Puerto para servir la app
-EXPOSE 8080
-
-# Comando para servir archivos estáticos
-CMD ["http-server", "dist", "-p", "8080"]
+# Comando para ejecutar la aplicación
+CMD exec gunicorn sistema_registro_api.wsgi:application \
+    --bind 0.0.0.0:$PORT \
+    --workers 4 \
+    --timeout 120
