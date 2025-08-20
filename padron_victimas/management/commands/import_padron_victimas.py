@@ -42,7 +42,31 @@ class Command(BaseCommand):
                         'lugar_hechos': row.get('TiempoModoLugar', None),
                         'estado': 'ACTIVO',
                         'observaciones': row.get('DerechosHumanosViolados', None),
-                        'usuario_registro': usuario
+                        'usuario_registro': usuario,
+                        # Nuevos campos para todas las columnas del CSV
+                        'anio': row.get('Año', None),
+                        'numero_registro_csv': row.get('NúmeroRegistro', None),
+                        'alfanumerica_registro': row.get('AlfanúmericaRegistro', None),
+                        'nombre_victima_csv': row.get('NombreVíctima', None),
+                        'fecha_registro_csv': row.get('FechaRegistro', None),
+                        'tipo_delito_violacion_dh': row.get('TipoDelito.ViolaciónDH', None),
+                        'tipo_victima': row.get('TipoVíctima', None),
+                        'expediente_judicial': row.get('ExpedienteJudicial', None),
+                        'reconocimiento_calidad_victima': row.get('ReconocimientoCalidadVíctima', None),
+                        'post_mortem': row.get('PostMortem', None),
+                        'alcaldia_hecho_victimizante': row.get('AlcaldíaHechoVictimizante', None),
+                        'nna': row.get('NNA', None),
+                        'sexo_csv': row.get('Sexo', None),
+                        'telefono_csv': row.get('Teléfono', None),
+                        'correo_electronico_csv': row.get('CorreoElectrónico', None),
+                        'gap': row.get('GAP', None),
+                        'curp_csv': row.get('CURP', None),
+                        'tiempo_modo_lugar': row.get('TiempoModoLugar', None),
+                        'parentesco': row.get('Parentesco', None),
+                        'carpeta_investigacion': row.get('CarpetaInvestigación', None),
+                        'nombre_recomendacion': row.get('NombreRecomendacion', None),
+                        'derechos_humanos_violados': row.get('DerechosHumanosViolados', None),
+                        'clave_victima_recomendacion': row.get('ClaveVíctimaRecomendación', None)
                     }
                     # Parsear fechas si existen y son válidas
                     fecha_registro = row.get('FechaRegistro', None)

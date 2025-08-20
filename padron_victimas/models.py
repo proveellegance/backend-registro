@@ -2,6 +2,30 @@ from django.db import models
 from django.core.validators import RegexValidator
 
 class Victima(models.Model):
+    # Campos adicionales para almacenar todas las columnas del CSV como texto plano
+    anio = models.TextField(blank=True, null=True, verbose_name="Año")
+    numero_registro_csv = models.TextField(blank=True, null=True, verbose_name="NúmeroRegistro CSV")
+    alfanumerica_registro = models.TextField(blank=True, null=True, verbose_name="AlfanúmericaRegistro")
+    nombre_victima_csv = models.TextField(blank=True, null=True, verbose_name="NombreVíctima CSV")
+    fecha_registro_csv = models.TextField(blank=True, null=True, verbose_name="FechaRegistro CSV")
+    tipo_delito_violacion_dh = models.TextField(blank=True, null=True, verbose_name="TipoDelito.ViolaciónDH")
+    tipo_victima = models.TextField(blank=True, null=True, verbose_name="TipoVíctima")
+    expediente_judicial = models.TextField(blank=True, null=True, verbose_name="ExpedienteJudicial")
+    reconocimiento_calidad_victima = models.TextField(blank=True, null=True, verbose_name="ReconocimientoCalidadVíctima")
+    post_mortem = models.TextField(blank=True, null=True, verbose_name="PostMortem")
+    alcaldia_hecho_victimizante = models.TextField(blank=True, null=True, verbose_name="AlcaldíaHechoVictimizante")
+    nna = models.TextField(blank=True, null=True, verbose_name="NNA")
+    sexo_csv = models.TextField(blank=True, null=True, verbose_name="Sexo CSV")
+    telefono_csv = models.TextField(blank=True, null=True, verbose_name="Teléfono CSV")
+    correo_electronico_csv = models.TextField(blank=True, null=True, verbose_name="CorreoElectrónico CSV")
+    gap = models.TextField(blank=True, null=True, verbose_name="GAP")
+    curp_csv = models.TextField(blank=True, null=True, verbose_name="CURP CSV")
+    tiempo_modo_lugar = models.TextField(blank=True, null=True, verbose_name="TiempoModoLugar")
+    parentesco = models.TextField(blank=True, null=True, verbose_name="Parentesco")
+    carpeta_investigacion = models.TextField(blank=True, null=True, verbose_name="CarpetaInvestigación")
+    nombre_recomendacion = models.TextField(blank=True, null=True, verbose_name="NombreRecomendacion")
+    derechos_humanos_violados = models.TextField(blank=True, null=True, verbose_name="DerechosHumanosViolados")
+    clave_victima_recomendacion = models.TextField(blank=True, null=True, verbose_name="ClaveVíctimaRecomendación")
     """
     Modelo para el padrón de víctimas del sistema CDMX
     """
