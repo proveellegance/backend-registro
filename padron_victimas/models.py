@@ -227,6 +227,10 @@ class Victima(models.Model):
         verbose_name_plural = "Víctimas"
         ordering = ['-fecha_registro']
         indexes = [
+            models.Index(fields=['alfanumerica_registro']),
+            models.Index(fields=['numero_registro_csv']),
+            models.Index(fields=['anio']),
+            models.Index(fields=['tipo_victima']),
             models.Index(fields=['numero_registro']),
             models.Index(fields=['curp']),
             models.Index(fields=['fecha_hechos']),
@@ -234,7 +238,10 @@ class Victima(models.Model):
         ]
     
     def __str__(self):
-        return f"{self.numero_registro} - {self.nombre} {self.apellido_paterno}"
+        # Usar alfanumerica_registro como identificador principal y nombre_victima_csv
+        id_principal = self.alfanumerica_registro or "Sin ID"
+        nombre = self.nombre_victima_csv or "Sin nombre"
+        return f"{id_principal} - {nombre}"
     
     @property
     def nombre_completo(self):

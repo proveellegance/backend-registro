@@ -4,58 +4,30 @@ from .models import Victima
 @admin.register(Victima)
 class VictimaAdmin(admin.ModelAdmin):
     """
-    Configuración del admin para el modelo Victima
+    Configuración del admin para el modelo Victima - Solo campos CSV
     """
     list_display = (
-        'numero_registro', 'nombre_completo', 'anio', 'tipo_victima', 
-        'reconocimiento_calidad_victima', 'estado', 'fecha_registro'
+        'alfanumerica_registro', 'nombre_victima_csv', 'anio', 'tipo_victima', 
+        'reconocimiento_calidad_victima', 'fecha_registro_csv'
     )
     list_filter = (
         'anio', 'tipo_victima', 'reconocimiento_calidad_victima', 
-        'post_mortem', 'nna', 'gap', 'parentesco', 'alcaldia_hecho_victimizante',
-        'sexo', 'estado', 'fecha_hechos', 'fecha_registro'
+        'post_mortem', 'nna', 'gap', 'parentesco', 'alcaldia_hecho_victimizante'
     )
     search_fields = (
-        'numero_registro', 'numero_registro_csv', 'alfanumerica_registro',
-        'nombre', 'apellido_paterno', 'apellido_materno', 'nombre_victima_csv',
-        'curp', 'curp_csv', 'tipo_victimizacion', 'tipo_delito_violacion_dh'
+        'alfanumerica_registro', 'numero_registro_csv', 'nombre_victima_csv',
+        'curp_csv', 'tipo_delito_violacion_dh', 'carpeta_investigacion'
     )
-    ordering = ('-fecha_registro',)
-    date_hierarchy = 'fecha_hechos'
+    ordering = ('-alfanumerica_registro',)
     
     fieldsets = (
-        ('Información de Registro', {
-            'fields': ('numero_registro', 'estado', 'usuario_registro')
-        }),
-        ('Datos Personales', {
-            'fields': (
-                'nombre', 'apellido_paterno', 'apellido_materno',
-                'fecha_nacimiento', 'sexo', 'curp'
-            )
-        }),
-        ('Contacto', {
-            'fields': ('telefono', 'email', 'direccion'),
-            'classes': ('collapse',)
-        }),
-        ('Información del Caso', {
-            'fields': (
-                'tipo_victimizacion', 'fecha_hechos', 'lugar_hechos', 
-                'observaciones'
-            )
-        }),
         ('Datos CSV - Principales', {
             'fields': (
+                'alfanumerica_registro', 'numero_registro_csv', 'nombre_victima_csv',
                 'anio', 'tipo_victima', 'reconocimiento_calidad_victima',
                 'post_mortem', 'nna', 'gap', 'parentesco', 'alcaldia_hecho_victimizante'
             ),
-            'description': 'Información principal importada del CSV con campos optimizados'
-        }),
-        ('Datos CSV - Identificación', {
-            'fields': (
-                'numero_registro_csv', 'alfanumerica_registro', 'nombre_victima_csv',
-                'curp_csv'
-            ),
-            'classes': ('collapse',)
+            'description': 'Información principal importada del CSV'
         }),
         ('Datos CSV - Fechas y Proceso', {
             'fields': (
@@ -64,8 +36,8 @@ class VictimaAdmin(admin.ModelAdmin):
             ),
             'classes': ('collapse',)
         }),
-        ('Datos CSV - Contacto', {
-            'fields': ('telefono_csv', 'correo_electronico_csv'),
+        ('Datos CSV - Contacto e Identificación', {
+            'fields': ('curp_csv', 'telefono_csv', 'correo_electronico_csv'),
             'classes': ('collapse',)
         }),
         ('Datos CSV - Recomendaciones', {
@@ -77,10 +49,6 @@ class VictimaAdmin(admin.ModelAdmin):
         }),
         ('Datos CSV - Detalles del Caso', {
             'fields': ('tiempo_modo_lugar',),
-            'classes': ('collapse',)
-        }),
-        ('Metadatos', {
-            'fields': ('fecha_registro', 'fecha_actualizacion'),
             'classes': ('collapse',)
         }),
     )
