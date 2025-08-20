@@ -22,8 +22,9 @@ class Victima(models.Model):
     # Información personal
     numero_registro = models.CharField(
         max_length=50, 
-        unique=True, 
-        verbose_name="Número de Registro"
+        verbose_name="Número de Registro",
+        blank=True,
+        null=True
     )
     nombre = models.CharField(max_length=200, verbose_name="Nombre")
     apellido_paterno = models.CharField(max_length=200, verbose_name="Apellido Paterno")
@@ -35,7 +36,7 @@ class Victima(models.Model):
     )
     
     # Datos demográficos
-    fecha_nacimiento = models.DateField(verbose_name="Fecha de Nacimiento")
+    fecha_nacimiento = models.DateField(verbose_name="Fecha de Nacimiento", blank=True, null=True)
     sexo = models.CharField(
         max_length=2, 
         choices=SEXO_CHOICES, 
@@ -43,13 +44,14 @@ class Victima(models.Model):
     )
     curp = models.CharField(
         max_length=18,
-        unique=True,
         validators=[
             RegexValidator(
                 regex=r'^[A-Z]{4}[0-9]{6}[HM][A-Z]{5}[0-9A-Z][0-9]$',
                 message='Formato de CURP inválido'
             )
         ],
+        blank=True,
+        null=True,
         verbose_name="CURP"
     )
     
@@ -68,7 +70,7 @@ class Victima(models.Model):
         max_length=300, 
         verbose_name="Tipo de Victimización"
     )
-    fecha_hechos = models.DateField(verbose_name="Fecha de los Hechos")
+    fecha_hechos = models.DateField(verbose_name="Fecha de los Hechos", blank=True, null=True)
     lugar_hechos = models.CharField(
         max_length=500, 
         verbose_name="Lugar de los Hechos"
