@@ -18,7 +18,18 @@ class VictimaAdmin(admin.ModelAdmin):
         'alfanumerica_registro', 'numero_registro_csv', 'nombre_victima_csv',
         'curp_csv', 'tipo_delito_violacion_dh', 'carpeta_investigacion'
     )
-    ordering = ('-alfanumerica_registro',)
+    
+    def get_queryset(self, request):
+        """
+        Ordena por número_orden (extraído de la clave alfanumérica) de menor a mayor
+        """
+        return super().get_queryset(request)
+    
+    def get_ordering(self, request):
+        """
+        Ordenamiento: primero por año, luego por numero_orden, luego por alfanumerica_registro
+        """
+        return ['anio', 'numero_orden', 'alfanumerica_registro']
     
     fieldsets = (
         ('Datos CSV - Principales', {

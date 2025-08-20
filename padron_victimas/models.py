@@ -123,6 +123,9 @@ class Victima(models.Model):
     nombre_recomendacion = models.TextField(blank=True, null=True, verbose_name="NombreRecomendacion")
     derechos_humanos_violados = models.TextField(blank=True, null=True, verbose_name="DerechosHumanosViolados")
     clave_victima_recomendacion = models.TextField(blank=True, null=True, verbose_name="ClaveVíctimaRecomendación")
+    
+    # Campo calculado para ordenamiento por número en la clave alfanumérica
+    numero_orden = models.IntegerField(blank=True, null=True, verbose_name="Número de Orden", help_text="Número extraído para ordenamiento")
     """
     Modelo para el padrón de víctimas del sistema CDMX
     """
@@ -237,11 +240,39 @@ class Victima(models.Model):
             models.Index(fields=['estado']),
         ]
     
+    def save(self, *args, **kwargs):
+        """
+        Calcula automáticamente el numero_orden antes de guardar
+        """
+        self.numero_orden = self.get_numero_orden()
+        super().save(*args, **kwargs)
+    
     def __str__(self):
         # Usar alfanumerica_registro como identificador principal y nombre_victima_csv
         id_principal = self.alfanumerica_registro or "Sin ID"
         nombre = self.nombre_victima_csv or "Sin nombre"
         return f"{id_principal} - {nombre}"
+    
+    def get_numero_orden(self):
+        """
+        Extrae el número antes del año en la clave alfanumérica para ordenamiento
+        Ejemplo: CEAVI/REVI/176/2020 -> retorna 176
+        """
+        if not self.alfanumerica_registro:
+            return 99999
+        
+        import re
+        # Buscar patrón como /numero/año al final
+        match = re.search(r'/(\d+)/\d{4}$', self.alfanumerica_registro)
+        if match:
+            return int(match.group(1))
+        
+        # Si no encuentra el patrón, buscar cualquier número
+        numbers = re.findall(r'\d+', self.alfanumerica_registro)
+        if numbers:
+            return int(numbers[-2]) if len(numbers) >= 2 else int(numbers[-1])
+        
+        return 99999
     
     @property
     def nombre_completo(self):
