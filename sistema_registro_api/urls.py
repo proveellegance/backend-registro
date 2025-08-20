@@ -26,6 +26,7 @@ urlpatterns = [
     # API endpoints
     path('api/', include('usuarios.urls')),
     path('api/padron-victimas/', include('padron_victimas.urls')),
+    path('api/control-gestion/', include('control_gestion.urls')),
 ]
 
 # Serve static files in development
