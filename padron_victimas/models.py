@@ -2,26 +2,123 @@ from django.db import models
 from django.core.validators import RegexValidator
 
 class Victima(models.Model):
-    # Campos adicionales para almacenar todas las columnas del CSV como texto plano
-    anio = models.TextField(blank=True, null=True, verbose_name="Año")
+    # Choices para campos CSV con valores limitados
+    ANO_CHOICES = [
+        ('2020', '2020'),
+        ('2021', '2021'),
+        ('2022', '2022'),
+        ('2023', '2023'),
+        ('2024', '2024'),
+        ('2025', '2025'),
+        ('2026', '2026'),
+        ('2027', '2027'),
+        ('2028', '2028'),
+        ('2029', '2029'),
+        ('2030', '2030'),
+    ]
+    
+    TIPO_VICTIMA_CHOICES = [
+        ('Directa', 'Directa'),
+        ('Indirecta', 'Indirecta'),
+        ('Potencial', 'Potencial'),
+    ]
+    
+    RECONOCIMIENTO_CALIDAD_CHOICES = [
+        ('Delito - MP', 'Delito - MP'),
+        ('Delito – MP', 'Delito – MP'),
+        ('Violación DH', 'Violación DH'),
+        ('NA', 'NA'),
+        ('Delito - Judicial', 'Delito - Judicial'),
+        ('Delito – Judicial', 'Delito – Judicial'),
+    ]
+    
+    POST_MORTEM_CHOICES = [
+        ('NA', 'NA'),
+        ('0', 'No'),
+        ('1', 'Sí'),
+    ]
+    
+    NNA_CHOICES = [
+        ('0', 'No'),
+        ('1', 'Sí'),
+        ('NA', 'NA'),
+    ]
+    
+    GAP_CHOICES = [
+        ('NA', 'NA'),
+        ('Migrante', 'Migrante'),
+        ('Indígena', 'Indígena'),
+        ('NNA', 'NNA'),
+        ('Discapacidad', 'Discapacidad'),
+        ('PAM', 'PAM'),
+        ('Refugiado', 'Refugiado'),
+        ('Defensor DH', 'Defensor DH'),
+        ('Periodista', 'Periodista'),
+    ]
+    
+    PARENTESCO_CHOICES = [
+        ('NA', 'NA'),
+        ('Madre', 'Madre'),
+        ('Padre', 'Padre'),
+        ('Hermana', 'Hermana'),
+        ('Hijo', 'Hijo'),
+        ('Hija', 'Hija'),
+        ('Cuñada', 'Cuñada'),
+        ('Esposa', 'Esposa'),
+        ('Hermano', 'Hermano'),
+        ('Hijastro', 'Hijastro'),
+        ('Concubina', 'Concubina'),
+        ('Tía', 'Tía'),
+        ('Sobrina', 'Sobrina'),
+        ('Abuelo', 'Abuelo'),
+        ('Abuela', 'Abuela'),
+    ]
+    
+    ALCALDIA_CHOICES = [
+        ('NA', 'NA'),
+        ('Tlalpan', 'Tlalpan'),
+        ('Cuauhtémoc', 'Cuauhtémoc'),
+        ('Iztapalapa', 'Iztapalapa'),
+        ('Gustavo A. Madero', 'Gustavo A. Madero'),
+        ('Miguel Hidalgo', 'Miguel Hidalgo'),
+        ('Álvaro Obregón', 'Álvaro Obregón'),
+        ('Benito Juárez', 'Benito Juárez'),
+        ('Coyoacán', 'Coyoacán'),
+        ('Azcapotzalco', 'Azcapotzalco'),
+        ('Venustiano Carranza', 'Venustiano Carranza'),
+        ('Xochimilco', 'Xochimilco'),
+        ('La Magdalena Contreras', 'La Magdalena Contreras'),
+        ('Milpa Alta', 'Milpa Alta'),
+        ('Tláhuac', 'Tláhuac'),
+        ('Cuajimalpa de Morelos', 'Cuajimalpa de Morelos'),
+        ('Iztacalco', 'Iztacalco'),
+        ('Atizapán de Zaragoza', 'Atizapán de Zaragoza'),
+        ('Foráneo', 'Foráneo'),
+        ('Estado de México', 'Estado de México'),
+        ('No especificado', 'No especificado'),
+    ]
+
+    # Campos CSV con choices (optimizados)
+    anio = models.CharField(max_length=4, choices=ANO_CHOICES, blank=True, null=True, verbose_name="Año")
+    tipo_victima = models.CharField(max_length=20, choices=TIPO_VICTIMA_CHOICES, blank=True, null=True, verbose_name="TipoVíctima")
+    reconocimiento_calidad_victima = models.CharField(max_length=30, choices=RECONOCIMIENTO_CALIDAD_CHOICES, blank=True, null=True, verbose_name="ReconocimientoCalidadVíctima")
+    post_mortem = models.CharField(max_length=2, choices=POST_MORTEM_CHOICES, blank=True, null=True, verbose_name="PostMortem")
+    nna = models.CharField(max_length=2, choices=NNA_CHOICES, blank=True, null=True, verbose_name="NNA")
+    gap = models.CharField(max_length=20, choices=GAP_CHOICES, blank=True, null=True, verbose_name="GAP")
+    parentesco = models.CharField(max_length=20, choices=PARENTESCO_CHOICES, blank=True, null=True, verbose_name="Parentesco")
+    alcaldia_hecho_victimizante = models.CharField(max_length=50, choices=ALCALDIA_CHOICES, blank=True, null=True, verbose_name="AlcaldíaHechoVictimizante")
+    
+    # Campos CSV que siguen como TextField (muchos valores únicos)
     numero_registro_csv = models.TextField(blank=True, null=True, verbose_name="NúmeroRegistro CSV")
     alfanumerica_registro = models.TextField(blank=True, null=True, verbose_name="AlfanúmericaRegistro")
     nombre_victima_csv = models.TextField(blank=True, null=True, verbose_name="NombreVíctima CSV")
     fecha_registro_csv = models.TextField(blank=True, null=True, verbose_name="FechaRegistro CSV")
     tipo_delito_violacion_dh = models.TextField(blank=True, null=True, verbose_name="TipoDelito.ViolaciónDH")
-    tipo_victima = models.TextField(blank=True, null=True, verbose_name="TipoVíctima")
     expediente_judicial = models.TextField(blank=True, null=True, verbose_name="ExpedienteJudicial")
-    reconocimiento_calidad_victima = models.TextField(blank=True, null=True, verbose_name="ReconocimientoCalidadVíctima")
-    post_mortem = models.TextField(blank=True, null=True, verbose_name="PostMortem")
-    alcaldia_hecho_victimizante = models.TextField(blank=True, null=True, verbose_name="AlcaldíaHechoVictimizante")
-    nna = models.TextField(blank=True, null=True, verbose_name="NNA")
-    sexo_csv = models.TextField(blank=True, null=True, verbose_name="Sexo CSV")
     telefono_csv = models.TextField(blank=True, null=True, verbose_name="Teléfono CSV")
     correo_electronico_csv = models.TextField(blank=True, null=True, verbose_name="CorreoElectrónico CSV")
-    gap = models.TextField(blank=True, null=True, verbose_name="GAP")
     curp_csv = models.TextField(blank=True, null=True, verbose_name="CURP CSV")
     tiempo_modo_lugar = models.TextField(blank=True, null=True, verbose_name="TiempoModoLugar")
-    parentesco = models.TextField(blank=True, null=True, verbose_name="Parentesco")
     carpeta_investigacion = models.TextField(blank=True, null=True, verbose_name="CarpetaInvestigación")
     nombre_recomendacion = models.TextField(blank=True, null=True, verbose_name="NombreRecomendacion")
     derechos_humanos_violados = models.TextField(blank=True, null=True, verbose_name="DerechosHumanosViolados")
