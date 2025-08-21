@@ -3,7 +3,8 @@ from .models import Victima
 
 class VictimaSerializer(serializers.ModelSerializer):
     """
-    Serializador para el modelo Victima
+    Serializador completo para el modelo Victima (para GET individual, POST, PUT)
+    Incluye TODOS los campos del modelo
     """
     nombre_completo = serializers.ReadOnlyField()
     usuario_registro_nombre = serializers.CharField(
@@ -13,14 +14,8 @@ class VictimaSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Victima
-        fields = [
-            'id', 'numero_registro', 'nombre', 'apellido_paterno', 'apellido_materno',
-            'nombre_completo', 'fecha_nacimiento', 'sexo', 'curp', 'telefono', 'email',
-            'direccion', 'tipo_victimizacion', 'fecha_hechos', 'lugar_hechos',
-            'estado', 'observaciones', 'fecha_registro', 'fecha_actualizacion',
-            'usuario_registro', 'usuario_registro_nombre'
-        ]
-        read_only_fields = ('id', 'fecha_registro', 'fecha_actualizacion')
+        fields = '__all__'  # Incluir TODOS los campos del modelo
+        read_only_fields = ('id', 'fecha_registro', 'fecha_actualizacion', 'numero_orden')
     
     def create(self, validated_data):
         # Asignar el usuario actual como usuario_registro
@@ -29,23 +24,36 @@ class VictimaSerializer(serializers.ModelSerializer):
 
 class VictimaListSerializer(serializers.ModelSerializer):
     """
-    Serializador simplificado para listas de víctimas
+    Serializador optimizado para listas de víctimas
+    Incluye campos principales + campos CSV más importantes
     """
     nombre_completo = serializers.ReadOnlyField()
     
     class Meta:
         model = Victima
         fields = [
-            # Campos originales del API
-            'id', 'numero_registro', 'nombre_completo', 'curp', 
-            'tipo_victimizacion', 'fecha_hechos', 'estado', 'fecha_registro',
+            # Identificadores principales
+            'id', 'numero_registro', 'alfanumerica_registro',
             
-            # Campos CSV adicionales disponibles en el admin
-            'alfanumerica_registro', 'numero_registro_csv', 'nombre_victima_csv', 
-            'anio', 'tipo_victima', 'reconocimiento_calidad_victima', 'post_mortem',
-            'nna', 'gap', 'parentesco', 'alcaldia_hecho_victimizante',
-            'fecha_registro_csv', 'tipo_delito_violacion_dh', 'expediente_judicial',
-            'carpeta_investigacion', 'curp_csv', 'telefono_csv', 'correo_electronico_csv',
-            'nombre_recomendacion', 'derechos_humanos_violados', 'clave_victima_recomendacion',
-            'tiempo_modo_lugar', 'numero_orden'
+            # Información personal
+            'nombre_completo', 'nombre_victima_csv', 'nombre', 'apellido_paterno', 'apellido_materno',
+            
+            # Información del caso
+            'tipo_victimizacion', 'tipo_delito_violacion_dh', 'tipo_victima',
+            'fecha_hechos', 'fecha_registro', 'fecha_registro_csv',
+            'estado', 'reconocimiento_calidad_victima',
+            
+            # Clasificaciones importantes
+            'anio', 'nna', 'gap', 'parentesco', 'post_mortem',
+            'alcaldia_hecho_victimizante',
+            
+            # Contacto e identificación
+            'curp', 'curp_csv', 'telefono_csv', 'correo_electronico_csv',
+            
+            # Referencias procesales
+            'expediente_judicial', 'carpeta_investigacion',
+            'nombre_recomendacion', 'clave_victima_recomendacion',
+            
+            # Metadatos
+            'numero_orden', 'fecha_actualizacion', 'usuario_registro'
         ]
