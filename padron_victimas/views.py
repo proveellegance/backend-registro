@@ -6,27 +6,20 @@ from django_filters.rest_framework import DjangoFilterBackend
 from django.db.models import Count, Q
 from django.utils import timezone
 from .models import Victima
-from .serializers import VictimaSerializer, VictimaListSerializer
+from .serializers import VictimaListSerializer
 
 class VictimaViewSet(viewsets.ModelViewSet):
     """
     ViewSet para el modelo Victima con filtros avanzados
     """
     queryset = Victima.objects.all()
+    serializer_class = VictimaListSerializer  # Usar un solo serializador
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['sexo', 'estado', 'tipo_victimizacion']
     search_fields = ['numero_registro', 'nombre', 'apellido_paterno', 'apellido_materno', 'curp']
     ordering_fields = ['fecha_registro', 'fecha_hechos', 'numero_registro']
     ordering = ['-fecha_registro']
-    
-    def get_serializer_class(self):
-        """
-        Usar serializador simplificado para listas
-        """
-        if self.action == 'list':
-            return VictimaListSerializer
-        return VictimaSerializer
     
     @action(detail=False, methods=['get'])
     def estadisticas(self, request):
