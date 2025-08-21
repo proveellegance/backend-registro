@@ -36,6 +36,16 @@ class VictimaListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Victima
         fields = [
+            # Campos originales del API
             'id', 'numero_registro', 'nombre_completo', 'curp', 
-            'tipo_victimizacion', 'fecha_hechos', 'estado', 'fecha_registro'
+            'tipo_victimizacion', 'fecha_hechos', 'estado', 'fecha_registro',
+            
+            # Campos CSV adicionales disponibles en el admin
+            'alfanumerica_registro', 'numero_registro_csv', 'nombre_victima_csv', 
+            'anio', 'tipo_victima', 'reconocimiento_calidad_victima', 'post_mortem',
+            'nna', 'gap', 'parentesco', 'alcaldia_hecho_victimizante',
+            'fecha_registro_csv', 'tipo_delito_violacion_dh', 'expediente_judicial',
+            'carpeta_investigacion', 'curp_csv', 'telefono_csv', 'correo_electronico_csv',
+            'nombre_recomendacion', 'derechos_humanos_violados', 'clave_victima_recomendacion',
+            'tiempo_modo_lugar', 'numero_orden'
         ]
