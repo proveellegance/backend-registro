@@ -19,7 +19,7 @@ class VictimaListSerializer(serializers.ModelSerializer):
             'id', 'numero_registro', 'alfanumerica_registro',
             
             # Información personal
-            'nombre_completo', 'nombre_victima_csv', 'nombre', 'apellido_paterno', 'apellido_materno',
+            'nombre_completo', 'nombre_victima_csv',
             'fecha_nacimiento', 'sexo',
             
             # Información del caso

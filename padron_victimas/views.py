@@ -17,7 +17,7 @@ class VictimaViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['sexo', 'estado', 'tipo_victimizacion']
-    search_fields = ['numero_registro', 'nombre', 'apellido_paterno', 'apellido_materno', 'curp']
+    search_fields = ['numero_registro', 'nombre_victima_csv', 'alfanumerica_registro', 'curp']
     ordering_fields = ['fecha_registro', 'fecha_hechos', 'numero_registro']
     ordering = ['-fecha_registro']
     
