@@ -15,5 +15,5 @@ router.register(r'oficios-entrada', OficioEntradaViewSet, basename='oficio-entra
 app_name = 'control_gestion'
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path('', include(router.urls)),
 ]
