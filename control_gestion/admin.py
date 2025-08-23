@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import Expediente, TurnoCie, SolicitudRegistro, OficioSalida, OficioEntrada
+from .models import Expediente, TurnoCie, SolicitudRegistro, OficioSalida, OficioEntrada, Notificacion
 
 @admin.register(Expediente)
 class ExpedienteAdmin(admin.ModelAdmin):
     list_display = ('solicitud', 'estatus', 'fecha_turno_cie', 'resguardo', 'fecha_creacion')
     list_filter = ('estatus', 'resguardo', 'fecha_creacion')
-    search_fields = ('solicitud', 'numeros_registro', 'num_reco_carpeta')
+    search_fields = ('solicitud', 'numeros_registro', 'num_reco_carpeta', 'ubicacion')
     ordering = ['-fecha_creacion']
     
     fieldsets = (
@@ -16,7 +16,10 @@ class ExpedienteAdmin(admin.ModelAdmin):
             'fields': ('victimas_directas', 'victimas_indirectas', 'numeros_registro')
         }),
         ('Ubicación y Control', {
-            'fields': ('num_reco_carpeta', 'resguardo', 'ubicacion')
+            'fields': ('num_reco_carpeta', 'resguardo', 'ubicacion', 'hecho_victimizante')
+        }),
+        ('Observaciones', {
+            'fields': ('notas',)
         }),
         ('Metadatos', {
             'fields': ('usuario', 'fecha_creacion', 'fecha_actualizacion'),
@@ -27,14 +30,14 @@ class ExpedienteAdmin(admin.ModelAdmin):
 
 @admin.register(TurnoCie)
 class TurnoCieAdmin(admin.ModelAdmin):
-    list_display = ('num_registro', 'tipo', 'usuaria', 'fecha_recepcion_cie', 'fecha_creacion')
-    list_filter = ('tipo', 'usuaria', 'fecha_creacion')
-    search_fields = ('num_registro', 'num_sol', 'victimas_relacionadas')
+    list_display = ('num_registro', 'tipo', 'usuaria', 'fecha_recepcion_cie', 'anio', 'fecha_creacion')
+    list_filter = ('tipo', 'usuaria', 'anio', 'fecha_creacion')
+    search_fields = ('num_registro', 'num_sol', 'victimas_relacionadas', 'oficio_salida')
     ordering = ['-fecha_creacion']
     
     fieldsets = (
         ('Información Principal', {
-            'fields': ('num_registro', 'tipo', 'usuaria', 'num_sol')
+            'fields': ('num_registro', 'tipo', 'usuaria', 'num_sol', 'anio')
         }),
         ('Oficios y Víctimas', {
             'fields': ('oficio_salida', 'victimas_relacionadas')
@@ -51,20 +54,20 @@ class TurnoCieAdmin(admin.ModelAdmin):
 
 @admin.register(SolicitudRegistro)
 class SolicitudRegistroAdmin(admin.ModelAdmin):
-    list_display = ('numero_solicitud', 'solicitante', 'estatus_solicitud', 'fecha_solicitud', 'fecha_creacion')
-    list_filter = ('estatus_solicitud', 'tipo_resolucion', 'aceptacion', 'fecha_creacion')
-    search_fields = ('numero_solicitud', 'solicitante', 'persona_usuaria', 'curp')
+    list_display = ('numero_solicitud', 'solicitante', 'estatus_solicitud', 'fecha_solicitud', 'anio', 'fecha_creacion')
+    list_filter = ('estatus_solicitud', 'tipo_resolucion', 'aceptacion', 'anio', 'fecha_creacion')
+    search_fields = ('numero_solicitud', 'solicitante', 'persona_usuaria', 'delito', 'curp')
     ordering = ['-fecha_creacion']
     
     fieldsets = (
         ('Información Principal', {
-            'fields': ('numero_solicitud', 'fecha_solicitud', 'fecha_completo', 'estatus_solicitud')
+            'fields': ('numero_solicitud', 'fecha_solicitud', 'fecha_completo', 'estatus_solicitud', 'anio')
         }),
         ('Personas', {
             'fields': ('persona_usuaria', 'solicitante')
         }),
         ('Delito y Proceso', {
-            'fields': ('delito', 'recomendacion', 'aceptacion', 'reconocimiento_victima')
+            'fields': ('delito', 'recomendacion', 'aceptacion', 'reconocimiento_victima', 'solicitud')
         }),
         ('Documentos', {
             'fields': ('fuds', 'identificaciones', 'actas', 'curp')
@@ -81,14 +84,14 @@ class SolicitudRegistroAdmin(admin.ModelAdmin):
 
 @admin.register(OficioSalida)
 class OficioSalidaAdmin(admin.ModelAdmin):
-    list_display = ('numero_oficio', 'alfanumerica_oficio', 'solicitante', 'destinatario', 'fecha', 'fecha_creacion')
-    list_filter = ('tipo_envio', 'fecha_creacion')
+    list_display = ('numero_oficio', 'alfanumerica_oficio', 'solicitante', 'destinatario', 'fecha', 'anio', 'fecha_creacion')
+    list_filter = ('tipo_envio', 'anio', 'fecha_creacion')
     search_fields = ('numero_oficio', 'alfanumerica_oficio', 'solicitante', 'destinatario', 'asunto')
     ordering = ['-fecha_creacion']
     
     fieldsets = (
         ('Información del Oficio', {
-            'fields': ('numero_oficio', 'alfanumerica_oficio', 'fecha', 'tipo_envio')
+            'fields': ('numero_oficio', 'alfanumerica_oficio', 'fecha', 'tipo_envio', 'anio')
         }),
         ('Personas', {
             'fields': ('solicitante', 'destinatario')
@@ -105,14 +108,14 @@ class OficioSalidaAdmin(admin.ModelAdmin):
 
 @admin.register(OficioEntrada)
 class OficioEntradaAdmin(admin.ModelAdmin):
-    list_display = ('numero', 'alfanumerica_entrada', 'autoridad_dependencia', 'remitente', 'entrada', 'fecha_creacion')
-    list_filter = ('autoridad_dependencia', 'formato', 'fecha_creacion')
+    list_display = ('numero', 'alfanumerica_entrada', 'autoridad_dependencia', 'remitente', 'entrada', 'anio', 'archivo', 'fecha_creacion')
+    list_filter = ('autoridad_dependencia', 'formato', 'anio', 'fecha_creacion')
     search_fields = ('numero', 'alfanumerica_entrada', 'remitente', 'autoridad_dependencia', 'asunto')
     ordering = ['-fecha_creacion']
     
     fieldsets = (
         ('Información del Oficio', {
-            'fields': ('numero', 'alfanumerica_entrada', 'entrada')
+            'fields': ('numero', 'alfanumerica_entrada', 'entrada', 'anio')
         }),
         ('Recepción', {
             'fields': ('recepcion_ceavi', 'recepcion_relovi')
@@ -124,10 +127,37 @@ class OficioEntradaAdmin(admin.ModelAdmin):
             'fields': ('asunto', 'solicitud_registro')
         }),
         ('Proceso', {
-            'fields': ('termino', 'na', 'atiende_oficio', 'notificacion', 'confirmo_asignacion')
+            'fields': ('termino', 'na', 'atiende_oficio', 'notificacion', 'confirmo_asignacion', 'numero_entrada')
         }),
         ('Evidencia', {
-            'fields': ('formato', 'evidencia_respuesta')
+            'fields': ('formato', 'evidencia_respuesta', 'archivo')
+        }),
+        ('Metadatos', {
+            'fields': ('usuario', 'fecha_creacion', 'fecha_actualizacion'),
+            'classes': ('collapse',)
+        }),
+    )
+    readonly_fields = ('fecha_creacion', 'fecha_actualizacion')
+
+@admin.register(Notificacion)
+class NotificacionAdmin(admin.ModelAdmin):
+    list_display = ('persona_notificada', 'funcionario_notifico', 'fecha', 'lugar_notificacion', 'fecha_creacion')
+    list_filter = ('funcionario_notifico', 'fecha_creacion')
+    search_fields = ('persona_notificada', 'nucleo_familiar', 'delito_recomendacion', 'funcionario_notifico', 'lugar_notificacion')
+    ordering = ['-fecha_creacion']
+    
+    fieldsets = (
+        ('Información de la Notificación', {
+            'fields': ('persona_notificada', 'nucleo_familiar', 'relovi')
+        }),
+        ('Delito y Funcionario', {
+            'fields': ('delito_recomendacion', 'funcionario_notifico')
+        }),
+        ('Lugar y Fecha', {
+            'fields': ('fecha', 'lugar_notificacion')
+        }),
+        ('Documentación', {
+            'fields': ('soporte_documental',)
         }),
         ('Metadatos', {
             'fields': ('usuario', 'fecha_creacion', 'fecha_actualizacion'),
