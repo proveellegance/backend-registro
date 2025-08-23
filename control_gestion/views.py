@@ -157,7 +157,7 @@ class OficioEntradaViewSet(viewsets.ModelViewSet):
     serializer_class = OficioEntradaSerializer
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ['autoridad_dependencia', 'formato', 'anio', 'tiene_archivo']
+    filterset_fields = ['autoridad_dependencia', 'formato', 'anio']
     search_fields = ['numero', 'alfanumerica_entrada', 'remitente', 'autoridad_dependencia', 'asunto', 'entrada']
     ordering_fields = ['fecha_creacion', 'entrada']
     ordering = ['-fecha_creacion']
@@ -172,9 +172,9 @@ class OficioEntradaViewSet(viewsets.ModelViewSet):
         tiene_archivo = self.request.query_params.get('tiene_archivo', None)
         if tiene_archivo is not None:
             if tiene_archivo.lower() in ['true', '1']:
-                queryset = queryset.exclude(archivo='')
+                queryset = queryset.exclude(archivo__isnull=True).exclude(archivo__exact='')
             elif tiene_archivo.lower() in ['false', '0']:
-                queryset = queryset.filter(archivo='')
+                queryset = queryset.filter(Q(archivo__isnull=True) | Q(archivo__exact=''))
         
         return queryset
 
@@ -215,7 +215,7 @@ class OficioEntradaViewSet(viewsets.ModelViewSet):
         """
         Endpoint para obtener solo los oficios que tienen archivos PDF
         """
-        oficios_con_archivo = self.queryset.exclude(archivo='')
+        oficios_con_archivo = self.queryset.exclude(archivo__isnull=True).exclude(archivo__exact='')
         serializer = self.get_serializer(oficios_con_archivo, many=True, context={'request': request})
         return Response({
             'count': oficios_con_archivo.count(),
@@ -227,7 +227,7 @@ class OficioEntradaViewSet(viewsets.ModelViewSet):
         """
         Endpoint para obtener solo los oficios que NO tienen archivos PDF
         """
-        oficios_sin_archivo = self.queryset.filter(archivo='')
+        oficios_sin_archivo = self.queryset.filter(Q(archivo__isnull=True) | Q(archivo__exact=''))
         serializer = self.get_serializer(oficios_sin_archivo, many=True, context={'request': request})
         return Response({
             'count': oficios_sin_archivo.count(),
@@ -240,8 +240,8 @@ class OficioEntradaViewSet(viewsets.ModelViewSet):
         Endpoint para estadísticas de oficios de entrada
         """
         total_oficios = self.queryset.count()
-        con_archivo = self.queryset.exclude(archivo='').count()
-        sin_archivo = self.queryset.filter(archivo='').count()
+        con_archivo = self.queryset.exclude(archivo__isnull=True).exclude(archivo__exact='').count()
+        sin_archivo = self.queryset.filter(Q(archivo__isnull=True) | Q(archivo__exact='')).count()
         
         stats = {
             'total_oficios': total_oficios,
@@ -262,7 +262,7 @@ class OficioEntradaViewSet(viewsets.ModelViewSet):
                 self.queryset.values('anio')
                 .annotate(
                     total=Count('id'),
-                    con_pdf=Count('id', filter=~Q(archivo=''))
+                    con_pdf=Count('id', filter=~Q(archivo__isnull=True) & ~Q(archivo__exact=''))
                 )
                 .order_by('-anio')
             )
