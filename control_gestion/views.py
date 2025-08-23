@@ -129,6 +129,87 @@ class OficioSalidaViewSet(viewsets.ModelViewSet):
     ordering_fields = ['fecha_creacion', 'fecha']
     ordering = ['-fecha_creacion']
 
+    @action(detail=True, methods=['get'])
+    def descargar_pdf(self, request, pk=None):
+        """
+        Endpoint para descargar el archivo PDF de un oficio de salida
+        """
+        oficio = self.get_object()
+        
+        if not oficio.archivo:
+            return Response(
+                {'error': 'Este registro no tiene archivo asociado'}, 
+                status=status.HTTP_404_NOT_FOUND
+            )
+        
+        try:
+            if hasattr(oficio.archivo, 'url'):
+                file_path = oficio.archivo.path
+                if not os.path.exists(file_path):
+                    return Response(
+                        {'error': 'El archivo no existe en el servidor'}, 
+                        status=status.HTTP_404_NOT_FOUND
+                    )
+                
+                with open(file_path, 'rb') as pdf_file:
+                    response = HttpResponse(pdf_file.read(), content_type='application/pdf')
+                    response['Content-Disposition'] = f'attachment; filename="{oficio.archivo.name.split("/")[-1]}"'
+                    response['Access-Control-Allow-Origin'] = '*'
+                    response['Access-Control-Allow-Headers'] = 'Content-Type'
+                    return response
+            else:
+                return Response(
+                    {'error': 'No se puede acceder al archivo'}, 
+                    status=status.HTTP_404_NOT_FOUND
+                )
+                
+        except Exception as e:
+            return Response(
+                {'error': f'Error al acceder al archivo: {str(e)}'}, 
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+    @action(detail=True, methods=['get'])
+    def vista_previa_pdf(self, request, pk=None):
+        """
+        Endpoint para vista previa del archivo PDF de un oficio de salida (inline)
+        """
+        oficio = self.get_object()
+        
+        if not oficio.archivo:
+            return Response(
+                {'error': 'Este registro no tiene archivo asociado'}, 
+                status=status.HTTP_404_NOT_FOUND
+            )
+        
+        try:
+            if hasattr(oficio.archivo, 'url'):
+                file_path = oficio.archivo.path
+                if not os.path.exists(file_path):
+                    return Response(
+                        {'error': 'El archivo no existe en el servidor'}, 
+                        status=status.HTTP_404_NOT_FOUND
+                    )
+                
+                with open(file_path, 'rb') as pdf_file:
+                    response = HttpResponse(pdf_file.read(), content_type='application/pdf')
+                    response['Content-Disposition'] = f'inline; filename="{oficio.archivo.name.split("/")[-1]}"'
+                    response['Access-Control-Allow-Origin'] = '*'
+                    response['Access-Control-Allow-Headers'] = 'Content-Type'
+                    response['X-Frame-Options'] = 'SAMEORIGIN'
+                    return response
+            else:
+                return Response(
+                    {'error': 'No se puede acceder al archivo'}, 
+                    status=status.HTTP_404_NOT_FOUND
+                )
+                
+        except Exception as e:
+            return Response(
+                {'error': f'Error al acceder al archivo: {str(e)}'}, 
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
     @action(detail=False, methods=['get'])
     def estadisticas(self, request):
         """
@@ -192,6 +273,89 @@ class OficioEntradaViewSet(viewsets.ModelViewSet):
             )
         
         try:
+            # Usar la URL del archivo directamente si está disponible
+            if hasattr(oficio.archivo, 'url'):
+                file_path = oficio.archivo.path
+                if not os.path.exists(file_path):
+                    return Response(
+                        {'error': 'El archivo no existe en el servidor'}, 
+                        status=status.HTTP_404_NOT_FOUND
+                    )
+                
+                with open(file_path, 'rb') as pdf_file:
+                    response = HttpResponse(pdf_file.read(), content_type='application/pdf')
+                    response['Content-Disposition'] = f'attachment; filename="{oficio.archivo.name.split("/")[-1]}"'
+                    response['Access-Control-Allow-Origin'] = '*'
+                    response['Access-Control-Allow-Headers'] = 'Content-Type'
+                    return response
+            else:
+                return Response(
+                    {'error': 'No se puede acceder al archivo'}, 
+                    status=status.HTTP_404_NOT_FOUND
+                )
+                
+        except Exception as e:
+            return Response(
+                {'error': f'Error al acceder al archivo: {str(e)}'}, 
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+    @action(detail=True, methods=['get'])
+    def vista_previa_pdf(self, request, pk=None):
+        """
+        Endpoint para vista previa del archivo PDF de un oficio de entrada (inline)
+        """
+        oficio = self.get_object()
+        
+        if not oficio.archivo:
+            return Response(
+                {'error': 'Este registro no tiene archivo asociado'}, 
+                status=status.HTTP_404_NOT_FOUND
+            )
+        
+        try:
+            # Usar la URL del archivo directamente si está disponible
+            if hasattr(oficio.archivo, 'url'):
+                file_path = oficio.archivo.path
+                if not os.path.exists(file_path):
+                    return Response(
+                        {'error': 'El archivo no existe en el servidor'}, 
+                        status=status.HTTP_404_NOT_FOUND
+                    )
+                
+                with open(file_path, 'rb') as pdf_file:
+                    response = HttpResponse(pdf_file.read(), content_type='application/pdf')
+                    response['Content-Disposition'] = f'inline; filename="{oficio.archivo.name.split("/")[-1]}"'
+                    response['Access-Control-Allow-Origin'] = '*'
+                    response['Access-Control-Allow-Headers'] = 'Content-Type'
+                    response['X-Frame-Options'] = 'SAMEORIGIN'
+                    return response
+            else:
+                return Response(
+                    {'error': 'No se puede acceder al archivo'}, 
+                    status=status.HTTP_404_NOT_FOUND
+                )
+                
+        except Exception as e:
+            return Response(
+                {'error': f'Error al acceder al archivo: {str(e)}'}, 
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+    @action(detail=True, methods=['get'])
+    def info_pdf(self, request, pk=None):
+        """
+        Endpoint para obtener información del PDF sin descargarlo
+        """
+        oficio = self.get_object()
+        
+        if not oficio.archivo:
+            return Response(
+                {'error': 'Este registro no tiene archivo asociado'}, 
+                status=status.HTTP_404_NOT_FOUND
+            )
+        
+        try:
             file_path = oficio.archivo.path
             if not os.path.exists(file_path):
                 return Response(
@@ -199,10 +363,32 @@ class OficioEntradaViewSet(viewsets.ModelViewSet):
                     status=status.HTTP_404_NOT_FOUND
                 )
             
-            with open(file_path, 'rb') as pdf_file:
-                response = HttpResponse(pdf_file.read(), content_type='application/pdf')
-                response['Content-Disposition'] = f'attachment; filename="{oficio.archivo.name.split("/")[-1]}"'
-                return response
+            file_size = os.path.getsize(file_path)
+            file_name = oficio.archivo.name.split("/")[-1]
+            
+            # Construir URLs para descarga y vista previa
+            base_url = request.build_absolute_uri().replace('/info_pdf/', '')
+            download_url = f"{base_url}/descargar_pdf/"
+            preview_url = f"{base_url}/vista_previa_pdf/"
+            
+            return Response({
+                'archivo_info': {
+                    'nombre': file_name,
+                    'tamaño': f"{round(file_size / 1024, 2)} KB",
+                    'tamaño_bytes': file_size,
+                    'existe': True,
+                    'download_url': download_url,
+                    'preview_url': preview_url,
+                    'tipo': 'application/pdf'
+                },
+                'oficio_info': {
+                    'id': oficio.id,
+                    'numero': oficio.numero,
+                    'entrada': oficio.entrada,
+                    'remitente': oficio.remitente,
+                    'asunto': oficio.asunto[:100] + '...' if len(oficio.asunto) > 100 else oficio.asunto
+                }
+            })
                 
         except Exception as e:
             return Response(
