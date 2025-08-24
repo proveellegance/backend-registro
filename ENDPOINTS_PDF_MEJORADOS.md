@@ -1,18 +1,16 @@
-# 📄 Endpoints PDF Mejorados - Oficios de Entrada y Salida
+# 📄 Endpoints PDF Mejorados - Solo Oficios de Entrada
 
 ## 🎯 Nuevas Funcionalidades Implementadas
 
 ### 1. Vista Previa de PDF (Inline)
 **Endpoints:**
 - `GET /api/control-gestion/oficios-entrada/{id}/vista_previa_pdf/`
-- `GET /api/control-gestion/oficios-salida/{id}/vista_previa_pdf/`
 
 **Descripción:** Permite mostrar el PDF directamente en el navegador sin descargarlo.
 
 ### 2. Descarga de PDF (Mejorada)
 **Endpoints:**
 - `GET /api/control-gestion/oficios-entrada/{id}/descargar_pdf/`
-- `GET /api/control-gestion/oficios-salida/{id}/descargar_pdf/`
 
 **Descripción:** Descarga directa del archivo PDF con headers CORS correctos.
 
@@ -24,10 +22,16 @@
 
 ---
 
+## ⚠️ IMPORTANTE: Solo OficioEntrada tiene soporte para PDF
+
+- **OficioEntrada**: ✅ Soporta archivos PDF (campo `archivo`)
+- **OficioSalida**: ❌ NO soporta archivos PDF (sin campo `archivo`)
+
+---
+
 ## 🔗 URLs Incluidas en las Respuestas JSON
 
-Cada registro de `OficioEntrada` y `OficioSalida` ahora incluye:
-
+### OficioEntrada (CON archivos PDF):
 ```json
 {
   "id": 429,
@@ -39,6 +43,18 @@ Cada registro de `OficioEntrada` y `OficioSalida` ahora incluye:
   "download_url": "https://backend-registro-sa7u.onrender.com/api/control-gestion/oficios-entrada/429/descargar_pdf/",
   "preview_url": "https://backend-registro-sa7u.onrender.com/api/control-gestion/oficios-entrada/429/vista_previa_pdf/",
   // ... otros campos del modelo
+}
+```
+
+### OficioSalida (SIN archivos PDF):
+```json
+{
+  "id": 123,
+  "numero_oficio": "OF-123",
+  "destinatario": "Autoridad X",
+  "asunto": "Solicitud de información",
+  // ... otros campos del modelo
+  // NO incluye campos de archivo
 }
 ```
 
