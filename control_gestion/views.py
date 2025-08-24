@@ -122,7 +122,7 @@ class OficioSalidaViewSet(viewsets.ModelViewSet):
     """
     queryset = OficioSalida.objects.all()
     serializer_class = OficioSalidaSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = []  # TEMPORAL: Para debugging - remover después
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['tipo_envio', 'anio']
     search_fields = ['numero_oficio', 'alfanumerica_oficio', 'solicitante', 'destinatario', 'asunto']
